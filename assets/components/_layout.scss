@@ -1,0 +1,114 @@
+@use "sass:map";
+
+/************* Layout Grid pour les différents format **************/
+$numberColumnDesktop: 12;
+$numberColumnTablet: 8;
+$numberColumnSmartphone: 4;
+
+$widthDesktop: 1440px;
+$widthTablet: 1024px;
+$widthSmartphone: 500px;
+
+@function large($numberColumn,$i){
+  @return calc((100% / ($numberColumn / $i)) - ((($numberColumn / $i) - 1) * var(--gouttiere)) / ($numberColumn / $i)); 
+}
+
+
+@mixin largeur-modifier($numberColumn) {
+  @for $i from 1 to $numberColumn+1 {
+    &-#{$i}-#{$numberColumn}{
+      width : large($numberColumn,$i);
+    }
+  }
+}
+
+/*Generation des classes pour la largeur des colonnes selon 
+les resolutions d'ecrans*/
+
+/*Desktop*/
+.large{
+  @include largeur-modifier($numberColumnDesktop);
+}
+/*Container Desktop*/
+.container-full {
+  max-width: $widthDesktop;
+  margin-left: auto;
+  margin-right: auto;
+}
+.container-marges {
+    padding-left: var(--marginDesktop);
+    padding-right: var(--marginDesktop);
+  }
+
+/*Tablets*/
+@media all and (min-width : $widthSmartphone) and (max-width : $widthTablet){
+  .medium{
+  @include largeur-modifier($numberColumnTablet);
+  }
+  /*Container Tablet*/
+  .container-full {
+    max-width: $widthTablet;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--marginTablet);
+    padding-right: var(--marginTablet);
+  }
+}
+
+/*Smartphones*/
+@media all and (max-width : $widthSmartphone){
+  .small{
+    @include largeur-modifier($numberColumnSmartphone);
+  }
+  /*Container Tablet*/
+  .container-full {
+    max-width: $widthSmartphone;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--marginPhone);
+    padding-right: var(--marginPhone);
+  }
+}
+
+/************* Marges et Paddings Génériques **************/
+$cote: (
+  1: "-top",
+  2: "-bottom",
+  3: "-left",
+  4: "-right",
+  5: ""
+);
+
+/* On génère des marges multiples de 8 */
+@function marges($i){
+  @return calc($i*8px); 
+}
+
+/* Génération des margins */
+@mixin marges-generiques() {
+  @for $j from 1 to 6 {
+    @for $i from 1 to 7 {
+      &#{map.get($cote,$j)}-#{marges($i)}{
+        margin#{map.get($cote,$j)}: marges($i);
+      }
+    }
+  }
+}
+
+/* Génération des paddings */
+@mixin padding-generiques() {
+  @for $j from 1 to 6 {
+    @for $i from 1 to 7 {
+      &#{map.get($cote,$j)}#{marges($i)}{
+        padding#{map.get($cote,$j)}: marges($i);
+      }
+    }
+  }
+}
+
+.margin{
+  @include marges-generiques();
+}
+.padding{
+  @include padding-generiques();
+}

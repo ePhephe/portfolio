@@ -1,0 +1,443 @@
+@charset "UTF-8";
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Exo2";
+  src: url("../fonts/Exo2.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat.ttf");
+}
+@font-face {
+  font-family: "NotoSans";
+  src: url("../fonts/NotoSans.ttf");
+}
+:root {
+  /* TYPOGRAPHIE */
+  --fontTitre: "NotoSans";
+  --fontTexte: "Montserrat";
+  --fontAlt: "Exo2";
+  /* Palette de couleurs */
+  --firstColor: #776B5D;
+  --secondColor: #B0A695;
+  --thirdColor: #EBE3D5;
+  --fourthColor: #F3EEEA;
+  --fifthColor: #B4B4B8;
+  /* Couleur de texte */
+  --textColorLight: #000000;
+  --textColorDark: #FFFFFF;
+  /* Couleurs standards */
+  --whiteColor: #FFFFFF;
+  --blackColor: #000000;
+  --succesColor: hsl(113, 53%, 53%)	;
+  --warningColor: hsl(39, 100%, 67%)	;
+  --errorColor: hsl(0, 100%, 61%)	;
+  --infoColor: hsl(204, 86%, 53%);
+  /* Couleur de fond */
+  --backgroundColorLight: #FFFFFF;
+  --backgroundColorDark: #000000;
+  --backgroundColor1: #F3EEEA;
+  --backgroundColor2: #EBE3D5;
+  --backgroundColor3: #B0A695;
+  /* Gouttières et Espacements */
+  --gouttiere: 20px;
+  --marginDesktop: 80px;
+  --marginTablet: 40px;
+  --marginPhone: 20px;
+  /* RADIUS */
+  --radiusLarge: 30px;
+  --radiusMedium: 20px;
+  --radiusSmall: 10px;
+  --radiusRond: 50%;
+  /* TAILLE D'ELEMENTS FIXE */
+  --heightHeader: 80px;
+}
+
+/************* Layout Grid pour les différents format **************/
+/*Generation des classes pour la largeur des colonnes selon 
+les resolutions d'ecrans*/
+/*Desktop*/
+.large-1-12 {
+  width: calc(8.3333333333% - 11 * var(--gouttiere) / 12);
+}
+.large-2-12 {
+  width: calc(16.6666666667% - 5 * var(--gouttiere) / 6);
+}
+.large-3-12 {
+  width: calc(25% - 3 * var(--gouttiere) / 4);
+}
+.large-4-12 {
+  width: calc(33.3333333333% - 2 * var(--gouttiere) / 3);
+}
+.large-5-12 {
+  width: calc(41.6666666667% - 1.4 * var(--gouttiere) / 2.4);
+}
+.large-6-12 {
+  width: calc(50% - 1 * var(--gouttiere) / 2);
+}
+.large-7-12 {
+  width: calc(58.3333333333% - 0.7142857143 * var(--gouttiere) / 1.7142857143);
+}
+.large-8-12 {
+  width: calc(66.6666666667% - 0.5 * var(--gouttiere) / 1.5);
+}
+.large-9-12 {
+  width: calc(75% - 0.3333333333 * var(--gouttiere) / 1.3333333333);
+}
+.large-10-12 {
+  width: calc(83.3333333333% - 0.2 * var(--gouttiere) / 1.2);
+}
+.large-11-12 {
+  width: calc(91.6666666667% - 0.0909090909 * var(--gouttiere) / 1.0909090909);
+}
+.large-12-12 {
+  width: calc(100% - 0 * var(--gouttiere) / 1);
+}
+
+/*Container Desktop*/
+.container-full {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container-marges {
+  padding-left: var(--marginDesktop);
+  padding-right: var(--marginDesktop);
+}
+
+/*Tablets*/
+@media all and (min-width: 500px) and (max-width: 1024px) {
+  .medium-1-8 {
+    width: calc(12.5% - 7 * var(--gouttiere) / 8);
+  }
+  .medium-2-8 {
+    width: calc(25% - 3 * var(--gouttiere) / 4);
+  }
+  .medium-3-8 {
+    width: calc(37.5% - 1.6666666667 * var(--gouttiere) / 2.6666666667);
+  }
+  .medium-4-8 {
+    width: calc(50% - 1 * var(--gouttiere) / 2);
+  }
+  .medium-5-8 {
+    width: calc(62.5% - 0.6 * var(--gouttiere) / 1.6);
+  }
+  .medium-6-8 {
+    width: calc(75% - 0.3333333333 * var(--gouttiere) / 1.3333333333);
+  }
+  .medium-7-8 {
+    width: calc(87.5% - 0.1428571429 * var(--gouttiere) / 1.1428571429);
+  }
+  .medium-8-8 {
+    width: calc(100% - 0 * var(--gouttiere) / 1);
+  }
+  /*Container Tablet*/
+  .container-full {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--marginTablet);
+    padding-right: var(--marginTablet);
+  }
+}
+/*Smartphones*/
+@media all and (max-width: 500px) {
+  .small-1-4 {
+    width: calc(25% - 3 * var(--gouttiere) / 4);
+  }
+  .small-2-4 {
+    width: calc(50% - 1 * var(--gouttiere) / 2);
+  }
+  .small-3-4 {
+    width: calc(75% - 0.3333333333 * var(--gouttiere) / 1.3333333333);
+  }
+  .small-4-4 {
+    width: calc(100% - 0 * var(--gouttiere) / 1);
+  }
+  /*Container Tablet*/
+  .container-full {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--marginPhone);
+    padding-right: var(--marginPhone);
+  }
+}
+/************* Marges et Paddings Génériques **************/
+/* On génère des marges multiples de 8 */
+/* Génération des margins */
+/* Génération des paddings */
+.margin-top-8px {
+  margin-top: 8px;
+}
+.margin-top-16px {
+  margin-top: 16px;
+}
+.margin-top-24px {
+  margin-top: 24px;
+}
+.margin-top-32px {
+  margin-top: 32px;
+}
+.margin-top-40px {
+  margin-top: 40px;
+}
+.margin-top-48px {
+  margin-top: 48px;
+}
+.margin-bottom-8px {
+  margin-bottom: 8px;
+}
+.margin-bottom-16px {
+  margin-bottom: 16px;
+}
+.margin-bottom-24px {
+  margin-bottom: 24px;
+}
+.margin-bottom-32px {
+  margin-bottom: 32px;
+}
+.margin-bottom-40px {
+  margin-bottom: 40px;
+}
+.margin-bottom-48px {
+  margin-bottom: 48px;
+}
+.margin-left-8px {
+  margin-left: 8px;
+}
+.margin-left-16px {
+  margin-left: 16px;
+}
+.margin-left-24px {
+  margin-left: 24px;
+}
+.margin-left-32px {
+  margin-left: 32px;
+}
+.margin-left-40px {
+  margin-left: 40px;
+}
+.margin-left-48px {
+  margin-left: 48px;
+}
+.margin-right-8px {
+  margin-right: 8px;
+}
+.margin-right-16px {
+  margin-right: 16px;
+}
+.margin-right-24px {
+  margin-right: 24px;
+}
+.margin-right-32px {
+  margin-right: 32px;
+}
+.margin-right-40px {
+  margin-right: 40px;
+}
+.margin-right-48px {
+  margin-right: 48px;
+}
+.margin-8px {
+  margin: 8px;
+}
+.margin-16px {
+  margin: 16px;
+}
+.margin-24px {
+  margin: 24px;
+}
+.margin-32px {
+  margin: 32px;
+}
+.margin-40px {
+  margin: 40px;
+}
+.margin-48px {
+  margin: 48px;
+}
+
+.padding-top8px {
+  padding-top: 8px;
+}
+.padding-top16px {
+  padding-top: 16px;
+}
+.padding-top24px {
+  padding-top: 24px;
+}
+.padding-top32px {
+  padding-top: 32px;
+}
+.padding-top40px {
+  padding-top: 40px;
+}
+.padding-top48px {
+  padding-top: 48px;
+}
+.padding-bottom8px {
+  padding-bottom: 8px;
+}
+.padding-bottom16px {
+  padding-bottom: 16px;
+}
+.padding-bottom24px {
+  padding-bottom: 24px;
+}
+.padding-bottom32px {
+  padding-bottom: 32px;
+}
+.padding-bottom40px {
+  padding-bottom: 40px;
+}
+.padding-bottom48px {
+  padding-bottom: 48px;
+}
+.padding-left8px {
+  padding-left: 8px;
+}
+.padding-left16px {
+  padding-left: 16px;
+}
+.padding-left24px {
+  padding-left: 24px;
+}
+.padding-left32px {
+  padding-left: 32px;
+}
+.padding-left40px {
+  padding-left: 40px;
+}
+.padding-left48px {
+  padding-left: 48px;
+}
+.padding-right8px {
+  padding-right: 8px;
+}
+.padding-right16px {
+  padding-right: 16px;
+}
+.padding-right24px {
+  padding-right: 24px;
+}
+.padding-right32px {
+  padding-right: 32px;
+}
+.padding-right40px {
+  padding-right: 40px;
+}
+.padding-right48px {
+  padding-right: 48px;
+}
+.padding8px {
+  padding: 8px;
+}
+.padding16px {
+  padding: 16px;
+}
+.padding24px {
+  padding: 24px;
+}
+.padding32px {
+  padding: 32px;
+}
+.padding40px {
+  padding: 40px;
+}
+.padding48px {
+  padding: 48px;
+}
+
+.background {
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  right: 0;
+}
+
+.bg-accueil {
+  background-image: url("../img/background/background-accueil.jpg");
+}
+
+/*# sourceMappingURL=style.css.map */
