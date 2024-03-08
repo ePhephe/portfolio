@@ -36,10 +36,15 @@ les resolutions d'ecrans*/
   margin-right: auto;
 }
 .container-marges {
-    padding-left: var(--marginDesktop);
-    padding-right: var(--marginDesktop);
-  }
-
+  padding-left: var(--marginDesktop);
+  padding-right: var(--marginDesktop);
+}
+.container-marges-left {
+  padding-left: var(--marginDesktop);
+}
+.container-marges-right {
+  padding-left: var(--marginDesktop);
+}
 /*Tablets*/
 @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet){
   .medium{
@@ -79,9 +84,9 @@ $cote: (
   5: ""
 );
 
-/* On génère des marges multiples de 8 */
+/* On génère des marges multiples de 10 */
 @function marges($i){
-  @return calc($i*8px); 
+  @return calc($i*10px); 
 }
 
 /* Génération des margins */
@@ -99,7 +104,7 @@ $cote: (
 @mixin padding-generiques() {
   @for $j from 1 to 6 {
     @for $i from 1 to 7 {
-      &#{map.get($cote,$j)}#{marges($i)}{
+      &#{map.get($cote,$j)}-#{marges($i)}{
         padding#{map.get($cote,$j)}: marges($i);
       }
     }

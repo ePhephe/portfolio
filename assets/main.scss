@@ -2,16 +2,26 @@
 @import "./variables.scss";
 
 @import "./components/_layout.scss";
+@import "./components/_flexbox.scss";
 
-
+/********** Page d'accueil **********/
+/* Mise en place du background */
 .background {
     background-position: right;
     background-repeat: no-repeat;
+    position: fixed;
+    z-index: -1;
+    top:0;
     height:100vh;
     width: 100%;
-    position: fixed;
-    right:0;
 }
 .bg-accueil {
     background-image: url("../img/background/background-accueil.jpg");
+}
+/* Mise en place du header avec la photo, l'accroche et le menu */
+header {
+    background-color: red;
+    position: sticky;
+    top:0;
+    height:100vh;
 }
