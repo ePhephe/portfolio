@@ -1,0 +1,5 @@
+.grid {
+    display: grid;
+    grid-auto-flow: row dense;
+    gap: var(--gouttiere) var(--gouttiere);
+}

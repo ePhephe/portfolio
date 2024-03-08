@@ -4,6 +4,7 @@
 @import "./components/_layout.scss";
 @import "./components/_flexbox.scss";
 @import "./components/_card.scss";
+@import "./components/_grid.scss";
 
 
 /********** Général **********/
@@ -30,6 +31,19 @@ a {
     color: var(--secondColor);
 }
 
+.display-none {
+    display: none;
+}
+
+.picto-48 {
+    width: 48px;
+    height: 48px;
+}
+.picto-36 {
+    width: 36px;
+    height: 36px;
+}
+
 /********** Page d'accueil **********/
 /* Mise en place du background */
 .background {
@@ -44,44 +58,57 @@ a {
 
 .bg-accueil {
     background-image: url("../img/background/background-accueil.jpg");
+    background-position: right;
 }
 
 /* Mise en place du header avec la photo, l'accroche et le menu */
-header {
+.header-accueil {
     position: sticky;
     top: 0;
     height: 100vh;
 }
 
-header img {
+.header-accueil img {
     height: 100%;
     width: -moz-fit-content;
     width: fit-content;
 }
 
-header nav {
+.header-accueil nav {
     color: var(--firstColor);
     font-size: 1.5rem;
     font-family: var(--fontAlt);
 }
 
-header nav a {
+.header-accueil nav a {
     display: inline;
 }
 
-header nav ul {
+.header-accueil nav ul {
     color: var(--firstColor);
     border-left: 2px solid var(--firstColor);
     padding-left: var(--gouttiere);
 }
 
+.menu-actif {
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+/* Mise en place des icones de navigation */
+.navigation {
+    position: fixed;
+    top: 85vh;
+    right: 20px;
+}
+.navigation img {
+    cursor: pointer;
+}
+
 /* Mise en place du grid pour la partie à propos */
 .grid-a-propos {
-    display: grid;
-    grid-auto-flow: row dense;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 20px 20px;
     grid-template-areas:
         "a-propos soft-skills"
         "description description"
@@ -115,11 +142,8 @@ header nav ul {
 
 /* Mise en place du grid pour la partie carrière */
 .grid-carriere {
-    display: grid;
-    grid-auto-flow: row dense;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 20px 20px;
     grid-template-areas:
         "carriere-1"
         "carriere-2"
@@ -145,11 +169,8 @@ header nav ul {
 
 /* Mise en place du grid pour la partie projets */
 .grid-projets {
-    display: grid;
-    grid-auto-flow: row dense;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 20px 20px;
     grid-template-areas:
         "projet-1 projet-2"
         "projet-3 projet-4"
@@ -187,4 +208,125 @@ header nav ul {
 
 .projet-8 {
     grid-area: projet-8;
+}
+
+.plus-projet {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background-image: url("../img/icons/plus.png");
+    background-size: contain;
+}
+
+/********** Page d'un projet **********/
+/* Mise en place du background */
+.background {
+    background-repeat: no-repeat;
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+.bg-projet {
+    background-position: center;
+    background-image: url("../img/background/background-projet.jpg");
+    background-size: cover;
+}
+
+/* Mise en place du header avec la photo, l'accroche et le menu */
+.header-projet {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+.header-projet-max {
+    height: 45vh;
+}
+.header-projet-min {
+    height: 70px;
+}
+.header-projet .image-projet {
+    background-image: url("../img/images/projet-moovizy-ux.png");
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%; 
+    border-radius: 0 0 50px 50px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Mise en place du grid pour la partie à propos */
+.grid-presentation-projet {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "info-projet role-projet presentation-projet presentation-projet"
+        "histo-projet histo-projet histo-projet techno-projet";
+}
+
+.info-projet {
+    grid-area: info-projet;
+}
+
+.role-projet {
+    grid-area: role-projet;
+}
+
+.presentation-projet {
+    grid-area: presentation-projet;
+}
+
+.histo-projet {
+    grid-area: histo-projet;
+}
+
+.techno-projet {
+    grid-area: techno-projet;
+}
+
+/* Mise en place du grid pour la partie à propos */
+.grid-image-mobile-projet {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "image-mobile-1 image-mobile-2 image-mobile-3";
+}
+
+.image-mobile-1 {
+    grid-area: image-mobile-1;
+}
+
+.image-mobile-2 {
+    grid-area: image-mobile-2;
+}
+
+.image-mobile-3 {
+    grid-area: image-mobile-3;
+}
+
+/* Mise en place du grid pour la partie à propos */
+.grid-image-desktop-projet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "image-desktop-1 image-desktop-2"
+        "image-desktop-3 image-desktop-4";
+}
+
+.image-desktop-1 {
+    grid-area: image-desktop-1;
+}
+
+.image-desktop-2 {
+    grid-area: image-desktop-2;
+}
+
+.image-desktop-3 {
+    grid-area: image-desktop-3;
+}
+
+.image-desktop-4 {
+    grid-area: image-desktop-4;
 }
