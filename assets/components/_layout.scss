@@ -43,7 +43,7 @@ les resolutions d'ecrans*/
   padding-left: var(--marginDesktop);
 }
 .container-marges-right {
-  padding-left: var(--marginDesktop);
+  padding-right: var(--marginDesktop);
 }
 /*Tablets*/
 @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet){

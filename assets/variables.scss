@@ -1,27 +1,27 @@
 @font-face {
-    font-family: 'Exo2';
-    src: url("../fonts/Exo2.ttf");
+    font-family: 'HinaMincho';
+    src: url("../fonts/HinaMincho/HinaMincho-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'Montserrat';
-    src: url("../fonts/Montserrat.ttf");
+    font-family: 'KiwiMaru';
+    src: url("../fonts/KiwiMaru/KiwiMaru-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'NotoSans';
-    src: url("../fonts/NotoSans.ttf");
+    font-family: 'OpenSans';
+    src: url("../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
 :root {
     /* TYPOGRAPHIE */
-    --fontTitre: 'NotoSans';
-    --fontTexte: 'Montserrat';
-    --fontAlt: 'Exo2';
+    --fontTitre: 'HinaMincho';
+    --fontTexte: 'OpenSans';
+    --fontAlt: 'KiwiMaru';
     
     /* Palette de couleurs */
-    --firstColor: #776B5D;
-    --secondColor: #B0A695;
+    --firstColor: #81A760;
+    --secondColor: #4EAAA5;
     --thirdColor: #EBE3D5;
     --fourthColor: #F3EEEA;
     --fifthColor: #B4B4B8;

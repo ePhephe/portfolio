@@ -3,6 +3,32 @@
 
 @import "./components/_layout.scss";
 @import "./components/_flexbox.scss";
+@import "./components/_card.scss";
+
+
+/********** Général **********/
+body {
+    font-family: var(--fontTexte);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--fontTitre);
+}
+
+h1 {
+    font-size: 2rem;
+    color: var(--firstColor);
+}
+
+a {
+    text-decoration: none;
+    color: var(--secondColor);
+}
 
 /********** Page d'accueil **********/
 /* Mise en place du background */
@@ -11,17 +37,154 @@
     background-repeat: no-repeat;
     position: fixed;
     z-index: -1;
-    top:0;
-    height:100vh;
+    top: 0;
+    height: 100vh;
     width: 100%;
 }
+
 .bg-accueil {
     background-image: url("../img/background/background-accueil.jpg");
 }
+
 /* Mise en place du header avec la photo, l'accroche et le menu */
 header {
-    background-color: red;
     position: sticky;
-    top:0;
-    height:100vh;
+    top: 0;
+    height: 100vh;
+}
+
+header img {
+    height: 100%;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+header nav {
+    color: var(--firstColor);
+    font-size: 1.5rem;
+    font-family: var(--fontAlt);
+}
+
+header nav a {
+    display: inline;
+}
+
+header nav ul {
+    color: var(--firstColor);
+    border-left: 2px solid var(--firstColor);
+    padding-left: var(--gouttiere);
+}
+
+/* Mise en place du grid pour la partie à propos */
+.grid-a-propos {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas:
+        "a-propos soft-skills"
+        "description description"
+        "formation dev-language"
+        "formation dev-tools";
+}
+
+.description {
+    grid-area: description;
+}
+
+.a-propos {
+    grid-area: a-propos;
+}
+
+.soft-skills {
+    grid-area: soft-skills;
+}
+
+.formation {
+    grid-area: formation;
+}
+
+.dev-language {
+    grid-area: dev-language;
+}
+
+.dev-tools {
+    grid-area: dev-tools;
+}
+
+/* Mise en place du grid pour la partie carrière */
+.grid-carriere {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas:
+        "carriere-1"
+        "carriere-2"
+        "carriere-3"
+        "carriere-4";
+}
+
+.carriere-1 {
+    grid-area: carriere-1;
+}
+
+.carriere-2 {
+    grid-area: carriere-2;
+}
+
+.carriere-3 {
+    grid-area: carriere-3;
+}
+
+.carriere-4 {
+    grid-area: carriere-4;
+}
+
+/* Mise en place du grid pour la partie projets */
+.grid-projets {
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas:
+        "projet-1 projet-2"
+        "projet-3 projet-4"
+        "projet-5 projet-6"
+        "projet-7 projet-8";
+}
+
+.projet-1 {
+    grid-area: projet-1;
+}
+
+.projet-2 {
+    grid-area: projet-2;
+}
+
+.projet-3 {
+    grid-area: projet-3;
+}
+
+.projet-4 {
+    grid-area: projet-4;
+}
+
+.projet-5 {
+    grid-area: projet-5;
+}
+
+.projet-6 {
+    grid-area: projet-6;
+}
+
+.projet-7 {
+    grid-area: projet-7;
+}
+
+.projet-8 {
+    grid-area: projet-8;
 }
