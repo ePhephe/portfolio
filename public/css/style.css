@@ -112,7 +112,7 @@ th {
   --infoColor: hsl(204, 86%, 53%);
   /* Couleur de fond */
   --backgroundColorLight: #FFFFFF;
-  --backgroundColorDark: #000000;
+  --backgroundColorDark: #303030;
   --backgroundColor1: #F3EEEA;
   --backgroundColor2: #EBE3D5;
   --backgroundColor3: #B0A695;
@@ -444,6 +444,14 @@ les resolutions d'ecrans*/
   flex-direction: column;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
+.align-center {
+  align-items: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
@@ -456,11 +464,9 @@ les resolutions d'ecrans*/
 .card {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(48, 48, 48, 0.75);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
-  position: relative;
-  width: 100%;
 }
 
 .card-1h {
@@ -484,6 +490,8 @@ les resolutions d'ecrans*/
 /********** Général **********/
 body {
   font-family: var(--fontTexte);
+  background-color: var(--backgroundColorDark);
+  color: var(--textColorDark);
 }
 
 h1,
@@ -577,8 +585,17 @@ a {
   right: 20px;
 }
 
-.navigation img {
+.navigation .button {
   cursor: pointer;
+}
+
+.picto {
+  width: 48px;
+  height: 48px;
+  font-size: 1.5rem;
+  background-color: var(--firstColor);
+  color: var(--blackColor);
+  border-radius: 50%;
 }
 
 /* Mise en place du grid pour la partie à propos */

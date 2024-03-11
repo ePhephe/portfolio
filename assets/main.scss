@@ -10,6 +10,8 @@
 /********** Général **********/
 body {
     font-family: var(--fontTexte);
+    background-color: var(--backgroundColorDark);
+    color: var(--textColorDark)
 }
 
 h1,
@@ -101,8 +103,16 @@ a {
     top: 85vh;
     right: 20px;
 }
-.navigation img {
+.navigation .button {
     cursor: pointer;
+}
+.picto {
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    background-color: var(--firstColor);
+    color: var(--blackColor);
+    border-radius: 50%;
 }
 
 /* Mise en place du grid pour la partie à propos */
