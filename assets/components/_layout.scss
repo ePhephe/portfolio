@@ -35,14 +35,14 @@ les resolutions d'ecrans*/
   margin-left: auto;
   margin-right: auto;
 }
-.container-marges {
+.container-marges-desktop {
   padding-left: var(--marginDesktop);
   padding-right: var(--marginDesktop);
 }
-.container-marges-left {
+.container-marges-left-desktop {
   padding-left: var(--marginDesktop);
 }
-.container-marges-right {
+.container-marges-right-desktop {
   padding-right: var(--marginDesktop);
 }
 /*Tablets*/
@@ -55,7 +55,15 @@ les resolutions d'ecrans*/
     max-width: $widthTablet;
     margin-left: auto;
     margin-right: auto;
+  }
+  .container-marges-tablet {
     padding-left: var(--marginTablet);
+    padding-right: var(--marginTablet);
+  }
+  .container-marges-left-tablet {
+    padding-left: var(--marginTablet);
+  }
+  .container-marges-right-tablet {
     padding-right: var(--marginTablet);
   }
 }
@@ -65,13 +73,21 @@ les resolutions d'ecrans*/
   .small{
     @include largeur-modifier($numberColumnSmartphone);
   }
-  /*Container Tablet*/
+  /*Container Smartphone*/
   .container-full {
     max-width: $widthSmartphone;
     margin-left: auto;
     margin-right: auto;
-    padding-left: var(--marginPhone);
-    padding-right: var(--marginPhone);
+  }
+  .container-marges-smartphone {
+    padding-left: var(--marginSmartphone);
+    padding-right: var(--marginSmartphone);
+  }
+  .container-marges-left-smartphone {
+    padding-left: var(--marginSmartphone);
+  }
+  .container-marges-right-smartphone {
+    padding-right: var(--marginSmartphone);
   }
 }
 

@@ -1,6 +1,7 @@
 @import "./reset.scss";
 @import "./variables.scss";
 
+@import "./components/_themes.scss";
 @import "./components/_layout.scss";
 @import "./components/_flexbox.scss";
 @import "./components/_card.scss";
@@ -10,8 +11,8 @@
 /********** Général **********/
 body {
     font-family: var(--fontTexte);
-    background-color: var(--backgroundColorDark);
-    color: var(--textColorDark)
+    background-color: var(--backgroundColor);
+    color: var(--textColor)
 }
 
 h1,
@@ -26,6 +27,13 @@ h6 {
 h1 {
     font-size: 2rem;
     color: var(--firstColor);
+}
+
+h2 {
+    font-size: 2rem;
+    color: var(--firstColor);
+    margin-bottom: var(--gouttiere);
+    text-align: center;
 }
 
 a {
@@ -92,6 +100,10 @@ a {
     padding-left: var(--gouttiere);
 }
 
+.header-accueil-burger {
+    display: none;
+}
+
 .menu-actif {
     font-weight: 600;
     font-size: 2rem;
@@ -100,124 +112,31 @@ a {
 /* Mise en place des icones de navigation */
 .navigation {
     position: fixed;
-    top: 85vh;
-    right: 20px;
+    bottom: 2vh;
+    right: var(--gouttiere);
+    z-index: 1;
 }
 .navigation .button {
     cursor: pointer;
 }
 .picto {
-    width: 48px;
-    height: 48px;
     font-size: 1.5rem;
-    background-color: var(--firstColor);
-    color: var(--blackColor);
     border-radius: 50%;
 }
-
-/* Mise en place du grid pour la partie à propos */
-.grid-a-propos {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "a-propos soft-skills"
-        "description description"
-        "formation dev-language"
-        "formation dev-tools";
+.picto-background {
+    font-size: 1.5rem;
+    background-color: var(--firstColor);
+    color: var(--textColorReverse);
+    border-radius: 50%;
 }
-
-.description {
-    grid-area: description;
+.picto-48 {
+    width: 48px;
+    height: 48px;
+    
 }
-
-.a-propos {
-    grid-area: a-propos;
-}
-
-.soft-skills {
-    grid-area: soft-skills;
-}
-
-.formation {
-    grid-area: formation;
-}
-
-.dev-language {
-    grid-area: dev-language;
-}
-
-.dev-tools {
-    grid-area: dev-tools;
-}
-
-/* Mise en place du grid pour la partie carrière */
-.grid-carriere {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "carriere-1"
-        "carriere-2"
-        "carriere-3"
-        "carriere-4";
-}
-
-.carriere-1 {
-    grid-area: carriere-1;
-}
-
-.carriere-2 {
-    grid-area: carriere-2;
-}
-
-.carriere-3 {
-    grid-area: carriere-3;
-}
-
-.carriere-4 {
-    grid-area: carriere-4;
-}
-
-/* Mise en place du grid pour la partie projets */
-.grid-projets {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-        "projet-1 projet-2"
-        "projet-3 projet-4"
-        "projet-5 projet-6"
-        "projet-7 projet-8";
-}
-
-.projet-1 {
-    grid-area: projet-1;
-}
-
-.projet-2 {
-    grid-area: projet-2;
-}
-
-.projet-3 {
-    grid-area: projet-3;
-}
-
-.projet-4 {
-    grid-area: projet-4;
-}
-
-.projet-5 {
-    grid-area: projet-5;
-}
-
-.projet-6 {
-    grid-area: projet-6;
-}
-
-.projet-7 {
-    grid-area: projet-7;
-}
-
-.projet-8 {
-    grid-area: projet-8;
+.picto-36 {
+    width: 36px;
+    height: 36px;
 }
 
 .plus-projet {
@@ -267,76 +186,38 @@ a {
     border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
-/* Mise en place du grid pour la partie à propos */
-.grid-presentation-projet {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "info-projet role-projet presentation-projet presentation-projet"
-        "histo-projet histo-projet histo-projet techno-projet";
+/*Smartphones*/
+@media all and (max-width : $widthSmartphone) {
+    .header-accueil {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        transition: transform 400ms linear;
+        transform: translateX(-100%);
+    }
+    .header-accueil-affiche {
+        transform: translateX(0);
+    }
+
+    .menu-burger {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-around;
+        padding: 5px;
+        position: fixed;
+        top:var(--gouttiere);
+        left: var(--gouttiere);
+        z-index: 2;
+        background-color: var(--firstColor);
+        border-radius: var(--radiusSmall);
+    }
+    .menu-burger>span {
+        width: 30px;
+        display: block;
+        height: 3px;
+        background-color: var(--textColorReverse);
+    }
 }
 
-.info-projet {
-    grid-area: info-projet;
-}
-
-.role-projet {
-    grid-area: role-projet;
-}
-
-.presentation-projet {
-    grid-area: presentation-projet;
-}
-
-.histo-projet {
-    grid-area: histo-projet;
-}
-
-.techno-projet {
-    grid-area: techno-projet;
-}
-
-/* Mise en place du grid pour la partie à propos */
-.grid-image-mobile-projet {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas:
-        "image-mobile-1 image-mobile-2 image-mobile-3";
-}
-
-.image-mobile-1 {
-    grid-area: image-mobile-1;
-}
-
-.image-mobile-2 {
-    grid-area: image-mobile-2;
-}
-
-.image-mobile-3 {
-    grid-area: image-mobile-3;
-}
-
-/* Mise en place du grid pour la partie à propos */
-.grid-image-desktop-projet {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "image-desktop-1 image-desktop-2"
-        "image-desktop-3 image-desktop-4";
-}
-
-.image-desktop-1 {
-    grid-area: image-desktop-1;
-}
-
-.image-desktop-2 {
-    grid-area: image-desktop-2;
-}
-
-.image-desktop-3 {
-    grid-area: image-desktop-3;
-}
-
-.image-desktop-4 {
-    grid-area: image-desktop-4;
-}

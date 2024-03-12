@@ -13,50 +13,26 @@
     src: url("../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf");
 }
 
+@font-face {
+    font-family: 'Luciole';
+    src: url("../fonts/Luciole/Luciole-Regular.ttf");
+}
+
 :root {
     /* TYPOGRAPHIE */
     --fontTitre: 'HinaMincho';
     --fontTexte: 'OpenSans';
     --fontAlt: 'KiwiMaru';
-    
-    /* Palette de couleurs */
-    --firstColor: #81A760;
-    --secondColor: #4EAAA5;
-    --thirdColor: #EBE3D5;
-    --fourthColor: #F3EEEA;
-    --fifthColor: #B4B4B8;
-
-    /* Couleur de texte */
-    --textColorLight: #000000;
-    --textColorDark: #FFFFFF;
-
-    /* Couleurs standards */
-    --whiteColor: #FFFFFF;
-    --blackColor: #000000;
-    --succesColor: hsl(113, 53%, 53%)	;
-    --warningColor: hsl(39, 100%, 67%)	;
-    --errorColor: hsl(0, 100%, 61%)	;
-    --infoColor: hsl(204, 86%, 53%);
-
-    /* Couleur de fond */
-    --backgroundColorLight: #FFFFFF;
-    --backgroundColorDark: #303030;
-    --backgroundColor1: #F3EEEA;
-    --backgroundColor2: #EBE3D5;
-    --backgroundColor3: #B0A695;
 
     /* Gouttières et Espacements */
     --gouttiere: 20px;
     --marginDesktop: 80px;
     --marginTablet: 40px;
-    --marginPhone: 20px;
+    --marginSmartphone: 20px;
 
     /* RADIUS */
     --radiusLarge: 30px;
     --radiusMedium: 20px;
     --radiusSmall: 10px;
     --radiusRond: 50%;
-
-    /* TAILLE D'ELEMENTS FIXE */
-    --heightHeader: 80px;
 }

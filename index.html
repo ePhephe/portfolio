@@ -17,7 +17,12 @@
     </div>
 
     <!-- Header avec navigation sur la partie gauche de la page -->
-    <header class="header-accueil container-marges large-6-12 padding-top-40px">
+    <div class="picto-background picto-48 menu-burger" id="menuBurger">
+        <span class="burger-top"></span>
+        <span class="burger-middle"></span>
+        <span class="burger-bottom"></span>
+    </div>
+    <header class="header-accueil container-marges-desktop large-6-12 small-4-4 container-marges-smartphone padding-top-40px" id="headerAccueil">
         <div class="flex direction-column gap">
             <img src="./public/img/images/photo-profil.png" alt="Photo de profil de Mickaël">
             <p>
@@ -56,37 +61,46 @@
             </nav>
         </div>
     </header>
-    <main class="container-marges-right large-6-12">
+    <main class="container-marges-right-desktop large-6-12 container-marges-smartphone small-4-4">
         <div class="navigation flex direction-column gap">
-            <div class="picto button flex justify-center align-center" id="page-up"><i class="fa-solid fa-chevron-up"></i></div>
-            <div class="picto button flex justify-center align-center" id="page-down"><i class="fa-solid fa-chevron-down"></i></div>
+            <div class="picto-background picto-48 button flex justify-center align-center" id="page-up"><i class="fa-solid fa-chevron-up"></i></div>
+            <div class="picto-background picto-48 button flex justify-center align-center" id="page-down"><i class="fa-solid fa-chevron-down"></i></div>
         </div>
-        <section class="grid grid-a-propos padding-top-40px margin-bottom-20px">
-            <div class="a-propos card card-1h"></div>
-            <div class="soft-skills card card-1h"></div>
-            <div class="description card card-1h"></div>
-            <div class="formation card card-2h"></div>
-            <div class="dev-language card card-1h"></div>
-            <div class="dev-tools card card-1h"></div>
-        </section>
-        <section class="grid grid-carriere padding-top-40px margin-bottom-20px">
-            <div class="carriere-1 card card-1h"></div>
-            <div class="carriere-2 card card-1h"></div>
-            <div class="carriere-3 card card-1h"></div>
-            <div class="carriere-4 card card-1h"></div>
-        </section>
-        <section class="grid grid-projets padding-top-40px margin-bottom-20px">
-            <div class="projet-1 card card-1h">
-                <a class="picto-36 plus-projet" href="./projet.html" title="Accès au projet">
-                </a>
+        <section class="padding-top-40px margin-bottom-20px">
+            <h2 class="card">A propos</h2>
+            <div class="grid grid-a-propos">
+                <div class="a-propos card card-1h"></div>
+                <div class="soft-skills card card-1h"></div>
+                <div class="description card card-1h card-2h-smartphone"></div>
+                <div class="formation card card-2h"></div>
+                <div class="dev-language card card-1h"></div>
+                <div class="dev-tools card card-1h"></div>
             </div>
-            <div class="projet-2 card card-1h"></div>
-            <div class="projet-3 card card-1h"></div>
-            <div class="projet-4 card card-1h"></div>
-            <div class="projet-5 card card-1h"></div>
-            <div class="projet-6 card card-1h"></div>
-            <div class="projet-7 card card-1h"></div>
-            <div class="projet-8 card card-1h"></div>
+        </section>
+        <section class="padding-top-40px margin-bottom-20px">
+            <h2 class="card">Carrière</h2>
+            <div class="grid grid-carriere">
+                <div class="carriere-1 card card-1h card-2h-smartphone"></div>
+                <div class="carriere-2 card card-1h card-2h-smartphone"></div>
+                <div class="carriere-3 card card-1h card-2h-smartphone"></div>
+                <div class="carriere-4 card card-1h card-2h-smartphone"></div>
+            </div>
+        </section>
+        <section class="padding-top-40px margin-bottom-20px">
+            <h2 class="card">Projets</h2>
+            <div class="grid grid-projets">
+                <div class="projet-1 card card-1h">
+                    <a class="picto picto-36 plus-projet" href="./projet.html" title="Accès au projet">
+                    </a>
+                </div>
+                <div class="projet-2 card card-1h"></div>
+                <div class="projet-3 card card-1h"></div>
+                <div class="projet-4 card card-1h"></div>
+                <div class="projet-5 card card-1h"></div>
+                <div class="projet-6 card card-1h"></div>
+                <div class="projet-7 card card-1h"></div>
+                <div class="projet-8 card card-1h"></div>
+            </div>
         </section>
     </main>
 

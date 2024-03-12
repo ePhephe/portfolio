@@ -1,0 +1,62 @@
+/* Darkmode */
+body.dark-theme {
+    /* Palette de couleurs */
+    --firstColor: #81A760;
+    --secondColor: #4EAAA5;
+    --thirdColor: #EBE3D5;
+    --fourthColor: #F3EEEA;
+    --fifthColor: #B4B4B8;
+
+    /* Couleur des cards */
+    --backgroundCard: rgba(48, 48, 48, 0.75);
+    --borderColorCard: rgba(255, 255, 255, 0.125);
+
+    /* Couleurs standards */
+    --succesColor: hsl(113, 53%, 53%);
+    --warningColor: hsl(39, 100%, 67%);
+    --errorColor: hsl(0, 100%, 61%);
+    --infoColor: hsl(204, 86%, 53%);
+
+    /* Couleur de fond */
+    --backgroundColor: #111111;
+
+    /* Couleur des textes */
+    --textColor: #FFFFFF;
+    --textColorReverse: #000000;
+}
+/* Lightmode */
+body.light-theme {
+    /* Palette de couleurs */
+    --firstColor: #5c7d3f;
+    --secondColor: #38807b;
+    --thirdColor: #EBE3D5;
+    --fourthColor: #F3EEEA;
+    --fifthColor: #B4B4B8;
+
+    /* Couleur des cards */
+    --backgroundCard: rgba(255, 255, 255, 0.75);
+    --borderColorCard: rgba(209, 213, 219, 0.3);
+
+    /* Couleurs standards */
+    --blackColor: #000000;
+    --whiteColor: #FFFFFF;
+    --succesColor: hsl(113, 53%, 53%);
+    --warningColor: hsl(39, 100%, 67%);
+    --errorColor: hsl(0, 100%, 61%);
+    --infoColor: hsl(204, 86%, 53%);
+
+    /* Couleur de fond */
+    --backgroundColor: #FFFFFF;
+
+    /* Couleur des textes */
+    --textColor: #000000;
+    --textColorReverse: #FFFFFF;
+}
+
+/* Lightmode */
+body.accessible-theme {
+    /* TYPOGRAPHIE */
+    --fontTitre: 'Luciole';
+    --fontTexte: 'Luciole';
+    --fontAlt: 'Luciole';
+}

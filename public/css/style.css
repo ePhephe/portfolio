@@ -89,45 +89,81 @@ th {
   font-family: "OpenSans";
   src: url("../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf");
 }
+@font-face {
+  font-family: "Luciole";
+  src: url("../fonts/Luciole/Luciole-Regular.ttf");
+}
 :root {
   /* TYPOGRAPHIE */
   --fontTitre: "HinaMincho";
   --fontTexte: "OpenSans";
   --fontAlt: "KiwiMaru";
+  /* Gouttières et Espacements */
+  --gouttiere: 20px;
+  --marginDesktop: 80px;
+  --marginTablet: 40px;
+  --marginSmartphone: 20px;
+  /* RADIUS */
+  --radiusLarge: 30px;
+  --radiusMedium: 20px;
+  --radiusSmall: 10px;
+  --radiusRond: 50%;
+}
+
+/* Darkmode */
+body.dark-theme {
   /* Palette de couleurs */
   --firstColor: #81A760;
   --secondColor: #4EAAA5;
   --thirdColor: #EBE3D5;
   --fourthColor: #F3EEEA;
   --fifthColor: #B4B4B8;
-  /* Couleur de texte */
-  --textColorLight: #000000;
-  --textColorDark: #FFFFFF;
+  /* Couleur des cards */
+  --backgroundCard: rgba(48, 48, 48, 0.75);
+  --borderColorCard: rgba(255, 255, 255, 0.125);
   /* Couleurs standards */
-  --whiteColor: #FFFFFF;
-  --blackColor: #000000;
-  --succesColor: hsl(113, 53%, 53%)	;
-  --warningColor: hsl(39, 100%, 67%)	;
-  --errorColor: hsl(0, 100%, 61%)	;
+  --succesColor: hsl(113, 53%, 53%);
+  --warningColor: hsl(39, 100%, 67%);
+  --errorColor: hsl(0, 100%, 61%);
   --infoColor: hsl(204, 86%, 53%);
   /* Couleur de fond */
-  --backgroundColorLight: #FFFFFF;
-  --backgroundColorDark: #303030;
-  --backgroundColor1: #F3EEEA;
-  --backgroundColor2: #EBE3D5;
-  --backgroundColor3: #B0A695;
-  /* Gouttières et Espacements */
-  --gouttiere: 20px;
-  --marginDesktop: 80px;
-  --marginTablet: 40px;
-  --marginPhone: 20px;
-  /* RADIUS */
-  --radiusLarge: 30px;
-  --radiusMedium: 20px;
-  --radiusSmall: 10px;
-  --radiusRond: 50%;
-  /* TAILLE D'ELEMENTS FIXE */
-  --heightHeader: 80px;
+  --backgroundColor: #111111;
+  /* Couleur des textes */
+  --textColor: #FFFFFF;
+  --textColorReverse: #000000;
+}
+
+/* Lightmode */
+body.light-theme {
+  /* Palette de couleurs */
+  --firstColor: #5c7d3f;
+  --secondColor: #38807b;
+  --thirdColor: #EBE3D5;
+  --fourthColor: #F3EEEA;
+  --fifthColor: #B4B4B8;
+  /* Couleur des cards */
+  --backgroundCard: rgba(255, 255, 255, 0.75);
+  --borderColorCard: rgba(209, 213, 219, 0.3);
+  /* Couleurs standards */
+  --blackColor: #000000;
+  --whiteColor: #FFFFFF;
+  --succesColor: hsl(113, 53%, 53%);
+  --warningColor: hsl(39, 100%, 67%);
+  --errorColor: hsl(0, 100%, 61%);
+  --infoColor: hsl(204, 86%, 53%);
+  /* Couleur de fond */
+  --backgroundColor: #FFFFFF;
+  /* Couleur des textes */
+  --textColor: #000000;
+  --textColorReverse: #FFFFFF;
+}
+
+/* Lightmode */
+body.accessible-theme {
+  /* TYPOGRAPHIE */
+  --fontTitre: "Luciole";
+  --fontTexte: "Luciole";
+  --fontAlt: "Luciole";
 }
 
 /************* Layout Grid pour les différents format **************/
@@ -178,16 +214,16 @@ les resolutions d'ecrans*/
   margin-right: auto;
 }
 
-.container-marges {
+.container-marges-desktop {
   padding-left: var(--marginDesktop);
   padding-right: var(--marginDesktop);
 }
 
-.container-marges-left {
+.container-marges-left-desktop {
   padding-left: var(--marginDesktop);
 }
 
-.container-marges-right {
+.container-marges-right-desktop {
   padding-right: var(--marginDesktop);
 }
 
@@ -222,7 +258,15 @@ les resolutions d'ecrans*/
     max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .container-marges-tablet {
     padding-left: var(--marginTablet);
+    padding-right: var(--marginTablet);
+  }
+  .container-marges-left-tablet {
+    padding-left: var(--marginTablet);
+  }
+  .container-marges-right-tablet {
     padding-right: var(--marginTablet);
   }
 }
@@ -240,13 +284,21 @@ les resolutions d'ecrans*/
   .small-4-4 {
     width: calc(100% - 0 * var(--gouttiere) / 1);
   }
-  /*Container Tablet*/
+  /*Container Smartphone*/
   .container-full {
     max-width: 500px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: var(--marginPhone);
-    padding-right: var(--marginPhone);
+  }
+  .container-marges-smartphone {
+    padding-left: var(--marginSmartphone);
+    padding-right: var(--marginSmartphone);
+  }
+  .container-marges-left-smartphone {
+    padding-left: var(--marginSmartphone);
+  }
+  .container-marges-right-smartphone {
+    padding-right: var(--marginSmartphone);
   }
 }
 /************* Marges et Paddings Génériques **************/
@@ -464,9 +516,9 @@ les resolutions d'ecrans*/
 .card {
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(48, 48, 48, 0.75);
+  background-color: var(--backgroundCard);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  border: 1px solid var(--borderColorCard);
 }
 
 .card-1h {
@@ -481,121 +533,34 @@ les resolutions d'ecrans*/
   height: 840px;
 }
 
+/*Tablets*/
+@media all and (min-width: 500px) and (max-width: 1024px) {
+  .card-1h-tablet {
+    height: 200px;
+  }
+  .card-2h-tablet {
+    height: 420px;
+  }
+  .card-4h-tablet {
+    height: 840px;
+  }
+}
+/*Smartphones*/
+@media all and (max-width: 500px) {
+  .card-1h-smartphone {
+    height: 200px;
+  }
+  .card-2h-smartphone {
+    height: 420px;
+  }
+  .card-4h-smartphone {
+    height: 840px;
+  }
+}
 .grid {
   display: grid;
   grid-auto-flow: row dense;
   gap: var(--gouttiere) var(--gouttiere);
-}
-
-/********** Général **********/
-body {
-  font-family: var(--fontTexte);
-  background-color: var(--backgroundColorDark);
-  color: var(--textColorDark);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--fontTitre);
-}
-
-h1 {
-  font-size: 2rem;
-  color: var(--firstColor);
-}
-
-a {
-  text-decoration: none;
-  color: var(--secondColor);
-}
-
-.display-none {
-  display: none;
-}
-
-.picto-48 {
-  width: 48px;
-  height: 48px;
-}
-
-.picto-36 {
-  width: 36px;
-  height: 36px;
-}
-
-/********** Page d'accueil **********/
-/* Mise en place du background */
-.background {
-  background-position: right;
-  background-repeat: no-repeat;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-}
-
-.bg-accueil {
-  background-image: url("../img/background/background-accueil.jpg");
-  background-position: right;
-}
-
-/* Mise en place du header avec la photo, l'accroche et le menu */
-.header-accueil {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-}
-
-.header-accueil img {
-  height: 100%;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-.header-accueil nav {
-  color: var(--firstColor);
-  font-size: 1.5rem;
-  font-family: var(--fontAlt);
-}
-
-.header-accueil nav a {
-  display: inline;
-}
-
-.header-accueil nav ul {
-  color: var(--firstColor);
-  border-left: 2px solid var(--firstColor);
-  padding-left: var(--gouttiere);
-}
-
-.menu-actif {
-  font-weight: 600;
-  font-size: 2rem;
-}
-
-/* Mise en place des icones de navigation */
-.navigation {
-  position: fixed;
-  top: 85vh;
-  right: 20px;
-}
-
-.navigation .button {
-  cursor: pointer;
-}
-
-.picto {
-  width: 48px;
-  height: 48px;
-  font-size: 1.5rem;
-  background-color: var(--firstColor);
-  color: var(--blackColor);
-  border-radius: 50%;
 }
 
 /* Mise en place du grid pour la partie à propos */
@@ -605,6 +570,22 @@ a {
   grid-template-areas: "a-propos soft-skills" "description description" "formation dev-language" "formation dev-tools";
 }
 
+/*Tablets*/
+@media all and (min-width: 500px) and (max-width: 1024px) {
+  .grid-a-propos {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "a-propos soft-skills" "description description" "formation dev-language" "formation dev-tools";
+  }
+}
+/*Smartphones*/
+@media all and (max-width: 500px) {
+  .grid-a-propos {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "a-propos" "soft-skills" "description" "description" "formation" "formation" "dev-language" "dev-tools";
+  }
+}
 .description {
   grid-area: description;
 }
@@ -636,6 +617,22 @@ a {
   grid-template-areas: "carriere-1" "carriere-2" "carriere-3" "carriere-4";
 }
 
+/*Tablets*/
+@media all and (min-width: 500px) and (max-width: 1024px) {
+  .grid-carriere {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "carriere-1" "carriere-2" "carriere-3" "carriere-4";
+  }
+}
+/*Smartphones*/
+@media all and (max-width: 500px) {
+  .grid-carriere {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "carriere-1" "carriere-1" "carriere-2" "carriere-2" "carriere-3" "carriere-3" "carriere-4" "carriere-4";
+  }
+}
 .carriere-1 {
   grid-area: carriere-1;
 }
@@ -659,6 +656,22 @@ a {
   grid-template-areas: "projet-1 projet-2" "projet-3 projet-4" "projet-5 projet-6" "projet-7 projet-8";
 }
 
+/*Tablets*/
+@media all and (min-width: 500px) and (max-width: 1024px) {
+  .grid-projets {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "projet-1 projet-2" "projet-3 projet-4" "projet-5 projet-6" "projet-7 projet-8";
+  }
+}
+/*Smartphones*/
+@media all and (max-width: 500px) {
+  .grid-projets {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "projet-1" "projet-2" "projet-3" "projet-4" "projet-5" "projet-6" "projet-7" "projet-8";
+  }
+}
 .projet-1 {
   grid-area: projet-1;
 }
@@ -689,56 +702,6 @@ a {
 
 .projet-8 {
   grid-area: projet-8;
-}
-
-.plus-projet {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  background-image: url("../img/icons/plus.png");
-  background-size: contain;
-}
-
-/********** Page d'un projet **********/
-/* Mise en place du background */
-.background {
-  background-repeat: no-repeat;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  height: 100vh;
-  width: 100%;
-}
-
-.bg-projet {
-  background-position: center;
-  background-image: url("../img/background/background-projet.jpg");
-  background-size: cover;
-}
-
-/* Mise en place du header avec la photo, l'accroche et le menu */
-.header-projet {
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-.header-projet-max {
-  height: 45vh;
-}
-
-.header-projet-min {
-  height: 70px;
-}
-
-.header-projet .image-projet {
-  background-image: url("../img/images/projet-moovizy-ux.png");
-  background-position: center;
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-  border-radius: 0 0 50px 50px;
-  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 /* Mise en place du grid pour la partie à propos */
@@ -808,6 +771,226 @@ a {
 
 .image-desktop-4 {
   grid-area: image-desktop-4;
+}
+
+/********** Général **********/
+body {
+  font-family: var(--fontTexte);
+  background-color: var(--backgroundColor);
+  color: var(--textColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--fontTitre);
+}
+
+h1 {
+  font-size: 2rem;
+  color: var(--firstColor);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--firstColor);
+  margin-bottom: var(--gouttiere);
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondColor);
+}
+
+.display-none {
+  display: none;
+}
+
+.picto-48 {
+  width: 48px;
+  height: 48px;
+}
+
+.picto-36 {
+  width: 36px;
+  height: 36px;
+}
+
+/********** Page d'accueil **********/
+/* Mise en place du background */
+.background {
+  background-position: right;
+  background-repeat: no-repeat;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.bg-accueil {
+  background-image: url("../img/background/background-accueil.jpg");
+  background-position: right;
+}
+
+/* Mise en place du header avec la photo, l'accroche et le menu */
+.header-accueil {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.header-accueil img {
+  height: 100%;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.header-accueil nav {
+  color: var(--firstColor);
+  font-size: 1.5rem;
+  font-family: var(--fontAlt);
+}
+
+.header-accueil nav a {
+  display: inline;
+}
+
+.header-accueil nav ul {
+  color: var(--firstColor);
+  border-left: 2px solid var(--firstColor);
+  padding-left: var(--gouttiere);
+}
+
+.header-accueil-burger {
+  display: none;
+}
+
+.menu-actif {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+/* Mise en place des icones de navigation */
+.navigation {
+  position: fixed;
+  bottom: 2vh;
+  right: var(--gouttiere);
+  z-index: 1;
+}
+
+.navigation .button {
+  cursor: pointer;
+}
+
+.picto {
+  font-size: 1.5rem;
+  border-radius: 50%;
+}
+
+.picto-background {
+  font-size: 1.5rem;
+  background-color: var(--firstColor);
+  color: var(--textColorReverse);
+  border-radius: 50%;
+}
+
+.picto-48 {
+  width: 48px;
+  height: 48px;
+}
+
+.picto-36 {
+  width: 36px;
+  height: 36px;
+}
+
+.plus-projet {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-image: url("../img/icons/plus.png");
+  background-size: contain;
+}
+
+/********** Page d'un projet **********/
+/* Mise en place du background */
+.background {
+  background-repeat: no-repeat;
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+}
+
+.bg-projet {
+  background-position: center;
+  background-image: url("../img/background/background-projet.jpg");
+  background-size: cover;
+}
+
+/* Mise en place du header avec la photo, l'accroche et le menu */
+.header-projet {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.header-projet-max {
+  height: 45vh;
+}
+
+.header-projet-min {
+  height: 70px;
+}
+
+.header-projet .image-projet {
+  background-image: url("../img/images/projet-moovizy-ux.png");
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 0 0 50px 50px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/*Smartphones*/
+@media all and (max-width: 500px) {
+  .header-accueil {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transition: transform 400ms linear;
+    transform: translateX(-100%);
+  }
+  .header-accueil-affiche {
+    transform: translateX(0);
+  }
+  .menu-burger {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    padding: 5px;
+    position: fixed;
+    top: var(--gouttiere);
+    left: var(--gouttiere);
+    z-index: 2;
+    background-color: var(--firstColor);
+    border-radius: var(--radiusSmall);
+  }
+  .menu-burger > span {
+    width: 30px;
+    display: block;
+    height: 3px;
+    background-color: var(--textColorReverse);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

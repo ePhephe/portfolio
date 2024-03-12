@@ -2,9 +2,9 @@
 .card {
     -webkit-backdrop-filter: blur(16px) saturate(180%);
     backdrop-filter: blur(16px) saturate(180%);
-    background-color: rgba(48, 48, 48, 0.75);
+    background-color: var(--backgroundCard);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+    border: 1px solid var(--borderColorCard);
 }
 
 .card-1h {
@@ -15,4 +15,29 @@
 }
 .card-4h {
     height: 840px;
+}
+
+/*Tablets*/
+@media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
+    .card-1h-tablet {
+        height: 200px;
+    }
+    .card-2h-tablet  {
+        height: 420px;
+    }
+    .card-4h-tablet  {
+        height: 840px;
+    }
+}
+/*Smartphones*/
+@media all and (max-width : $widthSmartphone) {
+    .card-1h-smartphone {
+        height: 200px;
+    }
+    .card-2h-smartphone  {
+        height: 420px;
+    }
+    .card-4h-smartphone  {
+        height: 840px;
+    }
 }
