@@ -12,8 +12,11 @@
 
 <body class="container-full flex justify-between">
 
-    <!-- Div pour l'affichage du backgrounde -->
+    <!-- Div pour l'affichage du background -->
     <div class="container-full background bg-accueil">
+    </div>
+    <!-- Div pour l'affichage du background -->
+    <div class="background-pointer" id="pointer">
     </div>
 
     <!-- Header avec navigation sur la partie gauche de la page -->
@@ -32,20 +35,20 @@
                 <div>
                     class <a href="" title="Accès à mon portfolio">Mickael</a> {
                 </div>
-                <ul class="flex direction-column gap">
-                    <li class="menu-actif">
+                <ul class="flex direction-column gap menu-navigation">
+                    <li class="menu-actif" data-section="0">
                         public var <a href="" title="Accès à la partie A propos">A propos</a>
                     </li>
-                    <li>
+                    <li data-section="1">
                         private function <a href="" title="Voir ma carrière">Carrière</a>
                     </li>
-                    <li>
+                    <li data-section="2">
                         private function <a href="" title="Voir mes projets">Projets</a>
                     </li>
                 </ul>
                 <ul class="flex direction-column gap">
                     <li>
-                        public function <a href="">Contact</a>
+                        public function Contact
                     </li>
                     <li class="flex gap">
                         <a href="" title="Envoyez-moi un mail"><i class="fa-regular fa-paper-plane"></i></a>
@@ -66,8 +69,8 @@
             <div class="picto-background picto-48 button flex justify-center align-center" id="page-up"><i class="fa-solid fa-chevron-up"></i></div>
             <div class="picto-background picto-48 button flex justify-center align-center" id="page-down"><i class="fa-solid fa-chevron-down"></i></div>
         </div>
-        <section class="padding-top-40px margin-bottom-20px">
-            <h2 class="card">A propos</h2>
+        <section data-section="0" class="padding-top-40px margin-bottom-20px active">
+            <h2 class="card h2-responsive">A propos</h2>
             <div class="grid grid-a-propos">
                 <div class="a-propos card card-1h"></div>
                 <div class="soft-skills card card-1h"></div>
@@ -77,8 +80,8 @@
                 <div class="dev-tools card card-1h"></div>
             </div>
         </section>
-        <section class="padding-top-40px margin-bottom-20px">
-            <h2 class="card">Carrière</h2>
+        <section data-section="1" class="padding-top-40px margin-bottom-20px opacity-yes">
+            <h2 class="card h2-responsive">Carrière</h2>
             <div class="grid grid-carriere">
                 <div class="carriere-1 card card-1h card-2h-smartphone"></div>
                 <div class="carriere-2 card card-1h card-2h-smartphone"></div>
@@ -86,8 +89,8 @@
                 <div class="carriere-4 card card-1h card-2h-smartphone"></div>
             </div>
         </section>
-        <section class="padding-top-40px margin-bottom-20px">
-            <h2 class="card">Projets</h2>
+        <section data-section="2" class="padding-top-40px margin-bottom-20px opacity-yes">
+            <h2 class="card h2-responsive">Projets</h2>
             <div class="grid grid-projets">
                 <div class="projet-1 card card-1h">
                     <a class="picto picto-36 plus-projet" href="./projet.html" title="Accès au projet">

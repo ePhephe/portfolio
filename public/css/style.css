@@ -801,6 +801,10 @@ h2 {
   text-align: center;
 }
 
+.h2-responsive {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: var(--secondColor);
@@ -832,6 +836,19 @@ a {
   width: 100%;
 }
 
+.background-pointer {
+  position: fixed;
+  pointer-events: none;
+  z-index: 30;
+  inset: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  transition-duration: 0.3s;
+  transition-property: background;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .bg-accueil {
   background-image: url("../img/background/background-accueil.jpg");
   background-position: right;
@@ -842,6 +859,7 @@ a {
   position: sticky;
   top: 0;
   height: 100vh;
+  background-color: var(--backgroundColor);
 }
 
 .header-accueil img {
@@ -866,7 +884,7 @@ a {
   padding-left: var(--gouttiere);
 }
 
-.header-accueil-burger {
+.menu-burger {
   display: none;
 }
 
@@ -917,17 +935,31 @@ a {
   background-size: contain;
 }
 
-/********** Page d'un projet **********/
-/* Mise en place du background */
-.background {
-  background-repeat: no-repeat;
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  height: 100vh;
-  width: 100%;
+/* Mise en forme des sections */
+main {
+  position: relative;
 }
 
+section {
+  transition: opacity 400ms ease-in-out;
+  width: calc(100% - var(--marginDesktop));
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.opacity-yes {
+  opacity: 0;
+  z-index: -10;
+}
+
+.opacity-none {
+  opacity: 1;
+  z-index: 0;
+}
+
+/********** Page d'un projet **********/
+/* Mise en place du background */
 .bg-projet {
   background-position: center;
   background-image: url("../img/background/background-projet.jpg");
@@ -961,6 +993,9 @@ a {
 
 /*Smartphones*/
 @media all and (max-width: 500px) {
+  .h2-responsive {
+    display: block;
+  }
   .header-accueil {
     position: fixed;
     top: 0;
@@ -971,6 +1006,9 @@ a {
   }
   .header-accueil-affiche {
     transform: translateX(0);
+  }
+  .menu-navigation {
+    display: none;
   }
   .menu-burger {
     display: flex;
@@ -990,6 +1028,30 @@ a {
     display: block;
     height: 3px;
     background-color: var(--textColorReverse);
+  }
+  .menu-burger-close > span {
+    position: absolute;
+    transition: transform 400ms linear;
+  }
+  .menu-burger-close span.burger-top {
+    transform: rotate(45deg);
+    top: 22px;
+    width: 40px;
+  }
+  .menu-burger-close span.burger-middle {
+    display: none;
+  }
+  .menu-burger-close span.burger-bottom {
+    transform: rotate(-45deg);
+    top: 22px;
+    width: 40px;
+  }
+  section {
+    transition: opacity 400ms ease-in-out;
+    width: calc(100% - var(--marginSmartphone) * 2);
+    position: absolute;
+    top: 0;
+    left: var(--marginSmartphone);
   }
 }
 
