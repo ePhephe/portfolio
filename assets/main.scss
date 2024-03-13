@@ -103,19 +103,14 @@ a {
     width: fit-content;
 }
 
-.header-accueil nav {
+nav {
     color: var(--firstColor);
     font-size: 1.5rem;
     font-family: var(--fontAlt);
 }
 
-.header-accueil nav a {
+nav a {
     display: inline;
-}
-
-.header-accueil nav ul {
-    color: var(--firstColor);
-    padding-left: var(--gouttiere);
 }
 
 .switch-theme p {
@@ -198,6 +193,8 @@ a {
     font-weight: 600;
     font-size: 2rem;
 }
+
+
 
 /* Mise en place des icones de navigation */
 .navigation {
@@ -312,12 +309,30 @@ section {
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 1;
+        z-index: 10;
         transition: transform 400ms linear;
         transform: translateX(-100%);
     }
     .header-accueil-affiche {
         transform: translateX(0);
+    }
+    .bottom-navigation {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        background-color: var(--backgroundColor);
+        font-size: 1.2rem;
+    }
+    .menu-actif-bottom {
+        font-weight: 600;
+        font-size: 1.7rem;
+    }
+    li.menu-actif-bottom {
+        border-top: 2px solid var(--secondColor);
     }
     .menu-navigation {
         display: none;
@@ -329,9 +344,9 @@ section {
         align-content: space-around;
         padding: 5px;
         position: fixed;
-        top:var(--gouttiere);
-        left: var(--gouttiere);
-        z-index: 2;
+        top: 10px;
+        left: 10px;
+        z-index: 11;
         background-color: var(--firstColor);
         border-radius: var(--radiusSmall);
     }
@@ -357,6 +372,10 @@ section {
         transform: rotate(-45deg);
         top: 22px;
         width:40px;
+    }
+    .navigation {
+        bottom: 60px;
+        right: 10px;
     }
     section {
         transition: opacity 400ms ease-in-out;

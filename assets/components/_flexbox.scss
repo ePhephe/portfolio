@@ -15,8 +15,15 @@
     align-items: center;
 }
 
+.content-center {
+    align-content: center;
+}
+
 .justify-between {
     justify-content: space-between;
+}
+.justify-around {
+    justify-content: space-around;
 }
 
 .gap {

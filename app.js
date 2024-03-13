@@ -51,6 +51,7 @@ function changeSection(direction,section=``) {
     let bodySections = document.querySelectorAll(`main section`);
     let sectionActive = document.querySelector(`main section.active`);
     let liMenuSection = document.querySelectorAll(`.menu-navigation li`);
+    let liBottomMenuSection = document.querySelectorAll(`.bottom-navigation li`);
     let numSection = parseInt(sectionActive.getAttribute(`data-section`));
     let newNumSection = 0;
 
@@ -95,6 +96,15 @@ function changeSection(direction,section=``) {
             li.classList.remove(`menu-actif`);
         }
     });
+
+    liBottomMenuSection.forEach(li => {
+        if(newNumSection===parseInt(li.getAttribute(`data-section`))) {
+            li.classList.add(`menu-actif-bottom`);
+        }
+        else {
+            li.classList.remove(`menu-actif-bottom`);
+        }
+    });
 }
 
 //On récupère les variables nécessaires pour faire slider les sections
@@ -113,6 +123,16 @@ elementDown.addEventListener(`click`,(e)=>{
 let liMenuSection = document.querySelectorAll(`.menu-navigation li a`);
 //Listener sur les éléments li de navigation
 liMenuSection.forEach(lien => {
+    lien.addEventListener(`click`,(e)=>{
+        e.preventDefault();
+        changeSection(``,parseInt(lien.parentElement.getAttribute(`data-section`)))
+    });
+});
+
+//On récupère les varibales pour notre menu
+let liBottomMenuSection = document.querySelectorAll(`.bottom-navigation li a`);
+//Listener sur les éléments li de navigation
+liBottomMenuSection.forEach(lien => {
     lien.addEventListener(`click`,(e)=>{
         e.preventDefault();
         changeSection(``,parseInt(lien.parentElement.getAttribute(`data-section`)))
