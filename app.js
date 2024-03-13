@@ -4,6 +4,8 @@ const isDarkMode = () =>
 //On récupère les éléments pour le menu burger
 let divMenuBurger = document.getElementById(`menuBurger`);
 let headerAccueil = document.getElementById(`headerAccueil`);
+let inputTheme = document.getElementById(`switchTheme`);
+let inputPolice = document.getElementById(`switchPolice`);
 
 //On ajouter un listener click sur le menu burger
 divMenuBurger.addEventListener(`click`,(e)=>{
@@ -17,13 +19,31 @@ divMenuBurger.addEventListener(`click`,(e)=>{
  */
 function setTheme(darkMode){
     let body = document.querySelector(`body`);
+
     if(darkMode===true) {
         body.classList.remove(`light-theme`);
         body.classList.add(`dark-theme`);
+        inputTheme.checked = true;
     }
     else {
         body.classList.remove(`dark-theme`);
         body.classList.add(`light-theme`);
+        inputTheme.checked = false;
+    }
+}
+
+/**
+ * Applique la bonne police selon le choix de l'utilsateur
+ * @param {booléen} police - True si le darkmode est activé, false sinon.
+ */
+function setPolice(police){
+    let body = document.querySelector(`body`);
+
+    if(police===true) {
+        body.classList.add(`accessible-theme`);
+    }
+    else {
+        body.classList.remove(`accessible-theme`);
     }
 }
 
@@ -103,6 +123,17 @@ liMenuSection.forEach(lien => {
 document.addEventListener(`mousemove`,(e)=>{
     let divPointer = document.getElementById(`pointer`);
     divPointer.style = `background: radial-gradient(600px at ${e.clientX}px ${e.clientY}px, rgba(129, 167, 96, 0.15), transparent 80%);`
+});
+
+
+//Listener sur le bouton pour la slide en haut
+inputTheme.addEventListener(`change`,(e)=>{
+    setTheme(e.target.checked);
+});
+
+//Listener sur le bouton pour la slide en haut
+inputPolice.addEventListener(`change`,(e)=>{
+    setPolice(e.target.checked);
 });
 
 //Initialisation du thème

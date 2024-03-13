@@ -28,42 +28,56 @@
     <header class="header-accueil container-marges-desktop large-6-12 small-4-4 container-marges-smartphone padding-top-40px" id="headerAccueil">
         <div class="flex direction-column gap">
             <img src="./public/img/images/photo-profil.png" alt="Photo de profil de Mickaël">
-            <p>
-                Je mets toute mon expérience à profit pour construire vos applications web de demain.
-            </p>
+            <div class="flex gap">
+                <div class="switch-theme flex align-center">
+                    <p>Mon thème :</p>
+                    <i class="fa-solid fa-sun"></i>
+                    <input type="checkbox" id="switchTheme">
+                    <label for="switchTheme">Theme</label> 
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <div class="switch-police flex align-center">
+                    <p>Police accessible :</p>
+                    <input type="checkbox" id="switchPolice">
+                    <label for="switchPolice">Police</label> 
+                </div>
+            </div>
             <nav class="flex direction-column gap">
-                <div>
-                    class <a href="" title="Accès à mon portfolio">Mickael</a> {
+                <div class="menu-navigation">
+                    <a href="" title="Accès à mon portfolio">Mickaël DURAND < Menu ></a>
                 </div>
                 <ul class="flex direction-column gap menu-navigation">
                     <li class="menu-actif" data-section="0">
-                        public var <a href="" title="Accès à la partie A propos">A propos</a>
+                        <span class="line-before"></span><a href="" title="Accès à la partie A propos">A propos</a>
                     </li>
                     <li data-section="1">
-                        private function <a href="" title="Voir ma carrière">Carrière</a>
+                        <span class="line-before"></span><a href="" title="Voir ma carrière">Carrière</a>
                     </li>
                     <li data-section="2">
-                        private function <a href="" title="Voir mes projets">Projets</a>
+                        <span class="line-before"></span><a href="" title="Voir mes projets">Projets</a>
                     </li>
                 </ul>
-                <ul class="flex direction-column gap">
-                    <li>
-                        public function Contact
-                    </li>
-                    <li class="flex gap">
-                        <a href="" title="Envoyez-moi un mail"><i class="fa-regular fa-paper-plane"></i></a>
-                        <a href="" title="Accès à mon compte LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="" title="Accès à mon compte GitHub"><i class="fa-brands fa-github"></i></a>
-                        <a href="" title="Accès à mon compte Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="" title="Accès à mon compte Spotify"><i class="fa-brands fa-spotify"></i></a>
-                    </li>
-                </ul>
-                <div>
-                    }
+                <div class="menu-navigation">
+                    <a href="" title="Accès à mon portfolio">< / Menu ></Micka></a>
+                </div>
+                <div class="flex gap contact">
+                    Contact
+                    <a href="" title="Envoyez-moi un mail"><i class="fa-regular fa-paper-plane"></i></a>
+                    <a href="" title="Accès à mon compte LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="" title="Accès à mon compte GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="" title="Accès à mon compte Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="" title="Accès à mon compte Spotify"><i class="fa-brands fa-spotify"></i></a>
                 </div>
             </nav>
         </div>
     </header>
+    <nav class="bottom-nav">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
     <main class="container-marges-right-desktop large-6-12 container-marges-smartphone small-4-4">
         <div class="navigation flex direction-column gap">
             <div class="picto-background picto-48 button flex justify-center align-center" id="page-up"><i class="fa-solid fa-chevron-up"></i></div>
