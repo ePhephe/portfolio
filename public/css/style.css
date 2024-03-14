@@ -98,6 +98,11 @@ th {
   --fontTitre: "HinaMincho";
   --fontTexte: "OpenSans";
   --fontAlt: "KiwiMaru";
+  --fontSize20rem: 2rem;
+  --fontSize17rem: 1.7rem;
+  --fontSize15rem: 1.5rem;
+  --fontSize12rem: 1.2rem;
+  --fontSize10rem: 1rem;
   /* Gouttières et Espacements */
   --gouttiere: 20px;
   --marginDesktop: 80px;
@@ -164,6 +169,11 @@ body.accessible-theme {
   --fontTitre: "Luciole";
   --fontTexte: "Luciole";
   --fontAlt: "Luciole";
+  --fontSize20rem: 1.7rem;
+  --fontSize17rem: 1.5rem;
+  --fontSize15rem: 1.2rem;
+  --fontSize12rem: 1rem;
+  --fontSize10rem: 0.9rem;
 }
 
 /************* Layout Grid pour les différents format **************/
@@ -500,20 +510,24 @@ les resolutions d'ecrans*/
   justify-content: center;
 }
 
-.align-center {
-  align-items: center;
-}
-
-.content-center {
-  align-content: center;
-}
-
 .justify-between {
   justify-content: space-between;
 }
 
 .justify-around {
   justify-content: space-around;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.content-center {
+  align-content: center;
 }
 
 .gap {
@@ -576,9 +590,27 @@ les resolutions d'ecrans*/
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: "a-propos soft-skills" "description description" "formation dev-language" "formation dev-tools";
+  /*Tablets*/
+  /*Smartphones*/
 }
-
-/*Tablets*/
+.grid-a-propos .description {
+  grid-area: description;
+}
+.grid-a-propos .a-propos {
+  grid-area: a-propos;
+}
+.grid-a-propos .soft-skills {
+  grid-area: soft-skills;
+}
+.grid-a-propos .formation {
+  grid-area: formation;
+}
+.grid-a-propos .dev-language {
+  grid-area: dev-language;
+}
+.grid-a-propos .dev-tools {
+  grid-area: dev-tools;
+}
 @media all and (min-width: 500px) and (max-width: 1024px) {
   .grid-a-propos {
     grid-template-columns: 1fr 1fr;
@@ -586,7 +618,6 @@ les resolutions d'ecrans*/
     grid-template-areas: "a-propos soft-skills" "description description" "formation dev-language" "formation dev-tools";
   }
 }
-/*Smartphones*/
 @media all and (max-width: 500px) {
   .grid-a-propos {
     grid-template-columns: 1fr;
@@ -594,38 +625,34 @@ les resolutions d'ecrans*/
     grid-template-areas: "a-propos" "soft-skills" "description" "description" "formation" "formation" "dev-language" "dev-tools";
   }
 }
-.description {
-  grid-area: description;
-}
-
-.a-propos {
-  grid-area: a-propos;
-}
-
-.soft-skills {
-  grid-area: soft-skills;
-}
-
-.formation {
-  grid-area: formation;
-}
-
-.dev-language {
-  grid-area: dev-language;
-}
-
-.dev-tools {
-  grid-area: dev-tools;
-}
 
 /* Mise en place du grid pour la partie carrière */
 .grid-carriere {
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: "carriere-1" "carriere-2" "carriere-3" "carriere-4";
+  /*Tablets*/
+  /*Smartphones*/
 }
-
-/*Tablets*/
+.grid-carriere .carriere-1 {
+  grid-area: carriere-1;
+}
+.grid-carriere .carriere-2 {
+  grid-area: carriere-2;
+}
+.grid-carriere .carriere-3 {
+  grid-area: carriere-3;
+}
+.grid-carriere .carriere-4 {
+  grid-area: carriere-4;
+}
+.grid-carriere div > h2 {
+  font-size: var(--fontSize15rem);
+  width: 100%;
+}
+.grid-carriere div > h2 > div {
+  width: 90%;
+}
 @media all and (min-width: 500px) and (max-width: 1024px) {
   .grid-carriere {
     grid-template-columns: 1fr 1fr;
@@ -633,7 +660,6 @@ les resolutions d'ecrans*/
     grid-template-areas: "carriere-1" "carriere-2" "carriere-3" "carriere-4";
   }
 }
-/*Smartphones*/
 @media all and (max-width: 500px) {
   .grid-carriere {
     grid-template-columns: 1fr;
@@ -641,30 +667,45 @@ les resolutions d'ecrans*/
     grid-template-areas: "carriere-1" "carriere-1" "carriere-2" "carriere-2" "carriere-3" "carriere-3" "carriere-4" "carriere-4";
   }
 }
-.carriere-1 {
-  grid-area: carriere-1;
-}
-
-.carriere-2 {
-  grid-area: carriere-2;
-}
-
-.carriere-3 {
-  grid-area: carriere-3;
-}
-
-.carriere-4 {
-  grid-area: carriere-4;
-}
 
 /* Mise en place du grid pour la partie projets */
 .grid-projets {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   grid-template-areas: "projet-1 projet-2" "projet-3 projet-4" "projet-5 projet-6" "projet-7 projet-8";
+  /*Tablets*/
+  /*Smartphones*/
 }
-
-/*Tablets*/
+.grid-projets .projet-1 {
+  grid-area: projet-1;
+}
+.grid-projets .projet-2 {
+  grid-area: projet-2;
+}
+.grid-projets .projet-3 {
+  grid-area: projet-3;
+}
+.grid-projets .projet-4 {
+  grid-area: projet-4;
+}
+.grid-projets .projet-5 {
+  grid-area: projet-5;
+}
+.grid-projets .projet-6 {
+  grid-area: projet-6;
+}
+.grid-projets .projet-7 {
+  grid-area: projet-7;
+}
+.grid-projets .projet-8 {
+  grid-area: projet-8;
+}
+.grid-projets div {
+  background-position: center;
+  background-size: cover;
+  font-family: var(--fontTitre);
+  font-size: var(--fontSize15rem);
+}
 @media all and (min-width: 500px) and (max-width: 1024px) {
   .grid-projets {
     grid-template-columns: 1fr 1fr;
@@ -672,44 +713,12 @@ les resolutions d'ecrans*/
     grid-template-areas: "projet-1 projet-2" "projet-3 projet-4" "projet-5 projet-6" "projet-7 projet-8";
   }
 }
-/*Smartphones*/
 @media all and (max-width: 500px) {
   .grid-projets {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-areas: "projet-1" "projet-2" "projet-3" "projet-4" "projet-5" "projet-6" "projet-7" "projet-8";
   }
-}
-.projet-1 {
-  grid-area: projet-1;
-}
-
-.projet-2 {
-  grid-area: projet-2;
-}
-
-.projet-3 {
-  grid-area: projet-3;
-}
-
-.projet-4 {
-  grid-area: projet-4;
-}
-
-.projet-5 {
-  grid-area: projet-5;
-}
-
-.projet-6 {
-  grid-area: projet-6;
-}
-
-.projet-7 {
-  grid-area: projet-7;
-}
-
-.projet-8 {
-  grid-area: projet-8;
 }
 
 /* Mise en place du grid pour la partie à propos */
@@ -718,24 +727,19 @@ les resolutions d'ecrans*/
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "info-projet role-projet presentation-projet presentation-projet" "histo-projet histo-projet histo-projet techno-projet";
 }
-
-.info-projet {
+.grid-presentation-projet .info-projet {
   grid-area: info-projet;
 }
-
-.role-projet {
+.grid-presentation-projet .role-projet {
   grid-area: role-projet;
 }
-
-.presentation-projet {
+.grid-presentation-projet .presentation-projet {
   grid-area: presentation-projet;
 }
-
-.histo-projet {
+.grid-presentation-projet .histo-projet {
   grid-area: histo-projet;
 }
-
-.techno-projet {
+.grid-presentation-projet .techno-projet {
   grid-area: techno-projet;
 }
 
@@ -745,16 +749,13 @@ les resolutions d'ecrans*/
   grid-template-rows: 1fr;
   grid-template-areas: "image-mobile-1 image-mobile-2 image-mobile-3";
 }
-
-.image-mobile-1 {
+.grid-image-mobile-projet .image-mobile-1 {
   grid-area: image-mobile-1;
 }
-
-.image-mobile-2 {
+.grid-image-mobile-projet .image-mobile-2 {
   grid-area: image-mobile-2;
 }
-
-.image-mobile-3 {
+.grid-image-mobile-projet .image-mobile-3 {
   grid-area: image-mobile-3;
 }
 
@@ -764,20 +765,16 @@ les resolutions d'ecrans*/
   grid-template-rows: 1fr 1fr;
   grid-template-areas: "image-desktop-1 image-desktop-2" "image-desktop-3 image-desktop-4";
 }
-
-.image-desktop-1 {
+.grid-image-desktop-projet .image-desktop-1 {
   grid-area: image-desktop-1;
 }
-
-.image-desktop-2 {
+.grid-image-desktop-projet .image-desktop-2 {
   grid-area: image-desktop-2;
 }
-
-.image-desktop-3 {
+.grid-image-desktop-projet .image-desktop-3 {
   grid-area: image-desktop-3;
 }
-
-.image-desktop-4 {
+.grid-image-desktop-projet .image-desktop-4 {
   grid-area: image-desktop-4;
 }
 
@@ -786,6 +783,7 @@ body {
   font-family: var(--fontTexte);
   background-color: var(--backgroundColor);
   color: var(--textColor);
+  font-size: var(--fontSize10rem);
 }
 
 h1,
@@ -798,19 +796,24 @@ h6 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: var(--fontSize20rem);
   color: var(--firstColor);
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: var(--fontSize20rem);
   color: var(--firstColor);
   border-bottom: 1px solid var(--borderColorCard);
 }
 
+h3 {
+  font-size: var(--fontSize12rem);
+  color: var(--secondColor);
+}
+
 em {
   font-family: var(--fontTitre);
-  font-size: 1.5rem;
+  font-size: var(--fontSize15rem);
   font-style: normal;
 }
 
@@ -821,7 +824,8 @@ a {
 
 ul.liste {
   list-style: disc;
-  list-style-position: inside;
+  list-style-position: outside;
+  margin-left: var(--gouttiere);
 }
 
 .display-none {
@@ -884,7 +888,7 @@ ul.liste {
 
 nav {
   color: var(--firstColor);
-  font-size: 1.5rem;
+  font-size: var(--fontSize15rem);
   font-family: var(--fontAlt);
 }
 
@@ -970,7 +974,7 @@ label:active:after {
 
 .menu-actif {
   font-weight: 600;
-  font-size: 2rem;
+  font-size: var(--fontSize20rem);
 }
 
 /* Mise en place des icones de navigation */
@@ -994,6 +998,7 @@ label:active:after {
   height: 2px;
   width: 30px;
   display: inline-block;
+  transition: width 200ms linear, height 200ms linear;
   margin-right: var(--gouttiere);
 }
 
@@ -1002,13 +1007,18 @@ label:active:after {
   width: 60px;
 }
 
+li:hover .line-before {
+  height: 4px;
+  width: 60px;
+}
+
 .picto {
-  font-size: 1.5rem;
+  font-size: var(--fontSize15rem);
   border-radius: 50%;
 }
 
 .picto-background {
-  font-size: 1.5rem;
+  font-size: var(--fontSize15rem);
   background-color: var(--firstColor);
   color: var(--textColorReverse);
   border-radius: 50%;
@@ -1037,7 +1047,7 @@ main {
   position: relative;
 }
 
-section {
+div.section {
   transition: opacity 400ms ease-in-out;
   width: calc(100% - var(--marginDesktop));
   position: absolute;
@@ -1113,7 +1123,10 @@ section {
     left: 0;
     z-index: 5;
     background-color: var(--backgroundColor);
-    font-size: 1.2rem;
+    font-size: var(--fontSize15rem);
+  }
+  .bottom-navigation li {
+    width: 30%;
   }
   .bottom-navigation-marge {
     width: 100%;
@@ -1122,7 +1135,7 @@ section {
   }
   .menu-actif-bottom {
     font-weight: 600;
-    font-size: 1.7rem;
+    font-size: var(--fontSize17rem);
   }
   li.menu-actif-bottom {
     border-top: 2px solid var(--secondColor);
@@ -1170,7 +1183,7 @@ section {
     bottom: 60px;
     right: 10px;
   }
-  section {
+  div.section {
     transition: opacity 400ms ease-in-out;
     width: calc(100% - var(--marginSmartphone) * 2);
     position: absolute;

@@ -13,11 +13,33 @@
         "description description"
         "formation dev-language"
         "formation dev-tools";
-}
 
-/*Tablets*/
-@media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
-    .grid-a-propos {
+    .description {
+        grid-area: description;
+    }
+
+    .a-propos {
+        grid-area: a-propos;
+    }
+
+    .soft-skills {
+        grid-area: soft-skills;
+    }
+
+    .formation {
+        grid-area: formation;
+    }
+
+    .dev-language {
+        grid-area: dev-language;
+    }
+
+    .dev-tools {
+        grid-area: dev-tools;
+    }
+
+    /*Tablets*/
+    @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
@@ -26,47 +48,24 @@
             "formation dev-language"
             "formation dev-tools";
     }
-}
-/*Smartphones*/
-@media all and (max-width : $widthSmartphone) {
-    .grid-a-propos {
+
+    /*Smartphones*/
+    @media all and (max-width : $widthSmartphone) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            "a-propos" 
+            "a-propos"
             "soft-skills"
             "description"
             "description"
-            "formation" 
             "formation"
-            "dev-language" 
+            "formation"
+            "dev-language"
             "dev-tools";
     }
 }
 
-.description {
-    grid-area: description;
-}
 
-.a-propos {
-    grid-area: a-propos;
-}
-
-.soft-skills {
-    grid-area: soft-skills;
-}
-
-.formation {
-    grid-area: formation;
-}
-
-.dev-language {
-    grid-area: dev-language;
-}
-
-.dev-tools {
-    grid-area: dev-tools;
-}
 
 /* Mise en place du grid pour la partie carrière */
 .grid-carriere {
@@ -77,11 +76,34 @@
         "carriere-2"
         "carriere-3"
         "carriere-4";
-}
 
-/*Tablets*/
-@media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
-    .grid-carriere {
+    .carriere-1 {
+        grid-area: carriere-1;
+    }
+
+    .carriere-2 {
+        grid-area: carriere-2;
+    }
+
+    .carriere-3 {
+        grid-area: carriere-3;
+    }
+
+    .carriere-4 {
+        grid-area: carriere-4;
+    }
+
+    div>h2 {
+        font-size: var(--fontSize15rem);
+        width: 100%;
+    }
+
+    div>h2>div {
+        width: 90%;
+    }
+
+    /*Tablets*/
+    @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
@@ -90,10 +112,9 @@
             "carriere-3"
             "carriere-4";
     }
-}
-/*Smartphones*/
-@media all and (max-width : $widthSmartphone) {
-    .grid-carriere {
+
+    /*Smartphones*/
+    @media all and (max-width : $widthSmartphone) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
@@ -108,21 +129,9 @@
     }
 }
 
-.carriere-1 {
-    grid-area: carriere-1;
-}
 
-.carriere-2 {
-    grid-area: carriere-2;
-}
 
-.carriere-3 {
-    grid-area: carriere-3;
-}
 
-.carriere-4 {
-    grid-area: carriere-4;
-}
 
 /* Mise en place du grid pour la partie projets */
 .grid-projets {
@@ -133,11 +142,48 @@
         "projet-3 projet-4"
         "projet-5 projet-6"
         "projet-7 projet-8";
-}
 
-/*Tablets*/
-@media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
-    .grid-projets {
+    .projet-1 {
+        grid-area: projet-1;
+    }
+
+    .projet-2 {
+        grid-area: projet-2;
+    }
+
+    .projet-3 {
+        grid-area: projet-3;
+    }
+
+    .projet-4 {
+        grid-area: projet-4;
+    }
+
+    .projet-5 {
+        grid-area: projet-5;
+    }
+
+    .projet-6 {
+        grid-area: projet-6;
+    }
+
+    .projet-7 {
+        grid-area: projet-7;
+    }
+
+    .projet-8 {
+        grid-area: projet-8;
+    }
+
+    div {
+        background-position: center;
+        background-size: cover;
+        font-family: var(--fontTitre);
+        font-size: var(--fontSize15rem);
+    }
+
+    /*Tablets*/
+    @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
@@ -146,55 +192,26 @@
             "projet-5 projet-6"
             "projet-7 projet-8";
     }
-}
-/*Smartphones*/
-@media all and (max-width : $widthSmartphone) {
-    .grid-projets {
+
+    /*Smartphones*/
+    @media all and (max-width : $widthSmartphone) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
-            "projet-1" 
+            "projet-1"
             "projet-2"
-            "projet-3" 
+            "projet-3"
             "projet-4"
-            "projet-5" 
+            "projet-5"
             "projet-6"
-            "projet-7" 
+            "projet-7"
             "projet-8";
     }
 }
 
-.projet-1 {
-    grid-area: projet-1;
-}
 
-.projet-2 {
-    grid-area: projet-2;
-}
 
-.projet-3 {
-    grid-area: projet-3;
-}
 
-.projet-4 {
-    grid-area: projet-4;
-}
-
-.projet-5 {
-    grid-area: projet-5;
-}
-
-.projet-6 {
-    grid-area: projet-6;
-}
-
-.projet-7 {
-    grid-area: projet-7;
-}
-
-.projet-8 {
-    grid-area: projet-8;
-}
 
 
 /* Mise en place du grid pour la partie à propos */
@@ -204,27 +221,29 @@
     grid-template-areas:
         "info-projet role-projet presentation-projet presentation-projet"
         "histo-projet histo-projet histo-projet techno-projet";
+
+    .info-projet {
+        grid-area: info-projet;
+    }
+
+    .role-projet {
+        grid-area: role-projet;
+    }
+
+    .presentation-projet {
+        grid-area: presentation-projet;
+    }
+
+    .histo-projet {
+        grid-area: histo-projet;
+    }
+
+    .techno-projet {
+        grid-area: techno-projet;
+    }
 }
 
-.info-projet {
-    grid-area: info-projet;
-}
 
-.role-projet {
-    grid-area: role-projet;
-}
-
-.presentation-projet {
-    grid-area: presentation-projet;
-}
-
-.histo-projet {
-    grid-area: histo-projet;
-}
-
-.techno-projet {
-    grid-area: techno-projet;
-}
 
 /* Mise en place du grid pour la partie à propos */
 .grid-image-mobile-projet {
@@ -232,19 +251,21 @@
     grid-template-rows: 1fr;
     grid-template-areas:
         "image-mobile-1 image-mobile-2 image-mobile-3";
+
+    .image-mobile-1 {
+        grid-area: image-mobile-1;
+    }
+
+    .image-mobile-2 {
+        grid-area: image-mobile-2;
+    }
+
+    .image-mobile-3 {
+        grid-area: image-mobile-3;
+    }
 }
 
-.image-mobile-1 {
-    grid-area: image-mobile-1;
-}
 
-.image-mobile-2 {
-    grid-area: image-mobile-2;
-}
-
-.image-mobile-3 {
-    grid-area: image-mobile-3;
-}
 
 /* Mise en place du grid pour la partie à propos */
 .grid-image-desktop-projet {
@@ -253,20 +274,20 @@
     grid-template-areas:
         "image-desktop-1 image-desktop-2"
         "image-desktop-3 image-desktop-4";
-}
 
-.image-desktop-1 {
-    grid-area: image-desktop-1;
-}
+    .image-desktop-1 {
+        grid-area: image-desktop-1;
+    }
 
-.image-desktop-2 {
-    grid-area: image-desktop-2;
-}
+    .image-desktop-2 {
+        grid-area: image-desktop-2;
+    }
 
-.image-desktop-3 {
-    grid-area: image-desktop-3;
-}
+    .image-desktop-3 {
+        grid-area: image-desktop-3;
+    }
 
-.image-desktop-4 {
-    grid-area: image-desktop-4;
+    .image-desktop-4 {
+        grid-area: image-desktop-4;
+    }
 }

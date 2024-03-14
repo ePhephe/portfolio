@@ -13,6 +13,7 @@ body {
     font-family: var(--fontTexte);
     background-color: var(--backgroundColor);
     color: var(--textColor);
+    font-size: var(--fontSize10rem);
 }
 
 h1,
@@ -25,19 +26,24 @@ h6 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: var(--fontSize20rem);
     color: var(--firstColor);
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: var(--fontSize20rem);
     color: var(--firstColor);
     border-bottom: 1px solid var(--borderColorCard);
 }
 
+h3 {
+    font-size: var(--fontSize12rem);
+    color: var(--secondColor);
+}
+
 em {
     font-family: var(--fontTitre);
-    font-size: 1.5rem;
+    font-size: var(--fontSize15rem);
     font-style: normal;
 }
 
@@ -48,7 +54,8 @@ a {
 
 ul.liste {
     list-style:disc;
-    list-style-position: inside;
+    list-style-position: outside;
+    margin-left: var(--gouttiere);
 }
 
 .display-none {
@@ -111,7 +118,7 @@ ul.liste {
 
 nav {
     color: var(--firstColor);
-    font-size: 1.5rem;
+    font-size: var(--fontSize15rem);
     font-family: var(--fontAlt);
 }
 
@@ -197,7 +204,7 @@ nav a {
 
 .menu-actif {
     font-weight: 600;
-    font-size: 2rem;
+    font-size: var(--fontSize20rem);
 }
 
 
@@ -222,18 +229,23 @@ nav a {
     height: 2px;
     width: 30px;
     display: inline-block;
+    transition: width 200ms linear,height 200ms linear;
     margin-right: var(--gouttiere)
 }
 .menu-actif .line-before {
     height: 4px;
     width: 60px;
 }
+li:hover .line-before {
+    height: 4px;
+    width: 60px;
+}
 .picto {
-    font-size: 1.5rem;
+    font-size: var(--fontSize15rem);
     border-radius: 50%;
 }
 .picto-background {
-    font-size: 1.5rem;
+    font-size: var(--fontSize15rem);
     background-color: var(--firstColor);
     color: var(--textColorReverse);
     border-radius: 50%;
@@ -260,7 +272,7 @@ nav a {
 main {
     position: relative;
 }
-section {
+div.section {
     transition: opacity 400ms ease-in-out;
     width: calc(100% - var(--marginDesktop));
     position: absolute;
@@ -331,7 +343,10 @@ section {
         left: 0;
         z-index: 5;
         background-color: var(--backgroundColor);
-        font-size: 1.2rem;
+        font-size: var(--fontSize15rem);
+    }
+    .bottom-navigation li {
+        width:30%;
     }
     .bottom-navigation-marge {
         width: 100%;
@@ -340,7 +355,7 @@ section {
     }
     .menu-actif-bottom {
         font-weight: 600;
-        font-size: 1.7rem;
+        font-size: var(--fontSize17rem);
     }
     li.menu-actif-bottom {
         border-top: 2px solid var(--secondColor);
@@ -388,7 +403,7 @@ section {
         bottom: 60px;
         right: 10px;
     }
-    section {
+    div.section {
         transition: opacity 400ms ease-in-out;
         width: calc(100% - var(--marginSmartphone)*2);
         position: absolute;

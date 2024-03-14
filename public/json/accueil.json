@@ -61,7 +61,7 @@
         },
         {
             "id" : "devTools",
-            "titre" : "Tools",
+            "titre" : "Outils",
             "items" : [
                 {"libelle" : "VS Code"},
                 {"libelle" : "SASS"},
@@ -71,6 +71,95 @@
             ]
         }
     ],
-    "carriere" : "",
-    "projets" : ""
+    "carriere" : [
+        {
+            "id": "1",
+            "metier": "Manager de Projets Digital",
+            "employeur": "LOCAM SAS",
+            "lieu": "Saint-Etienne, LOIRE",
+            "dates": "1 an (2022/2023)",
+            "description": "Gestion du projet de refonte de l’extranet partenaires dans le contexte du projet de transformation : Gestion du planning et du budget, Conception et spécifications, Suivi des développements, Phase de tests,Déploiement d’API et de la signature électronique auprès des partenaires.",
+            "link": "https://www.locam.fr"
+        },
+        {
+            "id": "2",
+            "metier": "Chargé de Missions Digital",
+            "employeur": "LOCAM SAS",
+            "lieu": "Saint-Etienne, LOIRE",
+            "dates": "6 ans (2016/2022)",
+            "description": "Gestion du projet de refonte de l’extranet partenaires dans le contexte du projet de transformation : Gestion du planning et du budget, Conception et spécifications, Suivi des développements, Phase de tests,Déploiement d’API et de la signature électronique auprès des partenaires.",
+            "link": "https://www.locam.fr"
+        },
+        {
+            "id": "3",
+            "metier": "Webmarketer",
+            "employeur": "LOCAM SAS",
+            "lieu": "Saint-Etienne, LOIRE",
+            "dates": "2 ans (2014/2016)",
+            "description": "Gestion du projet de refonte de l’extranet partenaires dans le contexte du projet de transformation : Gestion du planning et du budget, Conception et spécifications, Suivi des développements, Phase de tests,Déploiement d’API et de la signature électronique auprès des partenaires.",
+            "link": "https://www.locam.fr"
+        },
+        {
+            "id": "4",
+            "metier": "Analyste Informatique",
+            "employeur": "LOCAM SAS",
+            "lieu": "Saint-Etienne, LOIRE",
+            "dates": "5 ans (2009/2014)",
+            "description": "Gestion du projet de refonte de l’extranet partenaires dans le contexte du projet de transformation : Gestion du planning et du budget, Conception et spécifications, Suivi des développements, Phase de tests,Déploiement d’API et de la signature électronique auprès des partenaires.",
+            "link": "https://www.locam.fr"
+        }
+    ],
+    "projets": [
+        {
+            "id": "1",
+            "libelle": "Moovizy",
+            "color": "black",
+            "competence": "UX Design / Figma",
+            "background": "projet-moovizy-ux.png"
+        },
+        {
+            "id": "2",
+            "libelle": "Moovizy",
+            "color": "black",
+            "competence": "UX Design / Figma",
+            "background": "projet-moovizy-ux.png"
+        },
+        {
+            "id": "3",
+            "libelle": "Moovizy",
+            "color": "black",
+            "competence": "UX Design / Figma",
+            "background": "projet-moovizy-ux.png"
+        },
+        {
+            "id": "4",
+            "libelle": "",
+            "competence": "",
+            "background": ""
+        },
+        {
+            "id": "5",
+            "libelle": "",
+            "competence": "",
+            "background": ""
+        },
+        {
+            "id": "6",
+            "libelle": "",
+            "competence": "",
+            "background": ""
+        },
+        {
+            "id": "7",
+            "libelle": "",
+            "competence": "",
+            "background": ""
+        },
+        {
+            "id": "8",
+            "libelle": "",
+            "competence": "",
+            "background": ""
+        }
+    ]
 }

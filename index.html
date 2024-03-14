@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mickaël - Développeur Web Full Stack à Saint-Etienne</title>
     <meta name="description" content="">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./public/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./public/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./public/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./public/img/favicon/site.webmanifest">
+    
     <link rel="stylesheet" href="./public/css/style.css">
     <script src="https://kit.fontawesome.com/2314cf2df4.js" crossorigin="anonymous"></script>
 </head>
@@ -30,7 +36,7 @@
             <img src="./public/img/images/photo-profil.png" alt="Photo de profil de Mickaël">
             <div class="flex gap">
                 <div class="switch-theme flex align-center">
-                    <p>Mon thème :</p>
+                    <p>Thème :</p>
                     <i class="fa-solid fa-sun"></i>
                     <input type="checkbox" id="switchTheme">
                     <label for="switchTheme">Theme</label> 
@@ -44,38 +50,38 @@
             </div>
             <nav class="flex direction-column gap">
                 <div class="menu-navigation">
-                    <a href="" title="Accès à mon portfolio">Mickaël DURAND</a> < Menu >
+                    <a href="" title="Accès à mon portfolio">Mickaël DURAND</a> &lt; Menu &gt;
                 </div>
                 <ul class="flex direction-column gap menu-navigation">
                     <li class="menu-actif" data-section="0">
-                        <span class="line-before"></span><a href="" title="Accès à la partie A propos">A propos</a>
+                        <span class="line-before"></span><a href="" title="Accès à la partie A propos"><i class="fa-solid fa-user"></i> A propos</a>
                     </li>
                     <li data-section="1">
-                        <span class="line-before"></span><a href="" title="Voir ma carrière">Carrière</a>
+                        <span class="line-before"></span><a href="" title="Voir ma carrière"><i class="fa-solid fa-id-card-clip"></i> Carrière</a>
                     </li>
                     <li data-section="2">
-                        <span class="line-before"></span><a href="" title="Voir mes projets">Projets</a>
+                        <span class="line-before"></span><a href="" title="Voir mes projets"><i class="fa-regular fa-folder-open"></i> Projets</a>
                     </li>
                 </ul>
                 <div class="menu-navigation">
-                    < / Menu >
+                    &lt; / Menu &gt;
                 </div>
                 <div class="flex gap contact">
                     Contact
-                    <a href="" title="Envoyez-moi un mail"><i class="fa-regular fa-paper-plane"></i></a>
-                    <a href="" title="Accès à mon compte LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="" title="Accès à mon compte GitHub"><i class="fa-brands fa-github"></i></a>
-                    <a href="" title="Accès à mon compte Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="" title="Accès à mon compte Spotify"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="mailto:mickael.durand@outlook.com" title="Envoyez-moi un mail" target="_blank"><i class="fa-regular fa-paper-plane"></i></a>
+                    <a href="https://www.linkedin.com/in/m-durand" title="Accès à mon compte LinkedIn" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/ePhephe" title="Accès à mon compte GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/ephephe/" title="Accès à mon compte Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://open.spotify.com/playlist/3qT3NJQFRJHVeHiq3VdZ6h?si=fb8072dfbc0d42dc" title="Accès à ma playlist Spotify" target="_blank"><i class="fa-brands fa-spotify"></i></a>
                 </div>
             </nav>
         </div>
     </header>
     <nav class="bottom-navigation">
         <ul class="flex justify-around">
-            <li data-section="0" class="flex align-center menu-actif-bottom"><a href="" title="Accès à la partie A propos">A propos</a></li>
-            <li data-section="1" class="flex align-center"><a href="" title="Voir ma carrière">Carrière</a></li>
-            <li data-section="2" class="flex align-center"><a href="" title="Voir mes projets">Projet</a></li>
+            <li data-section="0" class="flex align-center justify-center menu-actif-bottom"><a href="" title="Accès à la partie A propos"><i class="fa-solid fa-user"></i></a></li>
+            <li data-section="1" class="flex align-center justify-center"><a href="" title="Voir ma carrière"><i class="fa-solid fa-id-card-clip"></i></a></li>
+            <li data-section="2" class="flex align-center justify-center"><a href="" title="Voir mes projets"><i class="fa-regular fa-folder-open"></i></a></li>
         </ul>
     </nav>
     <main class="container-marges-right-desktop large-6-12 container-marges-smartphone small-4-4">
@@ -83,7 +89,7 @@
             <div class="picto-background picto-48 button flex justify-center align-center" id="page-up"><i class="fa-solid fa-chevron-up"></i></div>
             <div class="picto-background picto-48 button flex justify-center align-center" id="page-down"><i class="fa-solid fa-chevron-down"></i></div>
         </div>
-        <section data-section="0" class="padding-top-40px margin-bottom-20px active">
+        <div data-section="0" class="section padding-top-40px margin-bottom-20px active">
             <div class="grid grid-a-propos">
                 <div class="a-propos card card-1h flex direction-column justify-between padding-20px" id="aPropos"></div>
                 <div class="soft-skills card card-1h flex direction-column justify-between padding-20px" id="softSkills"></div>
@@ -93,32 +99,29 @@
                 <div class="dev-tools card card-1h flex direction-column justify-between padding-20px" id="devTools"></div>
             </div>
             <div class="bottom-navigation-marge"></div>
-        </section>
-        <section data-section="1" class="padding-top-40px margin-bottom-20px opacity-yes">
+        </div>
+        <div data-section="1" class="section padding-top-40px margin-bottom-20px opacity-yes">
             <div class="grid grid-carriere">
-                <div class="carriere-1 card card-1h card-2h-smartphone"></div>
-                <div class="carriere-2 card card-1h card-2h-smartphone"></div>
-                <div class="carriere-3 card card-1h card-2h-smartphone"></div>
-                <div class="carriere-4 card card-1h card-2h-smartphone"></div>
+                <div class="carriere-1 card card-1h card-2h-smartphone flex direction-column justify-between padding-20px"></div>
+                <div class="carriere-2 card card-1h card-2h-smartphone flex direction-column justify-between padding-20px"></div>
+                <div class="carriere-3 card card-1h card-2h-smartphone flex direction-column justify-between padding-20px"></div>
+                <div class="carriere-4 card card-1h card-2h-smartphone flex direction-column justify-between padding-20px"></div>
             </div>
             <div class="bottom-navigation-marge"></div>
-        </section>
-        <section data-section="2" class="padding-top-40px margin-bottom-20px opacity-yes">
+        </div>
+        <div data-section="2" class="section padding-top-40px margin-bottom-20px opacity-yes">
             <div class="grid grid-projets">
-                <div class="projet-1 card card-1h">
-                    <a class="picto picto-36 plus-projet" href="./projet.html" title="Accès au projet">
-                    </a>
-                </div>
-                <div class="projet-2 card card-1h"></div>
-                <div class="projet-3 card card-1h"></div>
-                <div class="projet-4 card card-1h"></div>
-                <div class="projet-5 card card-1h"></div>
-                <div class="projet-6 card card-1h"></div>
-                <div class="projet-7 card card-1h"></div>
-                <div class="projet-8 card card-1h"></div>
+                <div class="projet-1 card card-1h flex direction-column justify-end padding-20px"></div>
+                <div class="projet-2 card card-1h flex direction-column justify-end padding-20px"></div>
+                <div class="projet-3 card card-1h flex direction-column justify-end padding-20px"></div>
+                <div class="projet-4 card card-1h flex direction-column justify-end padding-20px"></div>
+                <div class="projet-5 card card-1h flex direction-column justify-end padding-20px"></div>
+                <div class="projet-6 card card-1h flex direction-column justify-end padding-20px"></div>
+                <div class="projet-7 card card-1h flex direction-column justify-end padding-20px"></div>
+                <div class="projet-8 card card-1h flex direction-column justify-end padding-20px"></div>
             </div>
             <div class="bottom-navigation-marge"></div>
-        </section>
+        </div>
     </main> 
 
     <script src="./public/js/app.js"></script>

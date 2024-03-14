@@ -48,8 +48,8 @@ function setPolice(police){
 }
 
 function changeSection(direction,section=``) {
-    let bodySections = document.querySelectorAll(`main section`);
-    let sectionActive = document.querySelector(`main section.active`);
+    let bodySections = document.querySelectorAll(`main div.section`);
+    let sectionActive = document.querySelector(`main div.section.active`);
     let liMenuSection = document.querySelectorAll(`.menu-navigation li`);
     let liBottomMenuSection = document.querySelectorAll(`.bottom-navigation li`);
     let numSection = parseInt(sectionActive.getAttribute(`data-section`));
@@ -70,8 +70,6 @@ function changeSection(direction,section=``) {
     else if(section!=``){
         newNumSection = section;
     }
-
-    console.log(newNumSection);
 
     bodySections.forEach(section => {
         if(newNumSection===parseInt(section.getAttribute(`data-section`))) {

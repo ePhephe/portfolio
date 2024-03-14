@@ -11,19 +11,24 @@
     justify-content: center;
 }
 
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
 .align-center {
     align-items: center;
 }
 
 .content-center {
     align-content: center;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-.justify-around {
-    justify-content: space-around;
 }
 
 .gap {
