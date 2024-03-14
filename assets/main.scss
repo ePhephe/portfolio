@@ -32,17 +32,23 @@ h1 {
 h2 {
     font-size: 2rem;
     color: var(--firstColor);
-    margin-bottom: var(--gouttiere);
-    text-align: center;
+    border-bottom: 1px solid var(--borderColorCard);
 }
 
-.h2-responsive {
-    display: none;
+em {
+    font-family: var(--fontTitre);
+    font-size: 1.5rem;
+    font-style: normal;
 }
 
 a {
     text-decoration: none;
     color: var(--secondColor);
+}
+
+ul.liste {
+    list-style:disc;
+    list-style-position: inside;
 }
 
 .display-none {
@@ -207,7 +213,7 @@ nav a {
     cursor: pointer;
 }
 
-.bottom-navigation {
+.bottom-navigation,.bottom-navigation-marge {
     display: none;
 }
 
@@ -326,6 +332,11 @@ section {
         z-index: 5;
         background-color: var(--backgroundColor);
         font-size: 1.2rem;
+    }
+    .bottom-navigation-marge {
+        width: 100%;
+        height: 70px;
+        display: block;
     }
     .menu-actif-bottom {
         font-weight: 600;

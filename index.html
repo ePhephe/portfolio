@@ -84,27 +84,26 @@
             <div class="picto-background picto-48 button flex justify-center align-center" id="page-down"><i class="fa-solid fa-chevron-down"></i></div>
         </div>
         <section data-section="0" class="padding-top-40px margin-bottom-20px active">
-            <h2 class="card h2-responsive">A propos</h2>
             <div class="grid grid-a-propos">
-                <div class="a-propos card card-1h"></div>
-                <div class="soft-skills card card-1h"></div>
-                <div class="description card card-1h card-2h-smartphone"></div>
-                <div class="formation card card-2h"></div>
-                <div class="dev-language card card-1h"></div>
-                <div class="dev-tools card card-1h"></div>
+                <div class="a-propos card card-1h flex direction-column justify-between padding-20px" id="aPropos"></div>
+                <div class="soft-skills card card-1h flex direction-column justify-between padding-20px" id="softSkills"></div>
+                <div class="description card card-1h card-2h-smartphone padding-20px" id="description"></div>
+                <div class="formation card card-2h flex direction-column justify-between padding-20px" id="formation"></div>
+                <div class="dev-language card card-1h flex direction-column justify-between padding-20px" id="devLanguage"></div>
+                <div class="dev-tools card card-1h flex direction-column justify-between padding-20px" id="devTools"></div>
             </div>
+            <div class="bottom-navigation-marge"></div>
         </section>
         <section data-section="1" class="padding-top-40px margin-bottom-20px opacity-yes">
-            <h2 class="card h2-responsive">Carrière</h2>
             <div class="grid grid-carriere">
                 <div class="carriere-1 card card-1h card-2h-smartphone"></div>
                 <div class="carriere-2 card card-1h card-2h-smartphone"></div>
                 <div class="carriere-3 card card-1h card-2h-smartphone"></div>
                 <div class="carriere-4 card card-1h card-2h-smartphone"></div>
             </div>
+            <div class="bottom-navigation-marge"></div>
         </section>
         <section data-section="2" class="padding-top-40px margin-bottom-20px opacity-yes">
-            <h2 class="card h2-responsive">Projets</h2>
             <div class="grid grid-projets">
                 <div class="projet-1 card card-1h">
                     <a class="picto picto-36 plus-projet" href="./projet.html" title="Accès au projet">
@@ -118,10 +117,12 @@
                 <div class="projet-7 card card-1h"></div>
                 <div class="projet-8 card card-1h"></div>
             </div>
+            <div class="bottom-navigation-marge"></div>
         </section>
-    </main>
+    </main> 
 
-    <script src="./app.js"></script>
+    <script src="./public/js/app.js"></script>
+    <script src="./public/js/accueil.js"></script>
 </body>
 
 </html>

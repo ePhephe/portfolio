@@ -1,0 +1,76 @@
+{
+    "apropos" : [
+        {
+            "id" : "aPropos",
+            "titre" : "Mickaël, 34 ans",
+            "metier" : "Développeur web FullStack",
+            "lieu" : "Loire, FRANCE"
+        },
+        {
+            "id" : "softSkills",
+            "titre" : "Soft skills",
+            "items" : [
+                {"libelle" : "Rigueur"},
+                {"libelle" : "Autonomie"},
+                {"libelle" : "Esprit d'équipe"},
+                {"libelle" : "Pédagogie"}
+            ]
+        },
+        {
+            "id" : "description",
+            "texte" : "Je participe aux projets digitaux en intervenant dans la gestion de projet, l’expertise fonctionnelle et l’expérience utilisateur. Optimisme, bonne humeur, organisation et esprit d’équipe sont les maîtres mots pour mener à bien mes missions."
+        },
+        {
+            "id" : "formation",
+            "titre" : "Formation",
+            "etablissements" : [
+                {
+                    "libelle" : "Webecom",
+                    "diplomes" : [
+                        {"libelle" : "Certification RNCP Développeur web"}
+                    ]
+                },
+                {
+                    "libelle" : "CNAM Saint-Etienne",
+                    "diplomes" : [
+                        {"libelle" : "Ingénieur spécialité informatique"},
+                        {"libelle" : "RNCP Concepteur-Architecte"},
+                        {"libelle" : "Licence générale d'informatique"}
+                    ]
+                },
+                {
+                    "libelle" : "Lycée Simone Weil",
+                    "diplomes" : [
+                        {"libelle" : "BTS Informatique de gestion"},
+                        {"libelle" : "Baccalauréat série Scientifique"}
+                    ]
+                }
+            ]
+        },
+        {
+            "id" : "devLanguage",
+            "titre" : "Langages",
+            "items" : [
+                {"libelle" : "PHP"},
+                {"libelle" : "SQL"},
+                {"libelle" : "Javascript"},
+                {"libelle" : "HTML"},
+                {"libelle" : "CSS"},
+                {"libelle" : "UX/UI"}
+            ]
+        },
+        {
+            "id" : "devTools",
+            "titre" : "Tools",
+            "items" : [
+                {"libelle" : "VS Code"},
+                {"libelle" : "SASS"},
+                {"libelle" : "GitHub"},
+                {"libelle" : "Figma"},
+                {"libelle" : "Symfony"}
+            ]
+        }
+    ],
+    "carriere" : "",
+    "projets" : ""
+}
