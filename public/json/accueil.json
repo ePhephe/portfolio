@@ -55,8 +55,7 @@
                 {"libelle" : "SQL"},
                 {"libelle" : "Javascript"},
                 {"libelle" : "HTML"},
-                {"libelle" : "CSS"},
-                {"libelle" : "UX/UI"}
+                {"libelle" : "CSS"}
             ]
         },
         {
@@ -66,8 +65,7 @@
                 {"libelle" : "VS Code"},
                 {"libelle" : "SASS"},
                 {"libelle" : "GitHub"},
-                {"libelle" : "Figma"},
-                {"libelle" : "Symfony"}
+                {"libelle" : "Figma"}
             ]
         }
     ],
@@ -119,17 +117,17 @@
         },
         {
             "id": "2",
-            "libelle": "Moovizy",
-            "color": "black",
-            "competence": "UX Design / Figma",
-            "background": "projet-moovizy-ux.png"
+            "libelle": "",
+            "color": "",
+            "competence": "",
+            "background": ""
         },
         {
             "id": "3",
-            "libelle": "Moovizy",
-            "color": "black",
-            "competence": "UX Design / Figma",
-            "background": "projet-moovizy-ux.png"
+            "libelle": "",
+            "color": "",
+            "competence": "",
+            "background": ""
         },
         {
             "id": "4",
