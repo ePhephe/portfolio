@@ -79,7 +79,7 @@ function afficheProjets(tabDataProjets) {
 
         if (data.libelle != ``) {
             divAffichage.style = `background-image: url("./public/img/images/${data.background}");color:${data.color};`;
-            templateHtml += `${data.competence}<a class="picto picto-36 picto-center fixed-bottom-right" href="./projet.html?projet-id=${data.id}" title="Accès au projet">
+            templateHtml += `${data.competence}<a class="picto picto-36 rounded picto-center fixed-bottom-right" href="./projet.html?projet-id=${data.id}" title="Accès au projet">
                 <i class="fa-solid fa-plus"></i></a>`;
         }
         else {

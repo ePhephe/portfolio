@@ -822,6 +822,185 @@ les resolutions d'ecrans*/
   width: 40px;
 }
 
+/* Style du menu */
+nav {
+  color: var(--firstColor);
+  font-size: var(--fontSize15rem);
+  font-family: var(--fontAlt);
+}
+nav .line-before {
+  background-color: var(--firstColor);
+  height: 2px;
+  width: 30px;
+  display: inline-block;
+  transition: width 200ms linear, height 200ms linear;
+  margin-right: var(--gouttiere);
+}
+nav li:hover .line-before {
+  height: 4px;
+  width: 60px;
+}
+nav a {
+  display: inline;
+}
+nav .menu-actif {
+  font-weight: 600;
+  font-size: var(--fontSize20rem);
+}
+nav .menu-actif .line-before {
+  height: 4px;
+  width: 60px;
+}
+
+/* Marge pour la partie contact */
+.contact {
+  margin-top: var(--gouttiere);
+}
+
+/* Menu Burger masqué normalement */
+.menu-burger {
+  display: none;
+  /* Affichage en mode smartphone */
+}
+@media all and (max-width: 500px) {
+  .menu-burger {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-around;
+    padding: 5px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 11;
+    background-color: var(--firstColor);
+  }
+  .menu-burger > span {
+    width: 30px;
+    display: block;
+    height: 3px;
+    background-color: var(--textColorReverse);
+  }
+}
+
+/* Croix du menu Burger masqué normalement */
+@media all and (max-width: 500px) {
+  .menu-burger-close > span {
+    position: absolute;
+    transition: transform 400ms linear;
+  }
+  .menu-burger-close span.burger-top {
+    transform: rotate(45deg);
+    top: 22px;
+    width: 40px;
+  }
+  .menu-burger-close span.burger-middle {
+    display: none;
+  }
+  .menu-burger-close span.burger-bottom {
+    transform: rotate(-45deg);
+    top: 22px;
+    width: 40px;
+  }
+}
+
+/* Menu classique */
+.menu-navigation {
+  /* Masqué en format smartphone */
+}
+@media all and (max-width: 500px) {
+  .menu-navigation {
+    display: none;
+  }
+}
+
+/* Mise en place des icones de navigation */
+.navigation {
+  position: fixed;
+  bottom: 2vh;
+  right: var(--gouttiere);
+  z-index: 1;
+}
+@media all and (max-width: 500px) {
+  .navigation {
+    display: none;
+  }
+}
+
+.button {
+  cursor: pointer;
+}
+
+/* Barre de navigation masquée normalement */
+.bottom-navigation {
+  display: none;
+}
+@media all and (max-width: 500px) {
+  .bottom-navigation {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    background-color: var(--backgroundColor);
+    font-size: var(--fontSize15rem);
+  }
+  .bottom-navigation .menu-actif-bottom {
+    font-weight: 600;
+    font-size: var(--fontSize17rem);
+  }
+  .bottom-navigation li {
+    width: 30%;
+  }
+  .bottom-navigation li.menu-actif-bottom {
+    border-top: 2px solid var(--secondColor);
+  }
+}
+
+.bottom-navigation-marge {
+  display: none;
+}
+@media all and (max-width: 500px) {
+  .bottom-navigation-marge {
+    width: 100%;
+    height: 70px;
+    display: block;
+  }
+}
+
+.picto {
+  font-size: var(--fontSize15rem);
+  background-color: var(--firstColor);
+  color: var(--textColorReverse);
+  border-radius: 50%;
+}
+.picto.picto-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.picto.picto-48 {
+  width: 48px;
+  height: 48px;
+}
+.picto.picto-36 {
+  width: 36px;
+  height: 36px;
+}
+.picto.rounded {
+  border-radius: 50%;
+}
+.picto.square {
+  border-radius: var(--radiusSmall);
+}
+.picto.fixed-bottom-right {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+}
+
 /********** Général **********/
 body {
   font-family: var(--fontTexte);
@@ -876,11 +1055,6 @@ ul.liste {
   display: none;
 }
 
-.picto-48 {
-  width: 48px;
-  height: 48px;
-}
-
 /* Mise en place des backgrounds */
 /* Background général */
 .background {
@@ -932,113 +1106,49 @@ ul.liste {
   width: -moz-fit-content;
   width: fit-content;
 }
-
-/* Style du menu */
-nav {
-  color: var(--firstColor);
-  font-size: var(--fontSize15rem);
-  font-family: var(--fontAlt);
-}
-nav .line-before {
-  background-color: var(--firstColor);
-  height: 2px;
-  width: 30px;
-  display: inline-block;
-  transition: width 200ms linear, height 200ms linear;
-  margin-right: var(--gouttiere);
-}
-nav li:hover .line-before {
-  height: 4px;
-  width: 60px;
-}
-nav a {
-  display: inline;
-}
-nav .menu-actif {
-  font-weight: 600;
-  font-size: var(--fontSize20rem);
-}
-nav .menu-actif .line-before {
-  height: 4px;
-  width: 60px;
+@media all and (max-width: 500px) {
+  .header-accueil {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transition: transform 400ms linear;
+    transform: translateX(-100%);
+  }
 }
 
-/* Marge pour la partie contact */
-.contact {
-  margin-top: var(--gouttiere);
+/* Transformation pour l'affichage du header en smartphone */
+@media all and (max-width: 500px) {
+  .header-accueil-affiche {
+    transform: translateX(0);
+  }
 }
 
-/* Menu Burger masqué normalement */
-.menu-burger {
-  display: none;
-}
-
-/* Mise en place des icones de navigation */
-.navigation {
-  position: fixed;
-  bottom: 2vh;
-  right: var(--gouttiere);
-  z-index: 1;
-}
-
-.button {
-  cursor: pointer;
-}
-
-/* Barre de navigation masquée normalement */
-.bottom-navigation, .bottom-navigation-marge {
-  display: none;
-}
-
-.picto {
-  font-size: var(--fontSize15rem);
-  background-color: var(--firstColor);
-  color: var(--textColorReverse);
-  border-radius: 50%;
-}
-.picto.picto-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.picto.picto-48 {
-  width: 48px;
-  height: 48px;
-}
-.picto.picto-36 {
-  width: 36px;
-  height: 36px;
-}
-.picto.fixed-bottom-right {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
-}
-
-.plus-projet {
-  background-image: url("../img/icons/plus.png");
-  background-size: contain;
-}
-
-/* Mise en forme des sections */
+/* Mise en forme des sections avec la mise en page bento */
 main {
   position: relative;
 }
-
-div.section {
+main div.section {
   transition: opacity 400ms ease-in-out;
   width: calc(100% - var(--marginDesktop));
   position: absolute;
   top: 0;
   left: 0;
 }
-
-.opacity-yes {
+@media all and (max-width: 500px) {
+  main div.section {
+    transition: opacity 400ms ease-in-out;
+    width: calc(100% - var(--marginSmartphone) * 2);
+    position: absolute;
+    top: 0;
+    left: var(--marginSmartphone);
+  }
+}
+main div.opacity-yes {
   opacity: 0;
   z-index: -10;
 }
-
-.opacity-none {
+main div.opacity-none {
   opacity: 1;
   z-index: 0;
 }
@@ -1067,99 +1177,6 @@ div.section {
   width: 100%;
   border-radius: 0 0 50px 50px;
   border: 1px solid rgba(255, 255, 255, 0.125);
-}
-
-/*Smartphones*/
-@media all and (max-width: 500px) {
-  .h2-responsive {
-    display: block;
-  }
-  .header-accueil {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    transition: transform 400ms linear;
-    transform: translateX(-100%);
-  }
-  .header-accueil-affiche {
-    transform: translateX(0);
-  }
-  .bottom-navigation {
-    display: block;
-    position: fixed;
-    width: 100%;
-    height: 50px;
-    bottom: 0;
-    left: 0;
-    z-index: 5;
-    background-color: var(--backgroundColor);
-    font-size: var(--fontSize15rem);
-  }
-  .bottom-navigation li {
-    width: 30%;
-  }
-  .bottom-navigation-marge {
-    width: 100%;
-    height: 70px;
-    display: block;
-  }
-  .menu-actif-bottom {
-    font-weight: 600;
-    font-size: var(--fontSize17rem);
-  }
-  li.menu-actif-bottom {
-    border-top: 2px solid var(--secondColor);
-  }
-  .menu-navigation {
-    display: none;
-  }
-  .menu-burger {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: space-around;
-    padding: 5px;
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    z-index: 11;
-    background-color: var(--firstColor);
-    border-radius: var(--radiusSmall);
-  }
-  .menu-burger > span {
-    width: 30px;
-    display: block;
-    height: 3px;
-    background-color: var(--textColorReverse);
-  }
-  .menu-burger-close > span {
-    position: absolute;
-    transition: transform 400ms linear;
-  }
-  .menu-burger-close span.burger-top {
-    transform: rotate(45deg);
-    top: 22px;
-    width: 40px;
-  }
-  .menu-burger-close span.burger-middle {
-    display: none;
-  }
-  .menu-burger-close span.burger-bottom {
-    transform: rotate(-45deg);
-    top: 22px;
-    width: 40px;
-  }
-  .navigation {
-    display: none;
-  }
-  div.section {
-    transition: opacity 400ms ease-in-out;
-    width: calc(100% - var(--marginSmartphone) * 2);
-    position: absolute;
-    top: 0;
-    left: var(--marginSmartphone);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

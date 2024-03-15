@@ -1,0 +1,144 @@
+/* Style du menu */
+nav {
+    color: var(--firstColor);
+    font-size: var(--fontSize15rem);
+    font-family: var(--fontAlt);
+
+    .line-before {
+        background-color: var(--firstColor);
+        height: 2px;
+        width: 30px;
+        display: inline-block;
+        transition: width 200ms linear,height 200ms linear;
+        margin-right: var(--gouttiere)
+    }
+    li:hover {
+        .line-before {
+            height: 4px;
+            width: 60px;
+        }
+    }
+    a {
+        display: inline;
+    }
+    .menu-actif {
+        font-weight: 600;
+        font-size: var(--fontSize20rem);
+
+        .line-before {
+            height: 4px;
+            width: 60px;
+        }
+    }
+}
+/* Marge pour la partie contact */ 
+.contact {
+    margin-top: var(--gouttiere);
+}
+/* Menu Burger masqué normalement */
+.menu-burger {
+    display: none;
+    /* Affichage en mode smartphone */
+    @media all and (max-width : $widthSmartphone) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-around;
+        padding: 5px;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 11;
+        background-color: var(--firstColor);
+
+        &>span {
+            width: 30px;
+            display: block;
+            height: 3px;
+            background-color: var(--textColorReverse);
+        }
+    }
+}
+/* Croix du menu Burger masqué normalement */
+.menu-burger-close {
+    @media all and (max-width : $widthSmartphone) {
+        &>span {
+            position: absolute;
+            transition: transform 400ms linear;
+        }
+        span.burger-top {
+            transform: rotate(45deg);
+            top: 22px;
+            width:40px;
+        }
+        span.burger-middle {
+            display: none;
+        }
+        span.burger-bottom {
+            transform: rotate(-45deg);
+            top: 22px;
+            width:40px;
+        }
+    }
+}
+/* Menu classique */
+.menu-navigation {
+    /* Masqué en format smartphone */
+    @media all and (max-width : $widthSmartphone) {
+        display: none;
+    }
+}
+/* Mise en place des icones de navigation */
+.navigation {
+    position: fixed;
+    bottom: 2vh;
+    right: var(--gouttiere);
+    z-index: 1; 
+
+    @media all and (max-width : $widthSmartphone) {
+        display: none;
+    }
+}
+
+.button {
+    cursor: pointer;
+}
+/* Barre de navigation masquée normalement */
+.bottom-navigation {
+    display: none;
+
+    @media all and (max-width : $widthSmartphone) {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 50px;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        background-color: var(--backgroundColor);
+        font-size: var(--fontSize15rem);
+
+        .menu-actif-bottom {
+            font-weight: 600;
+            font-size: var(--fontSize17rem);
+        }
+
+        li {
+            width:30%;
+
+            &.menu-actif-bottom {
+                border-top: 2px solid var(--secondColor);
+            }
+        }
+    }
+}
+
+.bottom-navigation-marge {
+    display: none;
+
+    @media all and (max-width : $widthSmartphone) {
+        width: 100%;
+        height: 70px;
+        display: block;
+    }
+}
