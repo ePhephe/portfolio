@@ -1,23 +1,14 @@
 @use "sass:map";
 
-/************* Layout Grid pour les différents format **************/
-$numberColumnDesktop: 12;
-$numberColumnTablet: 8;
-$numberColumnSmartphone: 4;
-
-$widthDesktop: 1440px;
-$widthTablet: 1024px;
-$widthSmartphone: 500px;
-
-@function large($numberColumn,$i){
-  @return calc((100% / ($numberColumn / $i)) - ((($numberColumn / $i) - 1) * var(--gouttiere)) / ($numberColumn / $i)); 
+@function large($numberColumn, $i) {
+  @return calc((100% / ($numberColumn / $i)) - ((($numberColumn / $i) - 1) * var(--gouttiere)) / ($numberColumn / $i));
 }
 
 
 @mixin largeur-modifier($numberColumn) {
   @for $i from 1 to $numberColumn+1 {
-    &-#{$i}-#{$numberColumn}{
-      width : large($numberColumn,$i);
+    &-#{$i}-#{$numberColumn} {
+      width: large($numberColumn, $i);
     }
   }
 }
@@ -26,66 +17,79 @@ $widthSmartphone: 500px;
 les resolutions d'ecrans*/
 
 /*Desktop*/
-.large{
+.large {
   @include largeur-modifier($numberColumnDesktop);
 }
+
 /*Container Desktop*/
 .container-full {
   max-width: $widthDesktop;
   margin-left: auto;
   margin-right: auto;
 }
+
 .container-marges-desktop {
   padding-left: var(--marginDesktop);
   padding-right: var(--marginDesktop);
 }
+
 .container-marges-left-desktop {
   padding-left: var(--marginDesktop);
 }
+
 .container-marges-right-desktop {
   padding-right: var(--marginDesktop);
 }
+
 /*Tablets*/
-@media all and (min-width : $widthSmartphone) and (max-width : $widthTablet){
-  .medium{
-  @include largeur-modifier($numberColumnTablet);
+@media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
+  .medium {
+    @include largeur-modifier($numberColumnTablet);
   }
+
   /*Container Tablet*/
   .container-full {
     max-width: $widthTablet;
     margin-left: auto;
     margin-right: auto;
   }
+
   .container-marges-tablet {
     padding-left: var(--marginTablet);
     padding-right: var(--marginTablet);
   }
+
   .container-marges-left-tablet {
     padding-left: var(--marginTablet);
   }
+
   .container-marges-right-tablet {
     padding-right: var(--marginTablet);
   }
 }
 
 /*Smartphones*/
-@media all and (max-width : $widthSmartphone){
-  .small{
+@media all and (max-width : $widthSmartphone) {
+  .small {
     @include largeur-modifier($numberColumnSmartphone);
   }
+
   /*Container Smartphone*/
   .container-full {
     max-width: $widthSmartphone;
     margin-left: auto;
     margin-right: auto;
   }
+
   .container-marges-smartphone {
     padding-left: var(--marginSmartphone);
     padding-right: var(--marginSmartphone);
   }
+
   .container-marges-left-smartphone {
     padding-left: var(--marginSmartphone);
   }
+
   .container-marges-right-smartphone {
     padding-right: var(--marginSmartphone);
   }
@@ -101,15 +105,15 @@ $cote: (
 );
 
 /* On génère des marges multiples de 10 */
-@function marges($i){
-  @return calc($i*10px); 
+@function marges($i) {
+  @return calc($i*10px);
 }
 
 /* Génération des margins */
 @mixin marges-generiques() {
   @for $j from 1 to 6 {
     @for $i from 1 to 7 {
-      &#{map.get($cote,$j)}-#{marges($i)}{
+      &#{map.get($cote,$j)}-#{marges($i)} {
         margin#{map.get($cote,$j)}: marges($i);
       }
     }
@@ -120,16 +124,17 @@ $cote: (
 @mixin padding-generiques() {
   @for $j from 1 to 6 {
     @for $i from 1 to 7 {
-      &#{map.get($cote,$j)}-#{marges($i)}{
+      &#{map.get($cote,$j)}-#{marges($i)} {
         padding#{map.get($cote,$j)}: marges($i);
       }
     }
   }
 }
 
-.margin{
+.margin {
   @include marges-generiques();
 }
-.padding{
+
+.padding {
   @include padding-generiques();
 }

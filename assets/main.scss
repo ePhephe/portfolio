@@ -6,6 +6,7 @@
 @import "./components/_flexbox.scss";
 @import "./components/_card.scss";
 @import "./components/_grid.scss";
+@import "./components/_input-switch.scss";
 
 
 /********** Général **********/
@@ -62,18 +63,14 @@ ul.liste {
    display: none;
 }
 
-
 .picto-48 {
     width: 48px;
     height: 48px;
 }
-.picto-36 {
-    width: 36px;
-    height: 36px;
-}
 
-/********** Page d'accueil **********/
-/* Mise en place du background */
+
+/* Mise en place des backgrounds */
+/* Background général */
 .background {
     background-position: right;
     background-repeat: no-repeat;
@@ -83,7 +80,7 @@ ul.liste {
     height: 100vh;
     width: 100%;
 }
-
+/* Background pour l'effet sur le pointeur */
 .background-pointer {
     position: fixed;
     pointer-events: none;
@@ -96,174 +93,119 @@ ul.liste {
     transition-property: background;
     transition-timing-function: cubic-bezier(.4,0,.2,1);
 }
-
+/* Image pour la background de l'accueil */
 .bg-accueil {
     background-image: url("../img/background/background-accueil.jpg");
     background-position: right;
 }
+/* Image pour la background d'une page projet */
+.bg-projet {
+    background-position: center;
+    background-image: url("../img/background/background-projet.jpg");
+    background-size: cover;
+}
 
-/* Mise en place du header avec la photo, l'accroche et le menu */
+/* Mise en place du header avec la photo, les options et le menu */
 .header-accueil {
     position: sticky;
     top: 0;
     height: 100vh;
     background-color: var(--backgroundColor);
-}
 
-.header-accueil img {
-    height: 100%;
-    width: -moz-fit-content;
-    width: fit-content;
+    img {
+        height: 100%;
+        width: -moz-fit-content;
+        width: fit-content;
+    }
 }
-
+/* Style du menu */
 nav {
     color: var(--firstColor);
     font-size: var(--fontSize15rem);
     font-family: var(--fontAlt);
+
+    .line-before {
+        background-color: var(--firstColor);
+        height: 2px;
+        width: 30px;
+        display: inline-block;
+        transition: width 200ms linear,height 200ms linear;
+        margin-right: var(--gouttiere)
+    }
+    li:hover {
+        .line-before {
+            height: 4px;
+            width: 60px;
+        }
+    }
+    a {
+        display: inline;
+    }
+    .menu-actif {
+        font-weight: 600;
+        font-size: var(--fontSize20rem);
+
+        .line-before {
+            height: 4px;
+            width: 60px;
+        }
+    }
 }
-
-nav a {
-    display: inline;
-}
-
-.switch-theme p {
-    margin-right: var(--gouttiere);
-}
-
-.switch-police p {
-    margin-right: var(--gouttiere);
-}
-
-.switch-theme input[type=checkbox] {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-  }
-
-  .switch-police input[type=checkbox] {
-    height: 0;
-    width: 0;
-    visibility: hidden;
-  }
-  
-  label {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 50px;
-    height: 28px;
-    background: grey;
-    display: inline-block;
-    border-radius: 100px;
-    position: relative;
-    margin: 0 8px;
-  }
-  
-  label:after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 20px;
-    height: 20px;
-    background: var(--textColor);
-    border-radius: 90px;
-    transition: 0.3s;
-  }
-  
-  .switch-theme input + label {
-    background: var(--backgroundColor);
-    border: 1px solid var(--textColor);
-  }
-  
-  .switch-theme input:checked + label:after {
-    left: calc(100% - 3px);
-    transform: translateX(-100%);
-  }
-
-  .switch-police input + label {
-    background: var(--backgroundColor);
-    border: 1px solid var(--textColor);
-  }
-  
-  .switch-police input:checked + label:after {
-    left: calc(100% - 3px);
-    transform: translateX(-100%);
-  }
-  
-  label:active:after {
-    width: 40px;
-  }
-
+/* Marge pour la partie contact */ 
 .contact {
     margin-top: var(--gouttiere);
 }
-
+/* Menu Burger masqué normalement */
 .menu-burger {
     display: none;
 }
-
-.menu-actif {
-    font-weight: 600;
-    font-size: var(--fontSize20rem);
-}
-
-
-
 /* Mise en place des icones de navigation */
 .navigation {
     position: fixed;
     bottom: 2vh;
     right: var(--gouttiere);
-    z-index: 1;
-}
-.navigation .button {
-    cursor: pointer;
+    z-index: 1; 
 }
 
+.button {
+    cursor: pointer;
+}
+/* Barre de navigation masquée normalement */
 .bottom-navigation,.bottom-navigation-marge {
     display: none;
 }
 
-.line-before {
-    background-color: var(--firstColor);
-    height: 2px;
-    width: 30px;
-    display: inline-block;
-    transition: width 200ms linear,height 200ms linear;
-    margin-right: var(--gouttiere)
-}
-.menu-actif .line-before {
-    height: 4px;
-    width: 60px;
-}
-li:hover .line-before {
-    height: 4px;
-    width: 60px;
-}
 .picto {
-    font-size: var(--fontSize15rem);
-    border-radius: 50%;
-}
-.picto-background {
     font-size: var(--fontSize15rem);
     background-color: var(--firstColor);
     color: var(--textColorReverse);
     border-radius: 50%;
-}
-.picto-48 {
-    width: 48px;
-    height: 48px;
     
-}
-.picto-36 {
-    width: 36px;
-    height: 36px;
+    &.picto-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &.picto-48 {
+        width: 48px;
+        height: 48px;
+    }
+
+    &.picto-36 {
+        width: 36px;
+        height: 36px;
+    }
+
+    &.fixed-bottom-right {
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+    }
 }
 
 .plus-projet {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    
     background-image: url("../img/icons/plus.png");
     background-size: contain;
 }
@@ -289,14 +231,7 @@ div.section {
 }
 
 /********** Page d'un projet **********/
-/* Mise en place du background */
-.bg-projet {
-    background-position: center;
-    background-image: url("../img/background/background-projet.jpg");
-    background-size: cover;
-}
-
-/* Mise en place du header avec la photo, l'accroche et le menu */
+/* Mise en place du header spécifique avec l'image du projet */
 .header-projet {
     position: sticky;
     top: 0;
@@ -400,8 +335,7 @@ div.section {
         width:40px;
     }
     .navigation {
-        bottom: 60px;
-        right: 10px;
+        display:none;
     }
     div.section {
         transition: opacity 400ms ease-in-out;

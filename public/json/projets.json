@@ -6,55 +6,87 @@
             "color": "black",
             "competence": "UX Design / Figma",
             "images-mobile": [
+                "projet-moovizy-ux.png",
+                "projet-moovizy-ux.png",
+                "projet-moovizy-ux.png",
                 "projet-moovizy-ux.png"
             ],
             "images-desktop": [
-                "projet-moovizy-ux.png"
+                "ecran-desktop-accueil.png",
+                "ecran-desktop-popin-options.png",
+                "ecran-desktop-detail-itineraire.png",
+                "ecran-desktop-envoi-itineraire.png"
             ]
         },
         {
             "id": "2",
-            "libelle": "Moovizy",
-            "color": "black",
-            "competence": "UX Design / Figma",
-            "background": "projet-moovizy-ux.png"
+            "libelle": "",
+            "color": "",
+            "competence": "",
+            "images-mobile": [
+            ],
+            "images-desktop": [
+            ]
         },
         {
             "id": "3",
-            "libelle": "Moovizy",
-            "color": "black",
-            "competence": "UX Design / Figma",
-            "background": "projet-moovizy-ux.png"
+            "libelle": "",
+            "color": "",
+            "competence": "",
+            "images-mobile": [
+            ],
+            "images-desktop": [
+            ]
         },
         {
             "id": "4",
             "libelle": "",
+            "color": "",
             "competence": "",
-            "background": ""
+            "images-mobile": [
+            ],
+            "images-desktop": [
+            ]
         },
         {
             "id": "5",
             "libelle": "",
+            "color": "",
             "competence": "",
-            "background": ""
+            "images-mobile": [
+            ],
+            "images-desktop": [
+            ]
         },
         {
             "id": "6",
             "libelle": "",
+            "color": "",
             "competence": "",
-            "background": ""
+            "images-mobile": [
+            ],
+            "images-desktop": [
+            ]
         },
         {
             "id": "7",
             "libelle": "",
+            "color": "",
             "competence": "",
-            "background": ""
+            "images-mobile": [
+            ],
+            "images-desktop": [
+            ]
         },
         {
             "id": "8",
             "libelle": "",
+            "color": "",
             "competence": "",
-            "background": ""
+            "images-mobile": [
+            ],
+            "images-desktop": [
+            ]
         }
     ]
 }
