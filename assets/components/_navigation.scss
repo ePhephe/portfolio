@@ -88,6 +88,14 @@ nav {
         display: none;
     }
 }
+/* Menu classique */
+.menu-navigation-burger {
+    display: none;
+    @media all and (max-width : $widthSmartphone) {
+        display: block;
+    }
+}
+
 /* Mise en place des icones de navigation */
 .navigation {
     position: fixed;
@@ -97,6 +105,23 @@ nav {
 
     @media all and (max-width : $widthSmartphone) {
         display: none;
+    }
+}
+
+.navigation-projet {
+    @media all and (max-width : $widthSmartphone) {
+        display: none;
+    }
+}
+
+.navigation-back {
+    position: fixed;
+    top: 2vh;
+    left: var(--gouttiere);
+    z-index: 1; 
+    @media all and (max-width : $widthSmartphone) {
+        left: 10px;
+        top: calc(100vh - 50px - 48px - 2vh);
     }
 }
 

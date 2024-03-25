@@ -15,35 +15,99 @@
     <!-- Div pour l'affichage du backgrounde -->
     <div class="container-full background bg-projet">
     </div>
-
+    <!-- Div pour l'affichage du background -->
+    <div class="background-pointer" id="pointer">
+    </div>
+    
     <!-- Header avec navigation sur la partie gauche de la page -->
-    <header class="header-projet header-projet-max container-marges large-12-12">
-        <div class="image-projet">
-
+    <header class="header-projet header-projet-max container-marges-desktop container-marges-smartphone container-full">
+        <div class="image-projet header-projet-max flex align-end padding-left-40px padding-right-40px">
+            <a href="" title="Accès au site de ${data.employeur}" target="_blank"><i class="fa-solid fa-globe"></i></a>
+        </div>
+        <img src="./public/img/images/photo-profil.png" alt="Photo de profil de Mickaël">
+        <div class="navigation-projet flex margin-top-10px justify-between gap">
+            <div class="card flex gap large-6-12 small-4-4 padding-10px">
+                <div class="switch flex align-center">
+                    <p>Thème :</p>
+                    <i class="fa-solid fa-sun"></i>
+                    <input type="checkbox" id="switchTheme">
+                    <label for="switchTheme">Theme</label> 
+                    <i class="fa-solid fa-moon"></i>
+                </div>
+                <div class="switch flex align-center">
+                    <p>Police accessible :</p>
+                    <input type="checkbox" id="switchPolice">
+                    <label for="switchPolice">Police</label> 
+                </div>
+            </div>
+            <nav class="card padding-10px flex direction-column gap large-6-12 small-4-4">
+                <div class="flex gap contact">
+                    Contact
+                    <a href="mailto:mickael.durand@outlook.com" title="Envoyez-moi un mail" rel="noopener"><i class="fa-regular fa-paper-plane"></i></a>
+                    <a href="https://www.linkedin.com/in/m-durand" title="Accès à mon compte LinkedIn" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/ePhephe" title="Accès à mon compte GitHub" rel="noopener"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/ephephe/" title="Accès à mon compte Instagram" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://open.spotify.com/playlist/3qT3NJQFRJHVeHiq3VdZ6h?si=fb8072dfbc0d42dc" title="Accès à ma playlist Spotify" rel="noopener"><i class="fa-brands fa-spotify"></i></a>
+                </div>
+            </nav>
         </div>
     </header>
-    <main class="container-marges large-12-12">
-        <section class="grid grid-presentation-projet padding-top-40px margin-bottom-40px">
-            <div class="info-projet card card-1h"></div>
-            <div class="role-projet card card-1h"></div>
-            <div class="presentation-projet card card-1h"></div>
-            <div class="histo-projet card card-1h"></div>
-            <div class="techno-projet card card-1h"></div>
-        </section>
-        <section class="grid grid-image-mobile-projet padding-top-40px margin-bottom-40px">
-            <div class="image-mobile-1 card card-4h"></div>
-            <div class="image-mobile-2 card card-4h"></div>
-            <div class="image-mobile-3 card card-4h"></div>
-        </section>
-        <section class="grid grid-image-desktop-projet padding-top-40px margin-bottom-40px">
-            <div class="image-desktop-1 card card-2h"></div>
-            <div class="image-desktop-2 card card-2h"></div>
-            <div class="image-desktop-3 card card-3h"></div>
-            <div class="image-desktop-4 card card-2h"></div>
-        </section>
+    <nav class="bottom-navigation">
+        <ul class="flex justify-around">
+            <li data-section="0" class="flex align-center justify-center menu-actif-bottom"><a href="" title="A propos du projet"><i class="fa-solid fa-folder-closed"></i></a></li>
+            <li data-section="1" class="flex align-center justify-center"><a href="" title="Voir les écrans mobiles"><i class="fa-solid fa-mobile-screen"></i></a></li>
+            <li data-section="2" class="flex align-center justify-center"><a href="" title="Voir les écrans desktop"><i class="fa-solid fa-display"></i></a></li>
+        </ul>
+    </nav>
+    <div class="header-vide header-projet-max large-12-12"></div>
+    <main class="main-projet container-marges-desktop container-marges-smartphone large-12-12">
+        <div class="navigation-back">
+            <a href="./index.html?section=2" title="Retour aux projets">
+                <div class="picto picto-48 rounded picto-center button" id="page-back"><i class="fa-solid fa-backward-step"></i></div>
+            </a>
+        </div>
+        <div class="navigation flex direction-column gap">
+            <div class="picto picto-48 rounded picto-center button" id="page-up"><i class="fa-solid fa-chevron-up"></i></div>
+            <div class="picto picto-48 rounded picto-center button" id="page-down"><i class="fa-solid fa-chevron-down"></i></div>
+        </div>
+        <div data-section="0" class="section padding-top-40px margin-bottom-40px active">
+            <div class="grid grid-presentation-projet">
+                <div class="info-projet card card-1h flex direction-column justify-between padding-20px" id="infoProjet"></div>
+                <div class="role-projet card card-1h flex direction-column justify-between padding-20px" id="roleProjet"></div>
+                <div class="presentation-projet card card-1h card-3h-smartphone padding-20px" id="presentationProjet"></div>
+                <div class="histo-projet card card-1h card-3h-smartphone padding-20px" id="histoProjet"></div>
+                <div class="techno-projet card card-1h flex direction-column justify-between padding-20px" id="technoProjet"></div>
+                <div class="bottom-navigation-marge"></div>
+            </div>
+        </div>
+        <div data-section="1" class="section padding-top-20px opacity-yes">
+            <div class="grid grid-image-mobile-projet">
+                <div class="image-mobile-1 card card-screen-mobile"></div>
+                <div class="image-mobile-2 card card-screen-mobile"></div>
+                <div class="image-mobile-3 card card-screen-mobile"></div>
+                <div class="bottom-navigation-marge"></div>
+            </div>
+        </div>
+        <div data-section="2" class="section padding-top-20px opacity-yes">
+            <div class="grid grid-image-desktop-projet">
+                <div class="image-desktop-1 card card-screen-desktop card-1h-smartphone"></div>
+                <div class="image-desktop-2 card card-screen-desktop card-1h-smartphone"></div>
+                <div class="image-desktop-3 card card-screen-desktop card-1h-smartphone"></div>
+                <div class="image-desktop-4 card card-screen-desktop card-1h-smartphone"></div>
+                <div class="bottom-navigation-marge"></div>
+            </div>
+        </div>
     </main>
 
-    <script src="./app.js"></script>
+    <div class="modal flex align-center justify-center display-none" id="modal">
+        <div class="modal-content">
+            <div id="modal-image"></div>
+            <div class="picto picto-48 rounded picto-center button" id="btn-close"><i class="fa-solid fa-xmark"></i></div>
+        </div>
+    </div>
+
+    <script src="./public/js/app.js"></script>
+    <script src="./public/js/projet.js"></script>
 </body>
 
 </html>

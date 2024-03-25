@@ -65,7 +65,8 @@
                 {"libelle" : "VS Code"},
                 {"libelle" : "SASS"},
                 {"libelle" : "GitHub"},
-                {"libelle" : "Figma"}
+                {"libelle" : "Figma"},
+                {"libelle" : "Notion"}
             ]
         }
     ],

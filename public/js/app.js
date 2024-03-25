@@ -1,17 +1,9 @@
 //On récupère si le thème par défaut est dark ou non
 const isDarkMode = () =>
 	globalThis.matchMedia?.("(prefers-color-scheme:dark)").matches ?? false;
-//On récupère les éléments pour le menu burger
-let divMenuBurger = document.getElementById(`menuBurger`);
-let headerAccueil = document.getElementById(`headerAccueil`);
+
 let inputTheme = document.getElementById(`switchTheme`);
 let inputPolice = document.getElementById(`switchPolice`);
-
-//On ajouter un listener click sur le menu burger
-divMenuBurger.addEventListener(`click`,(e)=>{
-    divMenuBurger.classList.toggle(`menu-burger-close`);
-    headerAccueil.classList.toggle(`header-accueil-affiche`);    
-});
 
 /**
  * Applique le bon thème
@@ -47,7 +39,26 @@ function setPolice(police){
     }
 }
 
-function changeSection(direction,section=``) {
+function changeHeader(newNumSection) {
+    let headerProjet = document.querySelector(`header`);
+    let headerVide = document.querySelector(`.header-vide`);
+
+    if(newNumSection != 0) {
+        headerProjet.classList.remove(`header-projet-max`);
+        headerProjet.classList.add(`header-projet-min`);
+        headerVide.classList.remove(`header-projet-max`);
+        headerVide.classList.add(`header-projet-min`);
+    }
+    else {
+        headerProjet.classList.add(`header-projet-max`);
+        headerProjet.classList.remove(`header-projet-min`);
+        headerVide.classList.add(`header-projet-max`);
+        headerVide.classList.remove(`header-projet-min`);
+    }
+
+}
+
+function changeSection(direction,section=``,page=`accueil`) {
     let bodySections = document.querySelectorAll(`main div.section`);
     let sectionActive = document.querySelector(`main div.section.active`);
     let liMenuSection = document.querySelectorAll(`.menu-navigation li`);
@@ -69,6 +80,10 @@ function changeSection(direction,section=``) {
     }
     else if(section!=``){
         newNumSection = section;
+    }
+
+    if(page===`projet`) {
+        changeHeader(newNumSection);
     }
 
     bodySections.forEach(section => {
@@ -105,17 +120,7 @@ function changeSection(direction,section=``) {
     });
 }
 
-//On récupère les variables nécessaires pour faire slider les sections
-let elementUp = document.getElementById(`page-up`);
-let elementDown = document.getElementById(`page-down`);
-//Listener sur le bouton pour la slide en haut
-elementUp.addEventListener(`click`,(e)=>{
-    changeSection(`prec`);
-});
-//Listener sur le bouton pour la slide en bas
-elementDown.addEventListener(`click`,(e)=>{
-    changeSection(`suiv`);
-});
+
 
 //On récupère les varibales pour notre menu
 let liMenuSection = document.querySelectorAll(`.menu-navigation li a`);
@@ -154,5 +159,5 @@ inputPolice.addEventListener(`change`,(e)=>{
     setPolice(e.target.checked);
 });
 
-//Initialisation du thème
+
 setTheme(isDarkMode());

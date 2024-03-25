@@ -3,15 +3,38 @@
         {
             "id": "1",
             "libelle": "Moovizy",
+            "url": "https://www.google.fr",
             "color": "black",
             "competence": "UX Design / Figma",
-            "images-mobile": [
-                "projet-moovizy-ux.png",
-                "projet-moovizy-ux.png",
-                "projet-moovizy-ux.png",
-                "projet-moovizy-ux.png"
+            "infoProjet": {
+                "libelle": "Le Projet",
+                "description": "Dans le cadre de ma formation, j'ai eu la chance de suivre le module UX/UI Design durant lequel nous avons réalisé un projet fictif."
+            },
+            "roleProjet": {
+                "libelle": "Mon Rôle",
+                "roles": [
+                    "UX Designer",
+                    "UI Designer",
+                    "Chef de projet"
+                ]
+            },
+            "presentationProjet": "Nous avons simulé pendant ce module un projet basé sur l'application des transports stéphanois Moovizy. Avec mes camarades, nous avons donc élaboré une nouvelle version de l'application orientée vers la sécurité des trajets. Plutôt que de vous détaillez mon expérience dans un long pavé de texte, vous trouverez en lien le résultat de notre travail : la présentation de notre projet sous forme de pitch (avec à l'intérieur des liens vers les prototypes).",
+            "histoProjet": "",
+            "technoProjet": {
+                "libelle": "Compétences",
+                "technologies": [
+                    "UX Design",
+                    "UI Design",
+                    "Figma",
+                    "Notion"
+                ]
+            },
+            "imagesMobile": [
+                "mobile-connexion.png",
+                "mobile-itineraire-ideal.png",
+                "mobile-detail-itineraire.png"
             ],
-            "images-desktop": [
+            "imagesDesktop": [
                 "ecran-desktop-accueil.png",
                 "ecran-desktop-popin-options.png",
                 "ecran-desktop-detail-itineraire.png",

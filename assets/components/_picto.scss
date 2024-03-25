@@ -1,9 +1,10 @@
 
 .picto {
     font-size: var(--fontSize15rem);
-    background-color: var(--firstColor);
+    background-color: var(--secondColor);
     color: var(--textColorReverse);
     border-radius: 50%;
+    box-shadow: 0px 0px 4px var(--backgroundCard);
     
     &.picto-center {
         display: flex;

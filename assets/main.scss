@@ -9,6 +9,7 @@
 @import "./components/_input-switch.scss";
 @import "./components/_navigation.scss";
 @import "./components/_picto.scss";
+@import "./components/_modal.scss";
 
 
 /********** Général **********/
@@ -63,6 +64,12 @@ ul.liste {
 
 .display-none {
    display: none;
+}
+
+.responsive {
+    width:100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 /* Mise en place des backgrounds */
@@ -134,10 +141,10 @@ main {
     position: relative;
 
     div {
-
         &.section {
             transition: opacity 400ms ease-in-out;
             width: calc(100% - var(--marginDesktop));
+            overflow: hidden;
             position: absolute;
             top: 0;
             left: 0;
@@ -153,10 +160,13 @@ main {
         &.opacity-yes {
             opacity: 0;
             z-index: -10;
+            height: 0;
         }
         &.opacity-none {
             opacity: 1;
             z-index: 0;
+            height: auto;
+            
         }
     }
 }
@@ -164,23 +174,82 @@ main {
 /********** Page d'un projet **********/
 /* Mise en place du header spécifique avec l'image du projet */
 .header-projet {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1;
-}
-.header-projet-max {
-    height: 45vh;
-}
-.header-projet-min {
-    height: 70px;
-}
-.header-projet .image-projet {
-    background-image: url("../img/images/projet-moovizy-ux.png");
-    background-position: center;
-    background-size: cover;
-    height: 100%;
-    width: 100%; 
-    border-radius: 0 0 50px 50px;
-    border: 1px solid rgba(255, 255, 255, 0.125);
+
+    .image-projet {
+        background-image: url("../img/images/projet-moovizy-ux.png");
+        background-position: center;
+        background-size: cover;
+        width: 100%; 
+        border-radius: 0 0 50px 50px;
+        box-shadow: 0px 4px 4px var(--backgroundCard);
+        border: 1px solid rgba(255, 255, 255, 0.125);
+        transition: height 400ms linear;
+    }
+    &.header-projet-max .image-projet {
+        height: calc(45vh - 57px);
+        @media all and (max-width : $widthSmartphone) {
+            height: 70px;
+            background-image: url("../img/images/projet-moovizy-ux-70.png");
+        }
+    }
+    &.header-projet-min .image-projet {
+        background-image: url("../img/images/projet-moovizy-ux-70.png");
+        height: calc(127px - 57px);
+        @media all and (max-width : $widthSmartphone) {
+            height: 70px;
+        }
+    }
+    nav {
+        color: var(--textColor);
+        .contact {
+            margin-top: 0;
+        }
+        a {
+            color: var(--textColor); 
+        }
+    }
+    img {
+        display: none;
+    }   
 }
 
+.header-projet-max {
+    height: 45vh;
+    @media all and (max-width : $widthSmartphone) {
+        height: 70px;
+    }
+}
+.header-projet-min {
+    height: 127px;
+    @media all and (max-width : $widthSmartphone) {
+        height: 70px;
+    }
+}
+
+.main-projet {
+    div {
+        &.section {
+            width: calc(100% - var(--marginDesktop) * 2);
+            left: var(--marginDesktop);
+            @media all and (max-width : $widthSmartphone) {
+                width: calc(100% - var(--marginSmartphone) * 2);
+                left: var(--marginSmartphone);
+            }
+        }
+    }
+}
+
+.grid-image-mobile-projet {
+    img {
+        border-radius: 12px;
+    }
+}
+
+.grid-image-desktop-projet {
+    img {
+        border-radius: 12px;
+    }
+}

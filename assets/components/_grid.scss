@@ -241,12 +241,38 @@
     .techno-projet {
         grid-area: techno-projet;
     }
+
+    /*Tablets*/
+    @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "info-projet role-projet presentation-projet presentation-projet"
+            "histo-projet histo-projet histo-projet techno-projet";
+    }
+
+    /*Smartphones*/
+    @media all and (max-width : $widthSmartphone) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "info-projet"
+            "role-projet"
+            "presentation-projet" 
+            "presentation-projet"
+            "presentation-projet"
+            "histo-projet"
+            "histo-projet"
+            "histo-projet"
+            "techno-projet";
+    }
 }
 
 
 
 /* Mise en place du grid pour la partie à propos */
 .grid-image-mobile-projet {
+    gap: var(--gouttiere) 130px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
@@ -262,6 +288,24 @@
 
     .image-mobile-3 {
         grid-area: image-mobile-3;
+    }
+
+     /*Tablets*/
+     @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas:
+            "image-mobile-1 image-mobile-2 image-mobile-3";
+    }
+
+    /*Smartphones*/
+    @media all and (max-width : $widthSmartphone) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "image-mobile-1"
+            "image-mobile-2"
+            "image-mobile-3";
     }
 }
 
@@ -289,5 +333,25 @@
 
     .image-desktop-4 {
         grid-area: image-desktop-4;
+    }
+
+    /*Tablets*/
+    @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            "image-desktop-1 image-desktop-2"
+            "image-desktop-3 image-desktop-4";
+    }
+
+    /*Smartphones*/
+    @media all and (max-width : $widthSmartphone) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "image-desktop-1"
+            "image-desktop-2"
+            "image-desktop-3"
+            "image-desktop-4";
     }
 }

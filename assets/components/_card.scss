@@ -13,8 +13,17 @@
 .card-2h {
     height: 420px;
 }
+.card-3h {
+    height: 640px;
+}
 .card-4h {
-    height: 840px;
+    height: 860px;
+}
+.card-screen-desktop {
+    max-height: 380px;
+}
+.card-screen-mobile {
+    max-height: 750px;
 }
 
 /*Tablets*/
@@ -25,8 +34,11 @@
     .card-2h-tablet  {
         height: 420px;
     }
+    .card-3h-tablet {
+        height: 640px;
+    }
     .card-4h-tablet  {
-        height: 840px;
+        height: 860px;
     }
 }
 
@@ -38,7 +50,10 @@
     .card-2h-smartphone  {
         height: 420px;
     }
+    .card-3h-smartphone {
+        height: 640px;
+    }
     .card-4h-smartphone  {
-        height: 840px;
+        height: 860px;
     }
 }
