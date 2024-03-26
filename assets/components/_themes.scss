@@ -19,6 +19,7 @@ body.dark-theme {
 
     /* Couleur de fond */
     --backgroundColor: #111111;
+    --backgroundOpaciteColor: rgba(17, 17, 17, 0.3);
 
     /* Couleur des textes */
     --textColor: #FFFFFF;
@@ -38,8 +39,6 @@ body.light-theme {
     --borderColorCard: rgba(209, 213, 219, 0.3);
 
     /* Couleurs standards */
-    --blackColor: #000000;
-    --whiteColor: #FFFFFF;
     --succesColor: hsl(113, 53%, 53%);
     --warningColor: hsl(39, 100%, 67%);
     --errorColor: hsl(0, 100%, 61%);
@@ -47,6 +46,7 @@ body.light-theme {
 
     /* Couleur de fond */
     --backgroundColor: #FFFFFF;
+    --backgroundOpaciteColor: rgba(255, 255, 255, 0.3);
 
     /* Couleur des textes */
     --textColor: #000000;

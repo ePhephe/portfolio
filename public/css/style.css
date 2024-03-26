@@ -134,6 +134,7 @@ body.dark-theme {
   --infoColor: hsl(204, 86%, 53%);
   /* Couleur de fond */
   --backgroundColor: #111111;
+  --backgroundOpaciteColor: rgba(17, 17, 17, 0.3);
   /* Couleur des textes */
   --textColor: #FFFFFF;
   --textColorReverse: #000000;
@@ -151,14 +152,13 @@ body.light-theme {
   --backgroundCard: rgba(255, 255, 255, 0.75);
   --borderColorCard: rgba(209, 213, 219, 0.3);
   /* Couleurs standards */
-  --blackColor: #000000;
-  --whiteColor: #FFFFFF;
   --succesColor: hsl(113, 53%, 53%);
   --warningColor: hsl(39, 100%, 67%);
   --errorColor: hsl(0, 100%, 61%);
   --infoColor: hsl(204, 86%, 53%);
   /* Couleur de fond */
   --backgroundColor: #FFFFFF;
+  --backgroundOpaciteColor: rgba(255, 255, 255, 0.3);
   /* Couleur des textes */
   --textColor: #000000;
   --textColorReverse: #FFFFFF;
@@ -1307,9 +1307,8 @@ ul.liste {
 /* Image pour la background d'une page projet */
 .bg-projet {
   background-position: center;
-  background-image: url("../img/background/background-projet.jpg");
+  background-image: linear-gradient(var(--backgroundOpaciteColor) 0%, var(--backgroundOpaciteColor) 100%), url("../img/background/background-projet.jpg");
   background-size: cover;
-  backdrop-filter: drop-shadow(4px 4px 10px blue);
 }
 
 /* Mise en place du header avec la photo, les options et le menu */
@@ -1387,8 +1386,7 @@ main div.opacity-none {
   background-size: cover;
   width: 100%;
   border-radius: 0 0 50px 50px;
-  box-shadow: 0px 4px 4px var(--backgroundCard);
-  border: 1px solid rgba(255, 255, 255, 0.125);
+  border: 1px solid var(--borderColorCard);
   transition: height 400ms linear;
   font-size: 1.5rem;
 }
