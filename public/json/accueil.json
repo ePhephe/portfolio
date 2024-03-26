@@ -18,7 +18,7 @@
         },
         {
             "id" : "description",
-            "texte" : "Je participe aux projets digitaux en intervenant dans la gestion de projet, l’expertise fonctionnelle et l’expérience utilisateur. Optimisme, bonne humeur, organisation et esprit d’équipe sont les maîtres mots pour mener à bien mes missions."
+            "texte" : "Formé à l'informatique pendant 5 années, j'ai pu mettre mes compétences à profit au sein de LOCAM durant 14 annéess en diversifiant avec le marketing digital puis la gestion de projets digitaux.<br> La passion du développement redevenant la plus forte, je suis maintenant en reconversion pour (re)devenir développeur web fullstack. Mêler le développement à mon expérience me permettra d'avoir une vision complète et critiques des projets sur lesquels je pourrais intervenir demain !"
         },
         {
             "id" : "formation",
@@ -77,7 +77,7 @@
             "employeur": "LOCAM SAS",
             "lieu": "Saint-Etienne, LOIRE",
             "dates": "1 an (2022/2023)",
-            "description": "Gestion du projet de refonte de l’extranet partenaires dans le contexte du projet de transformation : Gestion du planning et du budget, Conception et spécifications, Suivi des développements, Phase de tests,Déploiement d’API et de la signature électronique auprès des partenaires.",
+            "description": "Gestion du projet de refonte de l’extranet partenaires dans un contexte de transformation globale du système d'information : gestion du planning et du budget, conception et spécifications, suivi des développements, phase de tests...",
             "link": "https://www.locam.fr"
         },
         {
@@ -86,7 +86,7 @@
             "employeur": "LOCAM SAS",
             "lieu": "Saint-Etienne, LOIRE",
             "dates": "6 ans (2016/2022)",
-            "description": "Gestion du projet de refonte de l’extranet partenaires dans le contexte du projet de transformation : Gestion du planning et du budget, Conception et spécifications, Suivi des développements, Phase de tests,Déploiement d’API et de la signature électronique auprès des partenaires.",
+            "description": "Mise en place d’un projet de dématérialisation des contrats avec signature électronique. Product Owner pour le développement d’une application Mobile. Gestion des maintenances évolutives de l’extranet existant",
             "link": "https://www.locam.fr"
         },
         {
@@ -95,7 +95,7 @@
             "employeur": "LOCAM SAS",
             "lieu": "Saint-Etienne, LOIRE",
             "dates": "2 ans (2014/2016)",
-            "description": "Gestion du projet de refonte de l’extranet partenaires dans le contexte du projet de transformation : Gestion du planning et du budget, Conception et spécifications, Suivi des développements, Phase de tests,Déploiement d’API et de la signature électronique auprès des partenaires.",
+            "description": "Gestion du site institutionnel (Évolutions, Contenu, SEO, SEA). Mise en place de campagnes e-mailing. Gestion des évolutions de l’extranet et des offres digitales.",
             "link": "https://www.locam.fr"
         },
         {
@@ -104,7 +104,7 @@
             "employeur": "LOCAM SAS",
             "lieu": "Saint-Etienne, LOIRE",
             "dates": "5 ans (2009/2014)",
-            "description": "Gestion du projet de refonte de l’extranet partenaires dans le contexte du projet de transformation : Gestion du planning et du budget, Conception et spécifications, Suivi des développements, Phase de tests,Déploiement d’API et de la signature électronique auprès des partenaires.",
+            "description": "Développement de l'extranet partenaires en PHP (Zend Framework) et Javascript (Sencha Extjs). Support de 1er et 2eme niveau et acteur des projets informatiques de l'entreprise.",
             "link": "https://www.locam.fr"
         }
     ],

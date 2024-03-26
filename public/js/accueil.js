@@ -25,8 +25,8 @@ function afficheApropos(tabDataApropos) {
             //Bloc à propos
             case "aPropos":
                 templateHtml += `<h2>${data.titre}</h2>
-                 <p><em>${data.metier}</em></p> 
-                 <p><em>${data.lieu}</em></p>`;
+                 <h1><p><em>${data.metier}</em></p> 
+                 <p><em>${data.lieu}</em></p></h1>`;
                 break;
             //Bloc des compétences
             case "softSkills":
