@@ -18,6 +18,15 @@
     src: url("../fonts/Luciole/Luciole-Regular.ttf");
 }
 
+/* Variables SCSS */
+$numberColumnDesktop: 12;
+$numberColumnTablet: 8;
+$numberColumnSmartphone: 4;
+
+$widthDesktop: 1440px;
+$widthTablet: 1140px;
+$widthSmartphone: 640px;
+
 :root {
     /* TYPOGRAPHIE */
     --fontTitre: 'HinaMincho';
@@ -32,7 +41,7 @@
     /* Gouttières et Espacements */
     --gouttiere: 20px;
     --marginDesktop: 80px;
-    --marginTablet: 40px;
+    --marginTablet: 20px;
     --marginSmartphone: 20px;
 
     /* RADIUS */
@@ -42,11 +51,3 @@
     --radiusRond: 50%;
 }
 
-/* Variables SCSS */
-$numberColumnDesktop: 12;
-$numberColumnTablet: 8;
-$numberColumnSmartphone: 4;
-
-$widthDesktop: 1440px;
-$widthTablet: 1024px;
-$widthSmartphone: 500px;

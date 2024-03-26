@@ -42,6 +42,26 @@ les resolutions d'ecrans*/
   padding-right: var(--marginDesktop);
 }
 
+/*SmallDesktopScreen*/
+@media all and (min-width : $widthTablet) and (max-width : $widthDesktop) {
+  .large-S {
+    @include largeur-modifier($numberColumnDesktop);
+  }
+  
+  .container-marges-desktop {
+    padding-left: var(--marginTablet);
+    padding-right: var(--marginTablet);
+  }
+  
+  .container-marges-left-desktop {
+    padding-left: var(--marginTablet);
+  }
+  
+  .container-marges-right-desktop {
+    padding-right: var(--marginTablet);
+  }
+}
+
 /*Tablets*/
 @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
   .medium {

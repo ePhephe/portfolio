@@ -104,7 +104,7 @@
 
     /*Tablets*/
     @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:
             "carriere-1"
@@ -126,6 +126,11 @@
             "carriere-3"
             "carriere-4"
             "carriere-4";
+
+        div {
+            justify-content: flex-start;
+            gap: 5px;
+        }
     }
 }
 
@@ -243,13 +248,25 @@
     }
 
     /*Tablets*/
-    @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
+    @media all and (min-width : 880px) and (max-width : $widthTablet) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas:
-            "info-projet role-projet presentation-projet presentation-projet"
-            "histo-projet histo-projet histo-projet techno-projet";
+            "info-projet role-projet techno-projet"
+            "presentation-projet presentation-projet presentation-projet"
+            "histo-projet histo-projet histo-projet";
     }
+
+    /*Tablets*/
+    @media all and (min-width : $widthSmartphone) and (max-width : 880px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "info-projet role-projet"
+            "presentation-projet presentation-projet"
+            "histo-projet techno-projet";
+    }
+
 
     /*Smartphones*/
     @media all and (max-width : $widthSmartphone) {
@@ -291,11 +308,19 @@
     }
 
      /*Tablets*/
-     @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr;
+     @media all and (min-width : 980px) and (max-width : $widthTablet) {
+        gap: var(--gouttiere) var(--gouttiere);
+    }
+
+     /*Tablets*/
+     @media all and (min-width : $widthSmartphone) and (max-width : 980px) {
+        margin-left: 80px;
+        margin-right: 80px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
         grid-template-areas:
-            "image-mobile-1 image-mobile-2 image-mobile-3";
+            "image-mobile-1 image-mobile-2"
+            "image-mobile-3 image-mobile-4";
     }
 
     /*Smartphones*/
@@ -335,17 +360,8 @@
         grid-area: image-desktop-4;
     }
 
-    /*Tablets*/
-    @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas:
-            "image-desktop-1 image-desktop-2"
-            "image-desktop-3 image-desktop-4";
-    }
-
     /*Smartphones*/
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         grid-template-areas:

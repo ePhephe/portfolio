@@ -1,20 +1,10 @@
-//On récupère les variables nécessaires pour faire slider les sections
-let elementUp = document.getElementById(`page-up`);
-let elementDown = document.getElementById(`page-down`);
-//Listener sur le bouton pour la slide en haut
-elementUp.addEventListener(`click`,(e)=>{
-    changeSection(`prec`,``,`projet`);
-});
-//Listener sur le bouton pour la slide en bas
-elementDown.addEventListener(`click`,(e)=>{
-    changeSection(`suiv`,``,`projet`);
-});
-
-let adresse = new URL(document.location.href);
 let projetParam = adresse.searchParams.get('projet-id');
 
 function afficheInfosProjet(tabDataProjet){
     let tabDivAffichage = document.querySelectorAll(`.grid-presentation-projet div`);
+    let headerProjet = document.querySelector(`.image-projet`);
+
+    headerProjet.innerHTML = `<a href="${tabDataProjet.url}" title="Accès à la démo du projet ${tabDataProjet.libelle}" target="_blank" style="color:${tabDataProjet.color};"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>`;
 
     tabDivAffichage.forEach(divAffichage => {
         let templateHtml = ``;
@@ -38,7 +28,13 @@ function afficheInfosProjet(tabDataProjet){
                 templateHtml += tabDataProjet.presentationProjet;
                 break;
             case "histoProjet":
-                templateHtml += tabDataProjet.histoProjet;
+                if(tabDataProjet.histoProjet != ``) {
+                    templateHtml += tabDataProjet.histoProjet;
+                }
+                else { 
+                    let couleurAlea = Math.floor(Math.random() * (3 - 1)) + 1 === 1 ? `firstColor` : `secondColor` ;
+                    divAffichage.style = `background-color: var(--${couleurAlea});`
+                }
                 break;
             case "technoProjet":
                 templateHtml += `<h2>${tabDataProjet.technoProjet.libelle}</h2>

@@ -13,8 +13,7 @@
             "roleProjet": {
                 "libelle": "Mon Rôle",
                 "roles": [
-                    "UX Designer",
-                    "UI Designer",
+                    "UX/UI Designer",
                     "Chef de projet"
                 ]
             },

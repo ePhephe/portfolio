@@ -13,7 +13,11 @@
 
     input+label {
         background: var(--backgroundColor);
-        border: 1px solid var(--textColor)
+        border: 1px solid var(--textColor);
+    }
+
+    input:checked+label {
+        background: var(--firstColor);
     }
 
     input:checked+label:after {

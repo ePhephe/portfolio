@@ -39,7 +39,7 @@ nav {
 .menu-burger {
     display: none;
     /* Affichage en mode smartphone */
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -61,7 +61,7 @@ nav {
 }
 /* Croix du menu Burger masqué normalement */
 .menu-burger-close {
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         &>span {
             position: absolute;
             transition: transform 400ms linear;
@@ -84,14 +84,14 @@ nav {
 /* Menu classique */
 .menu-navigation {
     /* Masqué en format smartphone */
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         display: none;
     }
 }
 /* Menu classique */
 .menu-navigation-burger {
     display: none;
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         display: block;
     }
 }
@@ -103,13 +103,13 @@ nav {
     right: var(--gouttiere);
     z-index: 1; 
 
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         display: none;
     }
 }
 
 .navigation-projet {
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         display: none;
     }
 }
@@ -119,7 +119,7 @@ nav {
     top: 2vh;
     left: var(--gouttiere);
     z-index: 1; 
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         left: 10px;
         top: calc(100vh - 50px - 48px - 2vh);
     }
@@ -132,7 +132,7 @@ nav {
 .bottom-navigation {
     display: none;
 
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         display: block;
         position: fixed;
         width: 100%;
@@ -154,6 +154,15 @@ nav {
             &.menu-actif-bottom {
                 border-top: 2px solid var(--secondColor);
             }
+            a {
+                color: var(--firstColor);
+            }
+            &.menu-actif-bottom {
+                border-top: 2px solid var(--secondColor);
+                a {
+                    color: var(--secondColor);
+                }
+            }
         }
     }
 }
@@ -161,7 +170,7 @@ nav {
 .bottom-navigation-marge {
     display: none;
 
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         width: 100%;
         height: 70px;
         display: block;

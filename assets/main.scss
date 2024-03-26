@@ -100,12 +100,17 @@ ul.liste {
 .bg-accueil {
     background-image: url("../img/background/background-accueil.jpg");
     background-position: right;
+    @media all and (max-width : $widthTablet) {
+        background-image: url("../img/background/background-accueil-1140.jpg");
+        background-position: center;
+    }
 }
 /* Image pour la background d'une page projet */
 .bg-projet {
     background-position: center;
     background-image: url("../img/background/background-projet.jpg");
     background-size: cover;
+    backdrop-filter: drop-shadow(4px 4px 10px blue);
 }
 
 /* Mise en place du header avec la photo, les options et le menu */
@@ -120,7 +125,7 @@ ul.liste {
         width: -moz-fit-content;
         width: fit-content;
     }
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         position: fixed;
         top: 0;
         left: 0;
@@ -131,7 +136,7 @@ ul.liste {
 }
 /* Transformation pour l'affichage du header en smartphone */
 .header-accueil-affiche {
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         transform: translateX(0);
     }
 }
@@ -149,7 +154,7 @@ main {
             top: 0;
             left: 0;
 
-            @media all and (max-width : $widthSmartphone) {
+            @media all and (max-width : $widthTablet) {
                 transition: opacity 400ms ease-in-out;
                 width: calc(100% - var(--marginSmartphone)*2);
                 position: absolute;
@@ -187,6 +192,7 @@ main {
         box-shadow: 0px 4px 4px var(--backgroundCard);
         border: 1px solid rgba(255, 255, 255, 0.125);
         transition: height 400ms linear;
+        font-size: 1.5rem;
     }
     &.header-projet-max .image-projet {
         height: calc(45vh - 57px);
@@ -211,20 +217,20 @@ main {
             color: var(--textColor); 
         }
     }
-    img {
-        display: none;
-    }   
 }
 
 .header-projet-max {
     height: 45vh;
+    @media all and (max-width : $widthTablet) {
+        height: calc(45vh - 57px);
+    }
     @media all and (max-width : $widthSmartphone) {
         height: 70px;
     }
 }
 .header-projet-min {
     height: 127px;
-    @media all and (max-width : $widthSmartphone) {
+    @media all and (max-width : $widthTablet) {
         height: 70px;
     }
 }
@@ -234,7 +240,7 @@ main {
         &.section {
             width: calc(100% - var(--marginDesktop) * 2);
             left: var(--marginDesktop);
-            @media all and (max-width : $widthSmartphone) {
+            @media all and (max-width : $widthDesktop) {
                 width: calc(100% - var(--marginSmartphone) * 2);
                 left: var(--marginSmartphone);
             }

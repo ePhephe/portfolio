@@ -30,9 +30,11 @@
         <span class="burger-middle"></span>
         <span class="burger-bottom"></span>
     </div>
-    <header class="header-accueil container-marges-desktop large-6-12 small-4-4 container-marges-smartphone padding-top-40px" id="headerAccueil">
+    <header class="header-accueil container-marges-desktop large-6-12 large-S-4-12 medium-8-8 small-4-4 container-marges-smartphone padding-top-40px" id="headerAccueil">
         <div class="flex direction-column gap">
-            <img src="./public/img/images/photo-profil.png" alt="Photo de profil de Mickaël">
+            <div class="large-12-12">
+                <img src="./public/img/images/photo-profil.png" alt="Photo de profil de Mickaël" class="responsive">
+            </div>
             <div class="flex gap">
                 <div class="switch flex align-center">
                     <p>Thème :</p>
@@ -83,28 +85,28 @@
             <li data-section="2" class="flex align-center justify-center"><a href="" title="Voir mes projets"><i class="fa-regular fa-folder-open"></i></a></li>
         </ul>
     </nav>
-    <main class="container-marges-right-desktop large-6-12 container-marges-smartphone small-4-4">
+    <main class="large-6-12 large-S-7-12 medium-8-8 small-4-4 container-marges-right-desktop container-marges-tablet container-marges-smartphone">
         <div class="navigation flex direction-column gap">
             <div class="picto picto-48 rounded picto-center button" id="page-up"><i class="fa-solid fa-chevron-up"></i></div>
             <div class="picto picto-48 rounded picto-center button" id="page-down"><i class="fa-solid fa-chevron-down"></i></div>
         </div>
         <div data-section="0" class="section padding-top-40px margin-bottom-20px active">
             <div class="grid grid-a-propos">
-                <div class="a-propos card card-1h flex direction-column justify-between padding-20px" id="aPropos"></div>
-                <div class="soft-skills card card-1h flex direction-column justify-between padding-20px" id="softSkills"></div>
+                <div class="a-propos card card-1h flex direction-column gap padding-20px" id="aPropos"></div>
+                <div class="soft-skills card card-1h flex direction-column gap padding-20px" id="softSkills"></div>
                 <div class="description card card-1h card-2h-smartphone padding-20px" id="description"></div>
                 <div class="formation card card-2h flex direction-column justify-between padding-20px" id="formation"></div>
-                <div class="dev-language card card-1h flex direction-column justify-between padding-20px" id="devLanguage"></div>
-                <div class="dev-tools card card-1h flex direction-column justify-between padding-20px" id="devTools"></div>
+                <div class="dev-language card card-1h flex direction-column gap padding-20px" id="devLanguage"></div>
+                <div class="dev-tools card card-1h flex direction-column gap padding-20px" id="devTools"></div>
             </div>
             <div class="bottom-navigation-marge"></div>
         </div>
         <div data-section="1" class="section padding-top-40px margin-bottom-20px opacity-yes">
             <div class="grid grid-carriere">
-                <div class="carriere-1 card card-1h card-2h-smartphone flex direction-column justify-between padding-20px"></div>
-                <div class="carriere-2 card card-1h card-2h-smartphone flex direction-column justify-between padding-20px"></div>
-                <div class="carriere-3 card card-1h card-2h-smartphone flex direction-column justify-between padding-20px"></div>
-                <div class="carriere-4 card card-1h card-2h-smartphone flex direction-column justify-between padding-20px"></div>
+                <div class="carriere-1 card card-1h card-2h-smartphone flex direction-column justify-around padding-20px"></div>
+                <div class="carriere-2 card card-1h card-2h-smartphone flex direction-column justify-around padding-20px"></div>
+                <div class="carriere-3 card card-1h card-2h-smartphone flex direction-column justify-around padding-20px"></div>
+                <div class="carriere-4 card card-1h card-2h-smartphone flex direction-column justify-around padding-20px"></div>
             </div>
             <div class="bottom-navigation-marge"></div>
         </div>

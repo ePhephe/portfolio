@@ -8,18 +8,6 @@ divMenuBurger.addEventListener(`click`,(e)=>{
     headerAccueil.classList.toggle(`header-accueil-affiche`);    
 });
 
-//On récupère les variables nécessaires pour faire slider les sections
-let elementUp = document.getElementById(`page-up`);
-let elementDown = document.getElementById(`page-down`);
-//Listener sur le bouton pour la slide en haut
-elementUp.addEventListener(`click`,(e)=>{
-    changeSection(`prec`);
-});
-//Listener sur le bouton pour la slide en bas
-elementDown.addEventListener(`click`,(e)=>{
-    changeSection(`suiv`);
-});
-
 /**
  * Affiche les informations sur la page d'accueil
  * @param {array} tabDataApropos - Tableau des informations à afficher
@@ -158,7 +146,6 @@ fetch(`./public/json/accueil.json`).then(res => {
         console.log(err);
 });
 
-let adresse = new URL(document.location.href);
 let sectionParam =adresse.searchParams.get('section');
 
 if(sectionParam != null) {
