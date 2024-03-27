@@ -237,5 +237,3 @@ else {
 }
 
 setPolice(accessibleTheme);
-
-console.log(monStockage.getItem(`theme`))

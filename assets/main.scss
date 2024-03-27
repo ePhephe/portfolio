@@ -95,10 +95,10 @@ ul.liste {
 }
 /* Image pour la background de l'accueil */
 .bg-accueil {
-    background-image: url("../img/background/background-accueil.jpg");
+    background-image: url("../img/background/background-accueil.webp");
     background-position: right;
     @media all and (max-width : $widthTablet) {
-        background-image: url("../img/background/background-accueil-1140.jpg");
+        background-image: url("../img/background/background-accueil-1140.webp");
         background-position: center;
     }
 }
@@ -180,7 +180,7 @@ main {
     z-index: 1;
 
     .image-projet {
-        background-image: url("../img/images/projet-moovizy-ux.png");
+        background-image: url("../img/images/projet-moovizy-ux.webp");
         background-position: center;
         background-size: cover;
         width: 100%; 
@@ -193,11 +193,11 @@ main {
         height: calc(45vh - 57px);
         @media all and (max-width : $widthSmartphone) {
             height: 70px;
-            background-image: url("../img/images/projet-moovizy-ux-70.png");
+            background-image: url("../img/images/projet-moovizy-ux-70.webp");
         }
     }
     &.header-projet-min .image-projet {
-        background-image: url("../img/images/projet-moovizy-ux-70.png");
+        background-image: url("../img/images/projet-moovizy-ux-70.webp");
         height: calc(127px - 57px);
         @media all and (max-width : $widthSmartphone) {
             height: 70px;

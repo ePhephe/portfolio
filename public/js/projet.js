@@ -79,7 +79,7 @@ function afficheImagesDesktop(tabImagesDesktop){
     let divImages = document.querySelectorAll(`.grid-image-desktop-projet div`);
 
     tabImagesDesktop.forEach((image,index) => {
-        divImages[index].innerHTML = `<img src="./public/img/images/projet-${projetParam}/${image}" class="responsive">`;
+        divImages[index].innerHTML = `<img src="./public/img/images/projet-loss-${projetParam}/${image}" class="responsive">`;
         divImages[index].addEventListener(`click`,(e)=>{
             let divModal = document.getElementById(`modal`);
             let divModalContenu = document.getElementById(`modal-image`);
@@ -100,7 +100,7 @@ fetch(`./public/json/projets.json`).then(res => {
     return res.json();
 }).then(rep => {
         //On appelle nos fonctions d'affichage
-        console.log(rep.projets[projetParam-1]);
+        //console.log(rep.projets[projetParam-1]);
         afficheInfosProjet(rep.projets[projetParam-1]);
         afficheImagesMobile(rep.projets[projetParam-1].imagesMobile);
         afficheImagesDesktop(rep.projets[projetParam-1].imagesDesktop);
