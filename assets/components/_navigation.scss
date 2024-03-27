@@ -29,6 +29,11 @@ nav {
             height: 4px;
             width: 60px;
         }
+
+        svg {
+            height:36px;
+            width:36px;
+        }
     }
 }
 /* Marge pour la partie contact */ 
@@ -132,6 +137,8 @@ nav {
 .bottom-navigation {
     display: none;
 
+    
+
     @media all and (max-width : $widthTablet) {
         display: block;
         position: fixed;
@@ -148,19 +155,24 @@ nav {
             font-size: var(--fontSize17rem);
         }
 
-        li {
-            width:30%;
+        ul {
+            height: 100%;
+            
+            li {
+                width:30%;
 
-            &.menu-actif-bottom {
-                border-top: 2px solid var(--secondColor);
-            }
-            a {
-                color: var(--firstColor);
-            }
-            &.menu-actif-bottom {
-                border-top: 2px solid var(--secondColor);
+                &.menu-actif-bottom {
+                    border-top: 2px solid var(--secondColor);
+                    svg {
+                        fill: var(--secondColor);
+                    }
+                }
                 a {
-                    color: var(--secondColor);
+                    display: flex;
+                    align-items: flex-end;
+                }
+                svg {
+                    fill: var(--firstColor);
                 }
             }
         }

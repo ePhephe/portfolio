@@ -5,6 +5,10 @@
         margin-right: var(--gouttiere);
     }
 
+    svg {
+        fill: var(--textColor);
+    }
+
     input[type=checkbox] {
         height: 0;
         width: 0;

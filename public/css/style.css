@@ -924,6 +924,9 @@ les resolutions d'ecrans*/
 .switch p {
   margin-right: var(--gouttiere);
 }
+.switch svg {
+  fill: var(--textColor);
+}
 .switch input[type=checkbox] {
   height: 0;
   width: 0;
@@ -994,6 +997,10 @@ nav .menu-actif {
 nav .menu-actif .line-before {
   height: 4px;
   width: 60px;
+}
+nav .menu-actif svg {
+  height: 36px;
+  width: 36px;
 }
 
 /* Marge pour la partie contact */
@@ -1124,20 +1131,24 @@ nav .menu-actif .line-before {
     font-weight: 600;
     font-size: var(--fontSize17rem);
   }
-  .bottom-navigation li {
+  .bottom-navigation ul {
+    height: 100%;
+  }
+  .bottom-navigation ul li {
     width: 30%;
   }
-  .bottom-navigation li.menu-actif-bottom {
+  .bottom-navigation ul li.menu-actif-bottom {
     border-top: 2px solid var(--secondColor);
   }
-  .bottom-navigation li a {
-    color: var(--firstColor);
+  .bottom-navigation ul li.menu-actif-bottom svg {
+    fill: var(--secondColor);
   }
-  .bottom-navigation li.menu-actif-bottom {
-    border-top: 2px solid var(--secondColor);
+  .bottom-navigation ul li a {
+    display: flex;
+    align-items: flex-end;
   }
-  .bottom-navigation li.menu-actif-bottom a {
-    color: var(--secondColor);
+  .bottom-navigation ul li svg {
+    fill: var(--firstColor);
   }
 }
 
@@ -1159,6 +1170,9 @@ nav .menu-actif .line-before {
   border-radius: 50%;
   box-shadow: 0px 0px 4px var(--backgroundCard);
 }
+.picto svg {
+  fill: var(--textColorReverse);
+}
 .picto.picto-center {
   display: flex;
   align-items: center;
@@ -1171,6 +1185,10 @@ nav .menu-actif .line-before {
 .picto.picto-36 {
   width: 36px;
   height: 36px;
+}
+.picto.picto-36 svg {
+  width: 26px;
+  height: 26px;
 }
 .picto.rounded {
   border-radius: 50%;
@@ -1248,6 +1266,9 @@ em {
 a {
   text-decoration: none;
   color: var(--secondColor);
+}
+a svg {
+  fill: var(--secondColor);
 }
 
 ul.liste {
@@ -1415,7 +1436,11 @@ main div.opacity-none {
   margin-top: 0;
 }
 .header-projet nav a {
-  color: var(--textColor);
+  display: flex;
+  align-items: flex-end;
+}
+.header-projet nav svg {
+  fill: var(--textColor);
 }
 
 .header-projet-max {

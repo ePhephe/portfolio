@@ -12,7 +12,6 @@
     <link rel="manifest" href="./public/img/favicon/site.webmanifest">
     
     <link rel="stylesheet" href="./public/css/style.css">
-    <script src="https://kit.fontawesome.com/2314cf2df4.js" crossorigin="anonymous"></script>
 </head>
 
 <body class="container-full flex justify-between">
@@ -38,10 +37,10 @@
             <div class="flex gap">
                 <div class="switch flex align-center">
                     <p>Thème :</p>
-                    <i class="fa-solid fa-sun"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" viewBox="0 0 256 256"><path d="M120,40V16a8,8,0,0,1,16,0V40a8,8,0,0,1-16,0Zm8,24a64,64,0,1,0,64,64A64.07,64.07,0,0,0,128,64ZM58.34,69.66A8,8,0,0,0,69.66,58.34l-16-16A8,8,0,0,0,42.34,53.66Zm0,116.68-16,16a8,8,0,0,0,11.32,11.32l16-16a8,8,0,0,0-11.32-11.32ZM192,72a8,8,0,0,0,5.66-2.34l16-16a8,8,0,0,0-11.32-11.32l-16,16A8,8,0,0,0,192,72Zm5.66,114.34a8,8,0,0,0-11.32,11.32l16,16a8,8,0,0,0,11.32-11.32ZM48,128a8,8,0,0,0-8-8H16a8,8,0,0,0,0,16H40A8,8,0,0,0,48,128Zm80,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V216A8,8,0,0,0,128,208Zm112-88H216a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16Z"></path></svg>
                     <input type="checkbox" id="switchTheme">
                     <label for="switchTheme">Theme</label> 
-                    <i class="fa-solid fa-moon"></i>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="#000000" viewBox="0 0 256 256"><path d="M235.54,150.21a104.84,104.84,0,0,1-37,52.91A104,104,0,0,1,32,120,103.09,103.09,0,0,1,52.88,57.48a104.84,104.84,0,0,1,52.91-37,8,8,0,0,1,10,10,88.08,88.08,0,0,0,109.8,109.8,8,8,0,0,1,10,10Z"></path></svg>
                 </div>
                 <div class="switch flex align-center">
                     <p>Police accessible :</p>
@@ -51,17 +50,29 @@
             </div>
             <nav class="flex direction-column gap">
                 <div class="menu-navigation">
-                    <a href="" title="Accès à mon portfolio">Mickaël DURAND</a> &lt; Menu &gt;
+                    <a href="./index.html" title="Accès à mon portfolio">Mickaël DURAND</a> &lt; Menu &gt;
                 </div>
                 <ul class="flex direction-column gap menu-navigation">
                     <li class="menu-actif" data-section="0">
-                        <span class="line-before"></span><a href="" title="Accès à la partie A propos"><i class="fa-solid fa-user"></i> A propos</a>
+                        <span class="line-before"></span>
+                        <a href="" title="Accès à la partie A propos">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"><path d="M230.93,220a8,8,0,0,1-6.93,4H32a8,8,0,0,1-6.92-12c15.23-26.33,38.7-45.21,66.09-54.16a72,72,0,1,1,73.66,0c27.39,8.95,50.86,27.83,66.09,54.16A8,8,0,0,1,230.93,220Z"></path></svg>
+                            A propos
+                        </a>
                     </li>
                     <li data-section="1">
-                        <span class="line-before"></span><a href="" title="Voir ma carrière"><i class="fa-solid fa-id-card-clip"></i> Carrière</a>
+                        <span class="line-before"></span>
+                        <a href="" title="Voir ma carrière">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"><path d="M210.78,39.25l-130.25-23A16,16,0,0,0,62,29.23l-29.75,169a16,16,0,0,0,13,18.53l130.25,23a16,16,0,0,0,18.54-13l29.75-169A16,16,0,0,0,210.78,39.25ZM135.5,131.56a8,8,0,0,1-7.87,6.61,8.27,8.27,0,0,1-1.4-.12l-41.5-7.33A8,8,0,0,1,87.52,115L129,122.29A8,8,0,0,1,135.5,131.56Zm47-24.18a8,8,0,0,1-7.86,6.61,7.55,7.55,0,0,1-1.41-.13l-83-14.65a8,8,0,0,1,2.79-15.76l83,14.66A8,8,0,0,1,182.53,107.38Zm5.55-31.52a8,8,0,0,1-7.87,6.61,8.36,8.36,0,0,1-1.4-.12l-83-14.66a8,8,0,1,1,2.78-15.75l83,14.65A8,8,0,0,1,188.08,75.86Z"></path></svg> 
+                            Carrière
+                        </a>
                     </li>
                     <li data-section="2">
-                        <span class="line-before"></span><a href="" title="Voir mes projets"><i class="fa-regular fa-folder-open"></i> Projets</a>
+                        <span class="line-before"></span>
+                        <a href="" title="Voir mes projets">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"><path d="M245,110.64A16,16,0,0,0,232,104H216V88a16,16,0,0,0-16-16H130.67L102.94,51.2a16.14,16.14,0,0,0-9.6-3.2H40A16,16,0,0,0,24,64V208h0a8,8,0,0,0,8,8H211.1a8,8,0,0,0,7.59-5.47l28.49-85.47A16.05,16.05,0,0,0,245,110.64ZM93.34,64l27.73,20.8a16.12,16.12,0,0,0,9.6,3.2H200v16H69.77a16,16,0,0,0-15.18,10.94L40,158.7V64Z"></path></svg>
+                            Projets
+                        </a>
                     </li>
                 </ul>
                 <div class="menu-navigation">
@@ -69,26 +80,52 @@
                 </div>
                 <div class="flex gap contact">
                     Contact
-                    <a href="mailto:mickael.durand@outlook.com" title="Envoyez-moi un mail" target="_blank" rel="noopener"><i class="fa-regular fa-paper-plane"></i></a>
-                    <a href="https://www.linkedin.com/in/m-durand" title="Accès à mon compte LinkedIn" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="https://github.com/ePhephe" title="Accès à mon compte GitHub" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/ephephe/" title="Accès à mon compte Instagram" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://open.spotify.com/playlist/3qT3NJQFRJHVeHiq3VdZ6h?si=fb8072dfbc0d42dc" title="Accès à ma playlist Spotify" target="_blank" rel="noopener"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="mailto:mickael.durand@outlook.com" title="Envoyez-moi un mail" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"><path d="M231.4,44.34s0,.1,0,.15l-58.2,191.94a15.88,15.88,0,0,1-14,11.51q-.69.06-1.38.06a15.86,15.86,0,0,1-14.42-9.15l-35.71-75.39a4,4,0,0,1,.79-4.54l57.26-57.27a8,8,0,0,0-11.31-11.31L97.08,147.6a4,4,0,0,1-4.54.79l-75-35.53A16.37,16.37,0,0,1,8,97.36,15.89,15.89,0,0,1,19.57,82.84l191.94-58.2.15,0A16,16,0,0,1,231.4,44.34Z"></path></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/m-durand" title="Accès à mon compte LinkedIn" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"><path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24ZM96,176a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0ZM88,96a12,12,0,1,1,12-12A12,12,0,0,1,88,96Zm96,80a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140Z"></path></svg>
+                    </a>
+                    <a href="https://github.com/ePhephe" title="Accès à mon compte GitHub" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"><path d="M216,104v8a56.06,56.06,0,0,1-48.44,55.47A39.8,39.8,0,0,1,176,192v40a8,8,0,0,1-8,8H104a8,8,0,0,1-8-8V216H72a40,40,0,0,1-40-40A24,24,0,0,0,8,152a8,8,0,0,1,0-16,40,40,0,0,1,40,40,24,24,0,0,0,24,24H96v-8a39.8,39.8,0,0,1,8.44-24.53A56.06,56.06,0,0,1,56,112v-8a58.14,58.14,0,0,1,7.69-28.32A59.78,59.78,0,0,1,69.07,28,8,8,0,0,1,76,24a59.75,59.75,0,0,1,48,24h24a59.75,59.75,0,0,1,48-24,8,8,0,0,1,6.93,4,59.74,59.74,0,0,1,5.37,47.68A58,58,0,0,1,216,104Z"></path></svg>
+                    </a>
+                    <a href="https://www.instagram.com/ephephe/" title="Accès à mon compte Instagram" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"><path d="M176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24ZM128,176a48,48,0,1,1,48-48A48.05,48.05,0,0,1,128,176Zm60-96a12,12,0,1,1,12-12A12,12,0,0,1,188,80Zm-28,48a32,32,0,1,1-32-32A32,32,0,0,1,160,128Z"></path></svg>
+                    </a>
+                    <a href="https://open.spotify.com/playlist/3qT3NJQFRJHVeHiq3VdZ6h?si=fb8072dfbc0d42dc" title="Accès à ma playlist Spotify" target="_blank" rel="noopener">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm31.07,145.74a8,8,0,0,1-10.81,3.33,42.79,42.79,0,0,0-40.52,0,8,8,0,0,1-7.48-14.14,59.33,59.33,0,0,1,55.48,0A8,8,0,0,1,159.07,169.74Zm16-28a8,8,0,0,1-10.82,3.3,77.07,77.07,0,0,0-72.48,0,8,8,0,0,1-7.52-14.12,93,93,0,0,1,87.52,0A8,8,0,0,1,175.06,141.76Zm16-28a8,8,0,0,1-10.83,3.29,110.62,110.62,0,0,0-104.46,0,8,8,0,0,1-7.54-14.12,126.67,126.67,0,0,1,119.54,0A8,8,0,0,1,191.06,113.76Z"></path></svg>
+                    </a>
                 </div>
             </nav>
         </div>
     </header>
     <nav class="bottom-navigation">
         <ul class="flex justify-around">
-            <li data-section="0" class="flex align-center justify-center menu-actif-bottom"><a href="" title="Accès à la partie A propos"><i class="fa-solid fa-user"></i></a></li>
-            <li data-section="1" class="flex align-center justify-center"><a href="" title="Voir ma carrière"><i class="fa-solid fa-id-card-clip"></i></a></li>
-            <li data-section="2" class="flex align-center justify-center"><a href="" title="Voir mes projets"><i class="fa-regular fa-folder-open"></i></a></li>
+            <li data-section="0" class="flex align-center justify-center menu-actif-bottom">
+                <a href="" title="Accès à la partie A propos">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"><path d="M230.93,220a8,8,0,0,1-6.93,4H32a8,8,0,0,1-6.92-12c15.23-26.33,38.7-45.21,66.09-54.16a72,72,0,1,1,73.66,0c27.39,8.95,50.86,27.83,66.09,54.16A8,8,0,0,1,230.93,220Z"></path></svg>
+                </a>
+            </li>
+            <li data-section="1" class="flex align-center justify-center">
+                <a href="" title="Voir ma carrière">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"><path d="M210.78,39.25l-130.25-23A16,16,0,0,0,62,29.23l-29.75,169a16,16,0,0,0,13,18.53l130.25,23a16,16,0,0,0,18.54-13l29.75-169A16,16,0,0,0,210.78,39.25ZM135.5,131.56a8,8,0,0,1-7.87,6.61,8.27,8.27,0,0,1-1.4-.12l-41.5-7.33A8,8,0,0,1,87.52,115L129,122.29A8,8,0,0,1,135.5,131.56Zm47-24.18a8,8,0,0,1-7.86,6.61,7.55,7.55,0,0,1-1.41-.13l-83-14.65a8,8,0,0,1,2.79-15.76l83,14.66A8,8,0,0,1,182.53,107.38Zm5.55-31.52a8,8,0,0,1-7.87,6.61,8.36,8.36,0,0,1-1.4-.12l-83-14.66a8,8,0,1,1,2.78-15.75l83,14.65A8,8,0,0,1,188.08,75.86Z"></path></svg> 
+                </a>
+            </li>
+            <li data-section="2" class="flex align-center justify-center">
+                <a href="" title="Voir mes projets">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="#000000" viewBox="0 0 256 256"><path d="M245,110.64A16,16,0,0,0,232,104H216V88a16,16,0,0,0-16-16H130.67L102.94,51.2a16.14,16.14,0,0,0-9.6-3.2H40A16,16,0,0,0,24,64V208h0a8,8,0,0,0,8,8H211.1a8,8,0,0,0,7.59-5.47l28.49-85.47A16.05,16.05,0,0,0,245,110.64ZM93.34,64l27.73,20.8a16.12,16.12,0,0,0,9.6,3.2H200v16H69.77a16,16,0,0,0-15.18,10.94L40,158.7V64Z"></path></svg>
+                </a>
+            </li>
         </ul>
     </nav>
     <main class="large-6-12 large-S-7-12 medium-8-8 small-4-4 container-marges-right-desktop container-marges-tablet container-marges-smartphone">
         <div class="navigation flex direction-column gap">
-            <div class="picto picto-48 rounded picto-center button" id="page-up"><i class="fa-solid fa-chevron-up"></i></div>
-            <div class="picto picto-48 rounded picto-center button" id="page-down"><i class="fa-solid fa-chevron-down"></i></div>
+            <div class="picto picto-48 rounded picto-center button" id="page-up">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 256 256"><path d="M215.39,163.06A8,8,0,0,1,208,168H48a8,8,0,0,1-5.66-13.66l80-80a8,8,0,0,1,11.32,0l80,80A8,8,0,0,1,215.39,163.06Z"></path></svg>
+            </div>
+            <div class="picto picto-48 rounded picto-center button" id="page-down">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,48,88H208a8,8,0,0,1,5.66,13.66Z"></path></svg>
+            </div>
         </div>
         <div data-section="0" class="section padding-top-40px margin-bottom-20px active">
             <div class="grid grid-a-propos">

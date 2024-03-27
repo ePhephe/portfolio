@@ -94,7 +94,9 @@ function afficheCarriere(tabDataCarriere) {
 
         //Si le métier n'est pas vide, on l'affiche
         if (data.metier != ``) {
-            templateHtml += `<h2 class="flex justify-between"><div>${data.metier} - ${data.employeur}</div> <a href="${data.link}" title="Accès au site de ${data.employeur}" target="_blank"><i class="fa-solid fa-globe"></i></a></h2> 
+            templateHtml += `<h2 class="flex justify-between"><div>${data.metier} - ${data.employeur}</div> <a href="${data.link}" title="Accès au site de ${data.employeur}" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="#000000" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm78.37,64H170.94a142.39,142.39,0,0,0-20.26-45A88.37,88.37,0,0,1,206.37,88ZM128,40.11c12,13,21,29.55,26.37,47.89H101.63C107,69.66,116,53.13,128,40.11ZM96,128a145.29,145.29,0,0,1,2-24h60a145.72,145.72,0,0,1,0,48H98A145.29,145.29,0,0,1,96,128Zm5.63,40h52.74C149,186.34,140,202.87,128,215.89,116,202.87,107,186.34,101.63,168Zm49.05,45a142.39,142.39,0,0,0,20.26-45h35.43A88.37,88.37,0,0,1,150.68,213Zm23.53-61a161.79,161.79,0,0,0,0-48h38.46a88.15,88.15,0,0,1,0,48Z"></path></svg>
+            </a></h2> 
             <h3>${data.lieu} - ${data.dates}</h3> 
             <p>${data.description}</p>`;
         }
@@ -123,7 +125,8 @@ function afficheProjets(tabDataProjets) {
         if (data.libelle != ``) {
             divAffichage.style = `background-image: url("./public/img/images/${data.background}");color:${data.color};`;
             templateHtml += `${data.competence}<a class="picto picto-36 rounded picto-center fixed-bottom-right" href="./projet.html?projet-id=${data.id}" title="Accès au projet">
-                <i class="fa-solid fa-plus"></i></a>`;
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 256 256"><path d="M192,136v72a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V80A16,16,0,0,1,48,64h72a8,8,0,0,1,0,16H48V208H176V136a8,8,0,0,1,16,0Zm32-96a8,8,0,0,0-8-8H152a8,8,0,0,0-5.66,13.66L172.69,72l-42.35,42.34a8,8,0,0,0,11.32,11.32L184,83.31l26.34,26.35A8,8,0,0,0,224,104Z"></path></svg>
+            </a>`;
         }
         else {
             //Sinon on affiche New Project Soon

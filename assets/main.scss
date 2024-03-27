@@ -48,6 +48,9 @@ em {
 a {
     text-decoration: none;
     color: var(--secondColor);
+    svg {
+        fill: var(--secondColor);
+    }
 }
 
 ul.liste {
@@ -206,7 +209,11 @@ main {
             margin-top: 0;
         }
         a {
-            color: var(--textColor); 
+            display: flex;
+            align-items: flex-end;
+        }
+        svg {
+            fill: var(--textColor); 
         }
     }
 }
