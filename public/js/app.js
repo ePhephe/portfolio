@@ -72,11 +72,15 @@ function setPolice(police){
 function changeHeader(newNumSection) {
     //On récupère les div nécessaires
     let headerProjet = document.querySelector(`header`);
+    let headerProjetMax = document.querySelector(`.image-projet.image-max`);
+    let headerProjetMin = document.querySelector(`.image-projet.image-min`);
     let headerVide = document.querySelector(`.header-vide`);
 
     //Si on est sur la première section
     if(newNumSection != 0) {
         //On met le header en grand
+        headerProjetMax.classList.add(`display-none`);
+        headerProjetMin.classList.remove(`display-none`);
         headerProjet.classList.remove(`header-projet-max`);
         headerProjet.classList.add(`header-projet-min`);
         headerVide.classList.remove(`header-projet-max`);
@@ -84,6 +88,8 @@ function changeHeader(newNumSection) {
     }
     else {
         //Sinon le header est petit
+        headerProjetMax.classList.remove(`display-none`);
+        headerProjetMin.classList.add(`display-none`);
         headerProjet.classList.add(`header-projet-max`);
         headerProjet.classList.remove(`header-projet-min`);
         headerVide.classList.add(`header-projet-max`);

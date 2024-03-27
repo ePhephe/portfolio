@@ -23,10 +23,9 @@
     </div>
     
     <!-- Header avec navigation sur la partie gauche de la page -->
-    <header class="header-projet header-projet-max container-marges-desktop container-marges-tablet container-marges-smartphone container-full">
-        <div class="image-projet image-max card flex justify-end padding-top-10px padding-right-20px">
-        </div>
-        <div class="image-projet image-min card flex justify-end padding-top-10px padding-right-20px display-none">
+    <header class="header-projet header-projet-min container-marges-desktop container-marges-tablet container-marges-smartphone container-full">
+        <div class="card image-projet image-min flex justify-center align-center">
+            <h1>Mentions légales</h1>
         </div>
         <div class="navigation-projet flex margin-top-10px justify-between gap">
             <div class="card flex gap large-6-12 small-4-4 padding-10px">
@@ -68,23 +67,13 @@
     <nav class="bottom-navigation">
         <ul class="flex justify-around">
             <li data-section="0" class="flex align-center justify-center menu-actif-bottom">
-                <a href="" title="A propos du projet">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 256 256"><path d="M216,72H130.66L102.92,51.2A16,16,0,0,0,93.34,48H40A16,16,0,0,0,24,64V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V88A16,16,0,0,0,216,72ZM40,64H93.34l21.33,16L93.33,96H40Z"></path></svg>
-                </a>
-            </li>
-            <li data-section="1" class="flex align-center justify-center">
-                <a href="" title="Voir les écrans mobiles">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 256 256"><path d="M176,16H80A24,24,0,0,0,56,40V216a24,24,0,0,0,24,24h96a24,24,0,0,0,24-24V40A24,24,0,0,0,176,16ZM128,72a12,12,0,1,1,12-12A12,12,0,0,1,128,72Z"></path></svg>
-                </a>
-            </li>
-            <li data-section="2" class="flex align-center justify-center">
-                <a href="" title="Voir les écrans desktop">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 256 256"><path d="M208,40H48A24,24,0,0,0,24,64V176a24,24,0,0,0,24,24h72v16H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V200h72a24,24,0,0,0,24-24V64A24,24,0,0,0,208,40Zm0,144H48a8,8,0,0,1-8-8V160H216v16A8,8,0,0,1,208,184Z"></path></svg>
+                <a href="" title="Mentions légales">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 256 256"><path d="M216,40H40A16,16,0,0,0,24,56V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A16,16,0,0,0,216,40ZM176,168H80a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm0-32H80a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Zm0-32H80a8,8,0,0,1,0-16h96a8,8,0,0,1,0,16Z"></path></svg>
                 </a>
             </li>
         </ul>
     </nav>
-    <div class="header-vide header-projet-max large-12-12"></div>
+    <div class="header-vide header-projet-min large-12-12"></div>
     <main class="main-projet container-marges-desktop container-marges-smartphone large-12-12">
         <div class="navigation-back">
             <a href="./index.html?section=2" title="Retour aux projets">
@@ -102,45 +91,38 @@
             </div>
         </div>
         <div data-section="0" class="section padding-top-40px margin-bottom-40px active">
-            <div class="grid grid-presentation-projet">
-                <div class="info-projet card card-1h flex direction-column justify-around padding-20px" id="infoProjet"></div>
-                <div class="role-projet card card-1h flex direction-column gap padding-20px" id="roleProjet"></div>
-                <div class="presentation-projet card card-1h card-3h-smartphone padding-20px" id="presentationProjet"></div>
-                <div class="histo-projet card card-1h card-3h-smartphone padding-20px" id="histoProjet"></div>
-                <div class="techno-projet card card-1h flex direction-column gap padding-20px" id="technoProjet"></div>
-                <div class="bottom-navigation-marge"></div>
-            </div>
-        </div>
-        <div data-section="1" class="section padding-top-20px opacity-yes">
-            <div class="grid grid-image-mobile-projet">
-                <div class="image-mobile-1 card card-screen-mobile"></div>
-                <div class="image-mobile-2 card card-screen-mobile"></div>
-                <div class="image-mobile-3 card card-screen-mobile"></div>
-                <div class="bottom-navigation-marge"></div>
-            </div>
-        </div>
-        <div data-section="2" class="section padding-top-20px opacity-yes">
-            <div class="grid grid-image-desktop-projet">
-                <div class="image-desktop-1 card card-screen-desktop card-1h-smartphone"></div>
-                <div class="image-desktop-2 card card-screen-desktop card-1h-smartphone"></div>
-                <div class="image-desktop-3 card card-screen-desktop card-1h-smartphone"></div>
-                <div class="image-desktop-4 card card-screen-desktop card-1h-smartphone"></div>
-                <div class="bottom-navigation-marge"></div>
+            <div class="grid grid-mentions">
+                <div class="mentions-infos card card-3h padding-20px flex direction-column gap">
+                    <h2>Hébergeur :</h2>
+                    <div class="flex direction-column gap">
+                        <span>HOSTINGER operations, UAB</span>
+                        <span>Švitrigailos str. 34,<br>Vilnius 03230 Lithuania</span>
+                        <span>Phone: <a href="tel:+37064503378" title="Appeler l'hébergeur">+37064503378</a></span>
+                        <span>Email: <a href="mailto:domains@hostinger.com" title="Écrire à l'hébergeur">domains@hostinger.com</a></span>
+                        <span>NOTE: To report abuse activity please use contacts indicated in the <a href="https://www.hostinger.com/report-abuse?_gl=1*12ux9j6*_gcl_au*MTk5OTY1Mjg1Ni4xNzA5OTAyMTAw&_ga=2.173504867.1598289384.1711548891-1118715786.1709902101" title="Accès à la page de rapport d'abus">Report Abuse</a> page.
+                    </div>
+                </div>
+                <div class="mentions-donnees card card-3h padding-20px flex direction-column gap">
+                    <h2>Propriété intellectuelle :</h2>
+                    <p>Ce site et son contenu sont la propriété de Mickaël DURAND. Toute reproduction totale ou partielle est interdite sans autorisation préalable.</p>
+                    <h2>Cookies :</h2>
+                    <p>Ce site peut utiliser des cookies pour améliorer l'expérience de navigation. En continuant votre navigation, vous acceptez l'utilisation de ces cookies.</p>
+                    <h2>Liens externes :</h2>
+                    <p>Ce site peut contenir des liens vers des sites externes. Nous déclinons toute responsabilité quant au contenu de ces sites.</p>
+                </div>
+                <div class="mentions-rgpd card card-3h padding-20px flex direction-column gap">
+                    <h2>Contact :</h2>
+                    <p>
+                        Pour toute question ou réclamation concernant ce site, veuillez nous contacter à l'adresse <a href="mailto:mickael.durand@outlook.com" title="Écrire au propriétaire du site">mickael.durand@outlook.com</a>.
+                    </p>
+                    <h2>Date de dernière mise à jour :</h2>
+                    <p>27/03/2024</p>
+                </div>
             </div>
         </div>
     </main>
 
-    <div class="modal flex align-center justify-center display-none" id="modal">
-        <div class="modal-content">
-            <div id="modal-image"></div>
-            <div class="picto picto-48 square picto-center button" id="btn-close">
-                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#000000" viewBox="0 0 256 256"><path d="M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H208a16,16,0,0,0,16-16V48A16,16,0,0,0,208,32ZM181.66,170.34a8,8,0,0,1-11.32,11.32L128,139.31,85.66,181.66a8,8,0,0,1-11.32-11.32L116.69,128,74.34,85.66A8,8,0,0,1,85.66,74.34L128,116.69l42.34-42.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>
-            </div>
-        </div>
-    </div>
-
     <script src="./public/js/app.js"></script>
-    <script src="./public/js/projet.js"></script>
 </body>
 
 </html>

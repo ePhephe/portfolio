@@ -2,11 +2,18 @@ let projetParam = adresse.searchParams.get('projet-id');
 
 function afficheInfosProjet(tabDataProjet){
     let tabDivAffichage = document.querySelectorAll(`.grid-presentation-projet div`);
-    let headerProjet = document.querySelector(`.image-projet`);
+    let headerProjetMax = document.querySelector(`.image-projet.image-max`);
+    let headerProjetMin = document.querySelector(`.image-projet.image-min`);
 
-    //document.querySelector('meta[name="description"]').setAttribute("content", _desc);
+    document.querySelector('meta[name="description"]').setAttribute("content", tabDataProjet.metaDesc);
+    document.title = tabDataProjet.title;
 
-    headerProjet.innerHTML = `<a href="${tabDataProjet.url}" title="Accès à la démo du projet ${tabDataProjet.libelle}" target="_blank">
+    headerProjetMax.style = `background-image:url("../public/img/images/projet-1.webp");`;
+    headerProjetMin.style = `background-image:url("../public/img/images/projet-1-70.webp");`;
+    headerProjetMax.innerHTML = `<a href="${tabDataProjet.url}" title="Accès à la démo du projet ${tabDataProjet.libelle}" target="_blank">
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="${tabDataProjet.color}" viewBox="0 0 256 256"><path d="M192,136v72a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V80A16,16,0,0,1,48,64h72a8,8,0,0,1,0,16H48V208H176V136a8,8,0,0,1,16,0Zm32-96a8,8,0,0,0-8-8H152a8,8,0,0,0-5.66,13.66L172.69,72l-42.35,42.34a8,8,0,0,0,11.32,11.32L184,83.31l26.34,26.35A8,8,0,0,0,224,104Z"></path></svg>
+    </a>`;
+    headerProjetMin.innerHTML = `<a href="${tabDataProjet.url}" title="Accès à la démo du projet ${tabDataProjet.libelle}" target="_blank">
     <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="${tabDataProjet.color}" viewBox="0 0 256 256"><path d="M192,136v72a16,16,0,0,1-16,16H48a16,16,0,0,1-16-16V80A16,16,0,0,1,48,64h72a8,8,0,0,1,0,16H48V208H176V136a8,8,0,0,1,16,0Zm32-96a8,8,0,0,0-8-8H152a8,8,0,0,0-5.66,13.66L172.69,72l-42.35,42.34a8,8,0,0,0,11.32,11.32L184,83.31l26.34,26.35A8,8,0,0,0,224,104Z"></path></svg>
     </a>`;
 

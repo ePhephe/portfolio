@@ -65,8 +65,6 @@
     }
 }
 
-
-
 /* Mise en place du grid pour la partie carrière */
 .grid-carriere {
     grid-template-columns: 1fr;
@@ -133,10 +131,6 @@
         }
     }
 }
-
-
-
-
 
 /* Mise en place du grid pour la partie projets */
 .grid-projets {
@@ -369,5 +363,51 @@
             "image-desktop-2"
             "image-desktop-3"
             "image-desktop-4";
+    }
+}
+
+/* Mise en place du grid pour la partie à propos */
+.grid-mentions {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "mentions-infos mentions-donnees mentions-rgpd";
+
+    .mentions-infos {
+        grid-area: mentions-infos;
+    }
+
+    .mentions-donnees {
+        grid-area: mentions-donnees;
+    }
+
+    .mentions-rgpd {
+        grid-area: mentions-rgpd;
+    }
+
+    /*Tablets*/
+    @media all and (min-width : $widthSmartphone) and (max-width : $widthTablet) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "a-propos soft-skills"
+            "description description"
+            "formation dev-language"
+            "formation dev-tools";
+    }
+
+    /*Smartphones*/
+    @media all and (max-width : $widthSmartphone) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            "a-propos"
+            "soft-skills"
+            "description"
+            "description"
+            "formation"
+            "formation"
+            "dev-language"
+            "dev-tools";
     }
 }
