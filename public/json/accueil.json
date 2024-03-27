@@ -110,18 +110,18 @@
     ],
     "projets": [
         {
-            "id": "1",
+            "id": "2",
             "libelle": "Moovizy",
             "color": "black",
             "competence": "UX Design / Figma",
             "background": "projet-1.webp"
         },
         {
-            "id": "2",
-            "libelle": "",
-            "color": "",
-            "competence": "",
-            "background": ""
+            "id": "1",
+            "libelle": "Men's Sportswear",
+            "color": "white",
+            "competence": "Intégration Front",
+            "background": "projet-2.webp"
         },
         {
             "id": "3",

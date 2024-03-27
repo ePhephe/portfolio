@@ -1,7 +1,7 @@
 {
     "projets": [
         {
-            "id": "1",
+            "id": "2",
             "libelle": "Moovizy",
             "title": "WorldOfMDDev - Projet Moovizy, UX Design",
             "metaDesc": "",
@@ -43,13 +43,45 @@
             ]
         },
         {
-            "id": "2",
-            "libelle": "",
-            "color": "",
-            "competence": "",
-            "images-mobile": [
+            "id": "1",
+            "libelle": "Moovizy",
+            "title": "WorldOfMDDev - Projet Moovizy, UX Design",
+            "metaDesc": "",
+            "url": "https://www.figma.com/proto/Vd2PwyqHM5mJjvPGAUDjvd/Groupe1-Prototypes-Moovizy-S%C3%A9curit%C3%A9?page-id=603%3A166&type=design&node-id=1127-9587&viewport=1712%2C753%2C0.09&t=voqHB0ICOCnB0Yoe-1&scaling=contain&starting-point-node-id=1127%3A9587",
+            "color": "black",
+            "competence": "UX Design / Figma",
+            "infoProjet": {
+                "libelle": "Le Projet",
+                "description": "Dans le cadre de ma formation, j'ai eu la chance de suivre le module UX/UI Design durant lequel nous avons réalisé un projet fictif."
+            },
+            "roleProjet": {
+                "libelle": "Mon Rôle",
+                "roles": [
+                    "UX/UI Designer",
+                    "Chef de projet"
+                ]
+            },
+            "presentationProjet": "Nous avons simulé pendant ce module un projet basé sur l'application des transports stéphanois Moovizy. Avec mes camarades, nous avons donc élaboré une nouvelle version de l'application orientée vers la sécurité des trajets. Plutôt que de vous détaillez mon expérience dans un long pavé de texte, vous trouverez en lien le résultat de notre travail : la présentation de notre projet sous forme de pitch (avec à l'intérieur des liens vers les prototypes).",
+            "histoProjet": "",
+            "technoProjet": {
+                "libelle": "Compétences",
+                "technologies": [
+                    "UX Design",
+                    "UI Design",
+                    "Figma",
+                    "Notion"
+                ]
+            },
+            "imagesMobile": [
+                "mobile-connexion.webp",
+                "mobile-itineraire-ideal.webp",
+                "mobile-detail-itineraire.webp"
             ],
-            "images-desktop": [
+            "imagesDesktop": [
+                "ecran-desktop-accueil.webp",
+                "ecran-desktop-popin-options.webp",
+                "ecran-desktop-detail-itineraire.webp",
+                "ecran-desktop-envoi-itineraire.webp"
             ]
         },
         {
