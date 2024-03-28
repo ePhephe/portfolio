@@ -4,7 +4,7 @@
             "id": "1",
             "libelle": "Men'S Sportswear",
             "title": "worldofMddev - Projet Men'S Sportswear, Développement Front-End",
-            "metaDesc": "",
+            "metaDesc": "Découvrez notre projet UX/UI pour Moovizy, l'appli de transport stéphanois. Sécurité des trajets et prototypes innovants au rendez-vous ! ",
             "url": "https://ephephe.github.io/eval-front-men-sportwear/",
             "color": "black",
             "competence": "Intégration Front",
@@ -19,8 +19,8 @@
                     "Développeur JS"
                 ]
             },
-            "presentationProjet": "Nous avons simulé pendant ce module un projet basé sur l'application des transports stéphanois Moovizy. Avec mes camarades, nous avons donc élaboré une nouvelle version de l'application orientée vers la sécurité des trajets. Plutôt que de vous détaillez mon expérience dans un long pavé de texte, vous trouverez en lien le résultat de notre travail : la présentation de notre projet sous forme de pitch (avec à l'intérieur des liens vers les prototypes).",
-            "histoProjet": "",
+            "presentationProjet": "Nous avons terminé le module de développement Front-end par une évaluation sur l'intégration d'un site de e-commerce fictif Men's Sportswear. En partant de la consigne et des maquettes sur Figma, j'ai intégré les différentes pages pour les types d'affichages desktop, tablet et smartphone. Plusieurs bibliothèques javascript ont été utilisées pour améliorer la navigation et l'ergonomie du site.",
+            "histoProjet": "L'évaluation s'est déroulée sur une semaine, le but étant de montrer toutes les compétences acquises tout au long du module. J'ai intégrer les maquettes en utilisant notamment HTML et SCSS. J'ai également utilisé JavaScript pour notamment les contrôles sur les champs de formulaire et l'ajout de contenu dynamique par la lecture de fichier JSON. Plusieurs bibliothèques javascript ont été utilisés pour animer certains composants du site : leaflet pour la carte des boutiques, AOS pour les effets d'apparition au scroll et enfin SwipperJS pour le slider de la page produit. Enfin, une attention particulière a été apporté au SEO et à l'accessibilité : optimisation des différentes balises et mise en place d'une police de caractères accessible OpenDys. ",
             "technoProjet": {
                 "libelle": "Compétences",
                 "technologies": [
@@ -71,7 +71,7 @@
             "id": "2",
             "libelle": "Moovizy",
             "title": "worldofMddev - Projet Moovizy, UX Design",
-            "metaDesc": "",
+            "metaDesc": "Découvrez notre projet UX/UI pour Moovizy, l'appli de transport stéphanois. Sécurité des trajets et prototypes innovants au rendez-vous ! ",
             "url": "https://www.figma.com/proto/Vd2PwyqHM5mJjvPGAUDjvd/Groupe1-Prototypes-Moovizy-S%C3%A9curit%C3%A9?page-id=603%3A166&type=design&node-id=1127-9587&viewport=1712%2C753%2C0.09&t=voqHB0ICOCnB0Yoe-1&scaling=contain&starting-point-node-id=1127%3A9587",
             "color": "black",
             "competence": "UX Design / Figma",
