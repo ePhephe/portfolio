@@ -1,22 +1,22 @@
 {
     "projets": [
         {
-            "id": "2",
-            "libelle": "Moovizy",
-            "title": "WorldOfMDDev - Projet Moovizy, UX Design",
+            "id": "1",
+            "libelle": "Men'S Sportswear",
+            "title": "worldofMddev - Projet Men'S Sportswear, Développement Front-End",
             "metaDesc": "",
-            "url": "https://www.figma.com/proto/Vd2PwyqHM5mJjvPGAUDjvd/Groupe1-Prototypes-Moovizy-S%C3%A9curit%C3%A9?page-id=603%3A166&type=design&node-id=1127-9587&viewport=1712%2C753%2C0.09&t=voqHB0ICOCnB0Yoe-1&scaling=contain&starting-point-node-id=1127%3A9587",
+            "url": "https://ephephe.github.io/eval-front-men-sportwear/",
             "color": "black",
-            "competence": "UX Design / Figma",
+            "competence": "Intégration Front",
             "infoProjet": {
                 "libelle": "Le Projet",
-                "description": "Dans le cadre de ma formation, j'ai eu la chance de suivre le module UX/UI Design durant lequel nous avons réalisé un projet fictif."
+                "description": "Lors de la formation Webecom, j'ai pu suivre le module Front-End qui s'est conclu par la réalisation de ce projet."
             },
             "roleProjet": {
                 "libelle": "Mon Rôle",
                 "roles": [
-                    "UX/UI Designer",
-                    "Chef de projet"
+                    "Intégrateur Front",
+                    "Développeur JS"
                 ]
             },
             "presentationProjet": "Nous avons simulé pendant ce module un projet basé sur l'application des transports stéphanois Moovizy. Avec mes camarades, nous avons donc élaboré une nouvelle version de l'application orientée vers la sécurité des trajets. Plutôt que de vous détaillez mon expérience dans un long pavé de texte, vous trouverez en lien le résultat de notre travail : la présentation de notre projet sous forme de pitch (avec à l'intérieur des liens vers les prototypes).",
@@ -24,28 +24,53 @@
             "technoProjet": {
                 "libelle": "Compétences",
                 "technologies": [
-                    "UX Design",
-                    "UI Design",
-                    "Figma",
-                    "Notion"
+                    "HTML/CSS",
+                    "Javascript",
+                    "Leaflet",
+                    "SwipperJS"
                 ]
             },
             "imagesMobile": [
-                "mobile-connexion.webp",
-                "mobile-itineraire-ideal.webp",
-                "mobile-detail-itineraire.webp"
+                {
+                    "nom":"mobile-accueil.webp",
+                    "alt":"Écran d'accueil de Men's Sportswear sur smartphone"
+                },
+                {
+                    "nom":"mobile-liste-produits.webp",
+                    "alt":"Écran de liste des produits de Men's Sportswear sur smartphone"
+                },
+                {
+                    "nom":"mobile-maps-leaflet.webp",
+                    "alt":"Écran de la carte des boutiques de Men's Sportswear sur smartphone"
+                },
+                {
+                    "nom":"mobile-menu-burger.webp",
+                    "alt":"Écran du menu burger de Men's Sportswear sur smartphone"
+                }
             ],
             "imagesDesktop": [
-                "ecran-desktop-accueil.webp",
-                "ecran-desktop-popin-options.webp",
-                "ecran-desktop-detail-itineraire.webp",
-                "ecran-desktop-envoi-itineraire.webp"
+                {
+                    "nom":"ecran-desktop-accueil.webp",
+                    "alt":"Écran d'accueil de Men's Sportswear sur ordinateur"
+                },
+                {
+                    "nom":"ecran-desktop-categories.webp",
+                    "alt":"Écran de liste des catégories de Men's Sportswear sur ordinateur"
+                },
+                {
+                    "nom":"ecran-desktop-liste-produits.webp",
+                    "alt":"Écran de la liste des produits de Men's Sportswear sur ordinateur"
+                },
+                {
+                    "nom":"ecran-desktop-un-produit.webp",
+                    "alt":"Écran d'un produit de Men's Sportswear sur ordinateur"
+                }
             ]
         },
         {
-            "id": "1",
+            "id": "2",
             "libelle": "Moovizy",
-            "title": "WorldOfMDDev - Projet Moovizy, UX Design",
+            "title": "worldofMddev - Projet Moovizy, UX Design",
             "metaDesc": "",
             "url": "https://www.figma.com/proto/Vd2PwyqHM5mJjvPGAUDjvd/Groupe1-Prototypes-Moovizy-S%C3%A9curit%C3%A9?page-id=603%3A166&type=design&node-id=1127-9587&viewport=1712%2C753%2C0.09&t=voqHB0ICOCnB0Yoe-1&scaling=contain&starting-point-node-id=1127%3A9587",
             "color": "black",
@@ -73,15 +98,40 @@
                 ]
             },
             "imagesMobile": [
-                "mobile-connexion.webp",
-                "mobile-itineraire-ideal.webp",
-                "mobile-detail-itineraire.webp"
+                {
+                    "nom":"mobile-connexion.webp",
+                    "alt":"Écran de connexion Moovizy sur smartphone"
+                },
+                {
+                    "nom":"mobile-itineraire-ideal.webp",
+                    "alt":"Écran de présentation de l'itinéraire idéal Moovizy sur smartphone"
+                },
+                {
+                    "nom":"mobile-detail-itineraire.webp",
+                    "alt":"Écran de détail d'un itinéraire Moovizy sur smartphone"
+                },
+                {
+                    "nom":"mobile-liste-itineraires.webp",
+                    "alt":"Écran de liste des itinéraires Moovizy sur smartphone"
+                }
             ],
             "imagesDesktop": [
-                "ecran-desktop-accueil.webp",
-                "ecran-desktop-popin-options.webp",
-                "ecran-desktop-detail-itineraire.webp",
-                "ecran-desktop-envoi-itineraire.webp"
+                {
+                    "nom":"ecran-desktop-accueil.webp",
+                    "alt":"Écran d'accueil Moovizy sur ordinateur"
+                },
+                {
+                    "nom":"ecran-desktop-popin-options.webp",
+                    "alt":"Écran des options Moovizy sur ordinateur"
+                },
+                {
+                    "nom":"ecran-desktop-detail-itineraire.webp",
+                    "alt":"Écran de détail d'un itinéraire Moovizy sur ordinateur"
+                },
+                {
+                    "nom":"ecran-desktop-envoi-itineraire.webp",
+                    "alt":"Écran de partage d'un itinéraire Moovizy sur ordinateur"
+                }
             ]
         },
         {

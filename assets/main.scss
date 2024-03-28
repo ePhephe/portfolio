@@ -204,14 +204,15 @@ main {
         border-radius: 0 0 50px 50px;
         border: 1px solid var(--borderColorCard);
         font-size: 1.5rem;
+        transition: height 400ms linear;
 
-        &.image-max {
+        &.header-projet-max {
             height: calc(45vh - 77px);
             @media all and (max-width : $widthSmartphone) {
                 height: 70px;
             }
         }
-        &.image-min {
+        &.header-projet-min {
             height: calc(127px - 77px);
             @media all and (max-width : $widthSmartphone) {
                 height: 70px;

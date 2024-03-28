@@ -301,6 +301,23 @@
         grid-area: image-mobile-3;
     }
 
+    .image-mobile-4 {
+        grid-area: image-mobile-4;
+        display: none;
+        @media all and (min-width : $widthSmartphone) and (max-width : 980px) {
+            display: block;
+        }
+
+        /*Smartphones*/
+        @media all and (max-width : $widthSmartphone) {
+            display: none;
+        }
+    }
+    
+    img {
+        cursor: pointer;
+    }
+
      /*Tablets*/
      @media all and (min-width : 980px) and (max-width : $widthTablet) {
         gap: var(--gouttiere) var(--gouttiere);
@@ -352,6 +369,10 @@
 
     .image-desktop-4 {
         grid-area: image-desktop-4;
+    }
+
+    img {
+        cursor: pointer;
     }
 
     /*Smartphones*/

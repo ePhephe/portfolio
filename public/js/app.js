@@ -72,15 +72,17 @@ function setPolice(police){
 function changeHeader(newNumSection) {
     //On récupère les div nécessaires
     let headerProjet = document.querySelector(`header`);
-    let headerProjetMax = document.querySelector(`.image-projet.image-max`);
-    let headerProjetMin = document.querySelector(`.image-projet.image-min`);
+    let headerImageProjet = document.querySelector(`.image-projet`);
     let headerVide = document.querySelector(`.header-vide`);
+    let idProjet = adresse.searchParams.get('projet-id');
 
     //Si on est sur la première section
     if(newNumSection != 0) {
         //On met le header en grand
-        headerProjetMax.classList.add(`display-none`);
-        headerProjetMin.classList.remove(`display-none`);
+        headerImageProjet.style = `background-image:url("../public/img/images/projet-${idProjet}-70.webp");`;
+        
+        headerImageProjet.classList.remove(`header-projet-max`);
+        headerImageProjet.classList.add(`header-projet-min`);
         headerProjet.classList.remove(`header-projet-max`);
         headerProjet.classList.add(`header-projet-min`);
         headerVide.classList.remove(`header-projet-max`);
@@ -88,8 +90,10 @@ function changeHeader(newNumSection) {
     }
     else {
         //Sinon le header est petit
-        headerProjetMax.classList.remove(`display-none`);
-        headerProjetMin.classList.add(`display-none`);
+        headerImageProjet.style = `background-image:url("../public/img/images/projet-${idProjet}.webp");`;
+        
+        headerImageProjet.classList.add(`header-projet-max`);
+        headerImageProjet.classList.remove(`header-projet-min`);
         headerProjet.classList.add(`header-projet-max`);
         headerProjet.classList.remove(`header-projet-min`);
         headerVide.classList.add(`header-projet-max`);
