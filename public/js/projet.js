@@ -6,7 +6,10 @@ function afficheInfosProjet(tabDataProjet){
 
     //On met à jour les informations SEO pour cette page projet
     document.querySelector('meta[name="description"]').setAttribute("content", tabDataProjet.metaDesc);
+    document.querySelector('meta[property="og:description"]').setAttribute("content", tabDataProjet.metaDesc);
     document.title = tabDataProjet.title;
+    document.querySelector('meta[property="og:title"]').setAttribute("content", tabDataProjet.title);
+    document.querySelector('meta[property="og:image"]').setAttribute("content", `https://www.wordlofmddev.fr/public/img/images/projet-${tabDataProjet.id}.webp`);
 
     headerProjet.style = `background-image:url("../public/img/images/projet-${tabDataProjet.id}.webp");`;
     headerProjet.innerHTML = `<a href="${tabDataProjet.url}" title="Accès à la démo du projet ${tabDataProjet.libelle}" target="_blank">
