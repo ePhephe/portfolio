@@ -1,4 +1,4 @@
-let projetParam = adresse.searchParams.get('projet-id');
+let projetParam = adresse.searchParams.get('projet-id') === null ? 1 : adresse.searchParams.get('projet-id');
 
 function afficheInfosProjet(tabDataProjet){
     let tabDivAffichage = document.querySelectorAll(`.grid-presentation-projet div`);
