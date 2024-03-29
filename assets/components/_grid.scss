@@ -243,10 +243,18 @@
 
     .grid-case-vide1 {
         grid-area: grid-case-vide1;
+        display: none;
+        @media all and (min-width : $widthSmartphone) and (max-width : 880px) {
+            display: flex;
+        }   
     }
     
     .grid-case-vide2 {
         grid-area: grid-case-vide2;
+        display: none;
+        @media all and (min-width : $widthSmartphone) and (max-width : 880px) {
+            display: flex;
+        }  
     }
 
     /*Tablets*/

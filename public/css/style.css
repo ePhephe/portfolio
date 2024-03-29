@@ -79,18 +79,22 @@ th {
 
 @font-face {
   font-family: "HinaMincho";
+  font-display: swap;
   src: url("../fonts/HinaMincho/HinaMincho-Regular.ttf");
 }
 @font-face {
   font-family: "KiwiMaru";
+  font-display: swap;
   src: url("../fonts/KiwiMaru/KiwiMaru-Regular.ttf");
 }
 @font-face {
   font-family: "OpenSans";
+  font-display: swap;
   src: url("../fonts/OpenSans/OpenSans-VariableFont_wdth,wght.ttf");
 }
 @font-face {
   font-family: "Luciole";
+  font-display: swap;
   src: url("../fonts/Luciole/Luciole-Regular.ttf");
 }
 /* Variables SCSS */
@@ -598,6 +602,15 @@ les resolutions d'ecrans*/
   border-radius: 12px;
   border: 1px solid var(--borderColorCard);
 }
+.card.grid-case-vide1, .card.grid-case-vide2 {
+  display: none;
+}
+@media all and (min-width: 640px) and (max-width: 880px) {
+  .card.grid-case-vide1, .card.grid-case-vide2 {
+    display: block;
+    background-color: var(--firstColor);
+  }
+}
 
 .card-1h {
   height: 200px;
@@ -634,6 +647,13 @@ les resolutions d'ecrans*/
   .card-3h-tablet {
     height: 640px;
   }
+}
+@media all and (min-width: 640px) and (max-width: 1140px) and (min-width: 880px) and (max-width: 1140px) {
+  .card-3h-tablet.histo-projet {
+    height: 200px;
+  }
+}
+@media all and (min-width: 640px) and (max-width: 1140px) {
   .card-4h-tablet {
     height: 860px;
   }
@@ -829,6 +849,24 @@ les resolutions d'ecrans*/
 .grid-presentation-projet .techno-projet {
   grid-area: techno-projet;
 }
+.grid-presentation-projet .grid-case-vide1 {
+  grid-area: grid-case-vide1;
+  display: none;
+}
+@media all and (min-width: 640px) and (max-width: 880px) {
+  .grid-presentation-projet .grid-case-vide1 {
+    display: flex;
+  }
+}
+.grid-presentation-projet .grid-case-vide2 {
+  grid-area: grid-case-vide2;
+  display: none;
+}
+@media all and (min-width: 640px) and (max-width: 880px) {
+  .grid-presentation-projet .grid-case-vide2 {
+    display: flex;
+  }
+}
 @media all and (min-width: 880px) and (max-width: 1140px) {
   .grid-presentation-projet {
     grid-template-columns: 1fr 1fr 1fr;
@@ -839,8 +877,8 @@ les resolutions d'ecrans*/
 @media all and (min-width: 640px) and (max-width: 880px) {
   .grid-presentation-projet {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: "info-projet role-projet" "presentation-projet presentation-projet" "histo-projet techno-projet";
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "info-projet role-projet" "presentation-projet presentation-projet" "histo-projet grid-case-vide1" "histo-projet techno-projet" "histo-projet grid-case-vide2";
   }
 }
 @media all and (max-width: 640px) {
@@ -869,6 +907,24 @@ les resolutions d'ecrans*/
 }
 .grid-image-mobile-projet .image-mobile-3 {
   grid-area: image-mobile-3;
+}
+.grid-image-mobile-projet .image-mobile-4 {
+  grid-area: image-mobile-4;
+  display: none;
+  /*Smartphones*/
+}
+@media all and (min-width: 640px) and (max-width: 980px) {
+  .grid-image-mobile-projet .image-mobile-4 {
+    display: block;
+  }
+}
+@media all and (max-width: 640px) {
+  .grid-image-mobile-projet .image-mobile-4 {
+    display: none;
+  }
+}
+.grid-image-mobile-projet img {
+  cursor: pointer;
 }
 @media all and (min-width: 980px) and (max-width: 1140px) {
   .grid-image-mobile-projet {
@@ -911,11 +967,46 @@ les resolutions d'ecrans*/
 .grid-image-desktop-projet .image-desktop-4 {
   grid-area: image-desktop-4;
 }
+.grid-image-desktop-projet img {
+  cursor: pointer;
+}
 @media all and (max-width: 1140px) {
   .grid-image-desktop-projet {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas: "image-desktop-1" "image-desktop-2" "image-desktop-3" "image-desktop-4";
+  }
+}
+
+/* Mise en place du grid pour la partie à propos */
+.grid-mentions {
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "mentions-infos mentions-donnees mentions-rgpd";
+  /*Tablets*/
+  /*Smartphones*/
+}
+.grid-mentions .mentions-infos {
+  grid-area: mentions-infos;
+}
+.grid-mentions .mentions-donnees {
+  grid-area: mentions-donnees;
+}
+.grid-mentions .mentions-rgpd {
+  grid-area: mentions-rgpd;
+}
+@media all and (min-width: 640px) and (max-width: 1140px) {
+  .grid-mentions {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "a-propos soft-skills" "description description" "formation dev-language" "formation dev-tools";
+  }
+}
+@media all and (max-width: 640px) {
+  .grid-mentions {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "a-propos" "soft-skills" "description" "description" "formation" "formation" "dev-language" "dev-tools";
   }
 }
 
@@ -1315,12 +1406,12 @@ ul.liste {
 
 /* Image pour la background de l'accueil */
 .bg-accueil {
-  background-image: url("../img/background/background-accueil.jpg");
+  background-image: url("../img/background/background-accueil.webp");
   background-position: right;
 }
 @media all and (max-width: 1140px) {
   .bg-accueil {
-    background-image: url("../img/background/background-accueil-1140.jpg");
+    background-image: url("../img/background/background-accueil-1140.webp");
     background-position: center;
   }
 }
@@ -1394,38 +1485,57 @@ main div.opacity-none {
   height: auto;
 }
 
+.mentions {
+  font-size: 0.8rem;
+}
+
 /********** Page d'un projet **********/
 /* Mise en place du header spécifique avec l'image du projet */
 .header-projet {
   position: fixed;
   top: 0;
   z-index: 1;
+  overflow-y: hidden;
+  transition: height 400ms linear;
+}
+.header-projet.header-projet-max {
+  height: 45vh;
+}
+@media all and (max-width: 640px) {
+  .header-projet.header-projet-max {
+    height: 70px;
+  }
+}
+.header-projet.header-projet-min {
+  height: 147px;
+}
+@media all and (max-width: 1140px) {
+  .header-projet.header-projet-min {
+    height: 70px;
+  }
 }
 .header-projet .image-projet {
-  background-image: url("../img/images/projet-moovizy-ux.png");
   background-position: center;
   background-size: cover;
   width: 100%;
   border-radius: 0 0 50px 50px;
   border: 1px solid var(--borderColorCard);
-  transition: height 400ms linear;
   font-size: 1.5rem;
+  transition: height 400ms linear;
 }
-.header-projet.header-projet-max .image-projet {
-  height: calc(45vh - 57px);
+.header-projet .image-projet.header-projet-max {
+  height: calc(45vh - 77px);
 }
 @media all and (max-width: 640px) {
-  .header-projet.header-projet-max .image-projet {
+  .header-projet .image-projet.header-projet-max {
     height: 70px;
-    background-image: url("../img/images/projet-moovizy-ux-70.png");
   }
 }
-.header-projet.header-projet-min .image-projet {
-  background-image: url("../img/images/projet-moovizy-ux-70.png");
-  height: 70px;
+.header-projet .image-projet.header-projet-min {
+  height: 50px;
 }
 @media all and (max-width: 640px) {
-  .header-projet.header-projet-min .image-projet {
+  .header-projet .image-projet.header-projet-min {
     height: 70px;
   }
 }
