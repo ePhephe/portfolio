@@ -241,6 +241,14 @@
         grid-area: techno-projet;
     }
 
+    .grid-case-vide1 {
+        grid-area: grid-case-vide1;
+    }
+    
+    .grid-case-vide2 {
+        grid-area: grid-case-vide2;
+    }
+
     /*Tablets*/
     @media all and (min-width : 880px) and (max-width : $widthTablet) {
         grid-template-columns: 1fr 1fr 1fr;
@@ -254,11 +262,13 @@
     /*Tablets*/
     @media all and (min-width : $widthSmartphone) and (max-width : 880px) {
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
         grid-template-areas:
             "info-projet role-projet"
             "presentation-projet presentation-projet"
-            "histo-projet techno-projet";
+            "histo-projet grid-case-vide1"
+            "histo-projet techno-projet"
+            "histo-projet grid-case-vide2";
     }
 
 

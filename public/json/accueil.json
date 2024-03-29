@@ -110,25 +110,25 @@
     ],
     "projets": [
         {
-            "id": "2",
-            "libelle": "Moovizy",
-            "color": "black",
-            "competence": "UX Design / Figma",
-            "background": "projet-1.webp"
-        },
-        {
             "id": "1",
             "libelle": "Men's Sportswear",
             "color": "white",
             "competence": "Intégration Front",
+            "background": "projet-1.webp"
+        },
+        {
+            "id": "2",
+            "libelle": "Moovizy",
+            "color": "black",
+            "competence": "UX Design / Figma",
             "background": "projet-2.webp"
         },
         {
             "id": "3",
-            "libelle": "",
-            "color": "",
-            "competence": "",
-            "background": ""
+            "libelle": "MNTA",
+            "color": "white",
+            "competence": "Développement Front",
+            "background": "projet-3.webp"
         },
         {
             "id": "4",

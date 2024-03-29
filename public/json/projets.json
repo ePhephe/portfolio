@@ -136,12 +136,69 @@
         },
         {
             "id": "3",
-            "libelle": "",
-            "color": "",
-            "competence": "",
-            "images-mobile": [
+            "libelle": "Marché Noir des Trésors Absurdes",
+            "title": "worldofMddev - Projet MNTA, Développement Front",
+            "metaDesc": "Découvrez notre projet UX/UI pour Moovizy, l'appli de transport stéphanois. Sécurité des trajets et prototypes innovants au rendez-vous ! ",
+            "url": "https://ephephe.github.io/site-absurde-mnta/",
+            "color": "white",
+            "competence": "Développement Front",
+            "infoProjet": {
+                "libelle": "Le Projet",
+                "description": "Dans le cadre de ma formation Webecom, nous avons réalisé un exercice de création d'un site avec du contenu généré par IA."
+            },
+            "roleProjet": {
+                "libelle": "Mon Rôle",
+                "roles": [
+                    "UX/UI Designer",
+                    "Développeur Front"
+                ]
+            },
+            "presentationProjet": "L'un de nos premiers exercices de développement HTML/CSS a été de créer un site en utilisant l'IA pour générer le contenu. Nous avons demandé à chatGPT de trouver un idée d'un site web complètement inutile et absurde ! Je l'ai simplement aiguillé en ajoutant la contrainte du thème des pirates, sa proposition a donc été de créer un site marchand pour l'achat et la vente de trésors absurdes.",
+            "histoProjet": "La première étape a tout de même été \" humaine \" avec la recherche de l'identité du site et la réalisation de quelques maquettes sur Figma. Ensuite chatGPT a été utilisé pour générer l'ensemble des contenus textuels du site internet : les pitchs, les idées de trésors, les histoires, les noms... Pour la partie graphique, j'ai utilisé leonardo.ai pour générer toutes les images. Nous avons ensuite picthé notre site web aux autres étudiants. MNTA a eu l'honneur de recevoir le prix de la meilleure UX/UI de la classe !",
+            "technoProjet": {
+                "libelle": "Compétences",
+                "technologies": [
+                    "UX Design",
+                    "UI Design",
+                    "HTML/CSS",
+                    "Figma"
+                ]
+            },
+            "imagesMobile": [
+                {
+                    "nom":"mobile-accueil.webp",
+                    "alt":"Écran d'accueil MNTA sur smartphone"
+                },
+                {
+                    "nom":"mobile-articles-lanterne.webp",
+                    "alt":"Écran des articles MNTA sur smartphone"
+                },
+                {
+                    "nom":"mobile-cta-recrutement.webp",
+                    "alt":"Écran du CTA MNTA sur smartphone"
+                },
+                {
+                    "nom":"mobile-article-hamac.webp",
+                    "alt":"Écran de présentation du hamac MNTA sur smartphone"
+                }
             ],
-            "images-desktop": [
+            "imagesDesktop": [
+                {
+                    "nom":"ecran-desktop-accueil.webp",
+                    "alt":"Écran d'accueil MNTA sur ordinateur"
+                },
+                {
+                    "nom":"ecran-desktop-articles.webp",
+                    "alt":"Écran des articles MNTA sur ordinateur"
+                },
+                {
+                    "nom":"ecran-desktop-code-pirate.webp",
+                    "alt":"Écran du code pirates MNTA sur ordinateur"
+                },
+                {
+                    "nom":"ecran-desktop-description-hamac.webp",
+                    "alt":"Écran de description du hamac MNTA sur ordinateur"
+                }
             ]
         },
         {

@@ -5,6 +5,14 @@
     background-color: var(--backgroundCard);
     border-radius: 12px;
     border: 1px solid var(--borderColorCard);
+
+    &.grid-case-vide1,&.grid-case-vide2 {
+        display: none;
+        @media all and (min-width : $widthSmartphone) and (max-width : 880px) {
+            display: block;
+            background-color: var(--firstColor);
+        }
+    }
 }
 
 .card-1h {
@@ -36,6 +44,11 @@
     }
     .card-3h-tablet {
         height: 640px;
+        &.histo-projet {
+            @media all and (min-width : 880px) and (max-width : $widthTablet) {
+                height: 200px;
+            }
+        }
     }
     .card-4h-tablet  {
         height: 860px;
