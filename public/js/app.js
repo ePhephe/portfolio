@@ -184,6 +184,8 @@ function changeSection(direction,section=``,page=`accueil`) {
             li.classList.remove(`menu-actif-bottom`);
         }
     });
+
+    window.scrollTo(0,0);
 }
 
 //Listener sur le bouton pour la slide en haut
