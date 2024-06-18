@@ -133,26 +133,30 @@
         {
             "id": "4",
             "libelle": "Un Concert dans mon salon",
+            "color": "white",
             "competence": "Développement Back",
             "background": "projet-4.webp"
         },
         {
             "id": "5",
             "libelle": "Combot",
+            "color": "white",
             "competence": "Développement Back",
             "background": "projet-5.webp"
         },
         {
             "id": "6",
             "libelle": "Pizz'Artiste",
+            "color": "white",
             "competence": "Développement Back",
             "background": "projet-6.webp"
         },
         {
             "id": "7",
-            "libelle": "",
-            "competence": "",
-            "background": ""
+            "libelle": "Framework",
+            "color": "black",
+            "competence": "Développement Back",
+            "background": "projet-7.webp"
         },
         {
             "id": "8",
