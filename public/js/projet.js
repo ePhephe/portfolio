@@ -101,11 +101,14 @@ function afficheImages(tabImages,div){
 fetch(`./public/json/projets.json`).then(res => {
     return res.json();
 }).then(rep => {
+    console.log(rep);
         //On appelle nos fonctions d'affichage
         //console.log(rep.projets[projetParam-1]);
         afficheInfosProjet(rep.projets[projetParam-1]);
-        afficheImagesMobile(rep.projets[projetParam-1].imagesMobile);
-        afficheImagesDesktop(rep.projets[projetParam-1].imagesDesktop);
+        if(rep.projets[projetParam-1].imagesMobile != undefined)
+            afficheImagesMobile(rep.projets[projetParam-1].imagesMobile);
+        if(rep.projets[projetParam-1].imagesDesktop != undefined)
+            afficheImagesDesktop(rep.projets[projetParam-1].imagesDesktop);
 }).catch(err => {
         console.log(err);
 });

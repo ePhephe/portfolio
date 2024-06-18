@@ -132,21 +132,21 @@
         },
         {
             "id": "4",
-            "libelle": "",
-            "competence": "",
-            "background": ""
+            "libelle": "Un Concert dans mon salon",
+            "competence": "Développement Back",
+            "background": "projet-4.webp"
         },
         {
             "id": "5",
-            "libelle": "",
-            "competence": "",
-            "background": ""
+            "libelle": "Combot",
+            "competence": "Développement Back",
+            "background": "projet-5.webp"
         },
         {
             "id": "6",
-            "libelle": "",
-            "competence": "",
-            "background": ""
+            "libelle": "Pizz'Artiste",
+            "competence": "Développement Back",
+            "background": "projet-6.webp"
         },
         {
             "id": "7",

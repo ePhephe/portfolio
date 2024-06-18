@@ -203,32 +203,149 @@
         },
         {
             "id": "4",
-            "libelle": "",
-            "color": "",
-            "competence": "",
-            "images-mobile": [
-            ],
-            "images-desktop": [
+            "libelle": "Un concert dans mon salon",
+            "title": "worldofMddev - Un concert dans mon salon, Développement Back-End",
+            "metaDesc": "Découvrez notre projet UX/UI pour Moovizy, l'appli de transport stéphanois. Sécurité des trajets et prototypes innovants au rendez-vous ! ",
+            "url": "https://ephephe.github.io/eval-front-men-sportwear/",
+            "color": "black",
+            "competence": "Développement PHP",
+            "infoProjet": {
+                "libelle": "Le Projet",
+                "description": "Lors de la formation Webecom, j'ai pu suivre le module Front-End qui s'est conclu par la réalisation de ce projet."
+            },
+            "roleProjet": {
+                "libelle": "Mon Rôle",
+                "roles": [
+                    "Intégrateur Front",
+                    "Développeur PHP"
+                ]
+            },
+            "presentationProjet": "Nous avons terminé le module de développement Front-end par une évaluation sur l'intégration d'un site de e-commerce fictif Men's Sportswear. En partant de la consigne et des maquettes sur Figma, j'ai intégré les différentes pages pour les types d'affichages desktop, tablet et smartphone. Plusieurs bibliothèques javascript ont été utilisées pour améliorer la navigation et l'ergonomie du site.",
+            "histoProjet": "L'évaluation s'est déroulée sur une semaine, le but étant de montrer toutes les compétences acquises tout au long du module. J'ai intégrer les maquettes en utilisant notamment HTML et SCSS. J'ai également utilisé JavaScript pour notamment les contrôles sur les champs de formulaire et l'ajout de contenu dynamique par la lecture de fichier JSON. Plusieurs bibliothèques javascript ont été utilisés pour animer certains composants du site : leaflet pour la carte des boutiques, AOS pour les effets d'apparition au scroll et enfin SwipperJS pour le slider de la page produit. Enfin, une attention particulière a été apporté au SEO et à l'accessibilité : optimisation des différentes balises et mise en place d'une police de caractères accessible OpenDys. ",
+            "technoProjet": {
+                "libelle": "Compétences",
+                "technologies": [
+                    "HTML/CSS",
+                    "Javascript",
+                    "PHP",
+                    "BDD / SQL"
+                ]
+            },
+            "imagesDesktop": [
+                {
+                    "nom":"ecran-desktop-accueil.webp",
+                    "alt":"Écran d'accueil de l'application un concert dans mon salon"
+                },
+                {
+                    "nom":"ecran-desktop-connexion.webp",
+                    "alt":"Écran de connexion à un concert dans mon salon"
+                },
+                {
+                    "nom":"ecran-desktop-messagerie.webp",
+                    "alt":"Écran de la page de messagerie de l'application"
+                },
+                {
+                    "nom":"ecran-desktop-messagerie-light.webp",
+                    "alt":"Écran avec une conversation épinglée"
+                }
             ]
         },
         {
             "id": "5",
-            "libelle": "",
-            "color": "",
-            "competence": "",
-            "images-mobile": [
-            ],
-            "images-desktop": [
+            "libelle": "Combot",
+            "title": "worldofMddev - Combot, Développement Back-End",
+            "metaDesc": "Découvrez notre projet UX/UI pour Moovizy, l'appli de transport stéphanois. Sécurité des trajets et prototypes innovants au rendez-vous ! ",
+            "url": "https://ephephe.github.io/eval-front-men-sportwear/",
+            "color": "black",
+            "competence": "Développement PHP",
+            "infoProjet": {
+                "libelle": "Le Projet",
+                "description": "Lors de la formation Webecom, j'ai pu suivre le module Front-End qui s'est conclu par la réalisation de ce projet."
+            },
+            "roleProjet": {
+                "libelle": "Mon Rôle",
+                "roles": [
+                    "Intégrateur Front",
+                    "Développeur PHP"
+                ]
+            },
+            "presentationProjet": "Nous avons terminé le module de développement Front-end par une évaluation sur l'intégration d'un site de e-commerce fictif Men's Sportswear. En partant de la consigne et des maquettes sur Figma, j'ai intégré les différentes pages pour les types d'affichages desktop, tablet et smartphone. Plusieurs bibliothèques javascript ont été utilisées pour améliorer la navigation et l'ergonomie du site.",
+            "histoProjet": "L'évaluation s'est déroulée sur une semaine, le but étant de montrer toutes les compétences acquises tout au long du module. J'ai intégrer les maquettes en utilisant notamment HTML et SCSS. J'ai également utilisé JavaScript pour notamment les contrôles sur les champs de formulaire et l'ajout de contenu dynamique par la lecture de fichier JSON. Plusieurs bibliothèques javascript ont été utilisés pour animer certains composants du site : leaflet pour la carte des boutiques, AOS pour les effets d'apparition au scroll et enfin SwipperJS pour le slider de la page produit. Enfin, une attention particulière a été apporté au SEO et à l'accessibilité : optimisation des différentes balises et mise en place d'une police de caractères accessible OpenDys. ",
+            "technoProjet": {
+                "libelle": "Compétences",
+                "technologies": [
+                    "HTML/CSS",
+                    "Javascript",
+                    "PHP",
+                    "BDD / SQL"
+                ]
+            },
+            "imagesDesktop": [
+                {
+                    "nom":"ecran-desktop-accueil.webp",
+                    "alt":"Écran d'accueil du jeu Combot"
+                },
+                {
+                    "nom":"ecran-desktop-creation-perso.webp",
+                    "alt":"Écran de création d'un personnage pour le jeu Combot"
+                },
+                {
+                    "nom":"ecran-desktop-jeu.webp",
+                    "alt":"Écran de jeu principal de Combot"
+                },
+                {
+                    "nom":"ecran-desktop-jeu-attaque.webp",
+                    "alt":"Écran de jeu principal de Combot en phase attaque"
+                }
             ]
         },
         {
             "id": "6",
-            "libelle": "",
-            "color": "",
-            "competence": "",
-            "images-mobile": [
-            ],
-            "images-desktop": [
+            "libelle": "Pizz'Artiste",
+            "title": "worldofMddev - Pizz'Artiste, Développement Back-End",
+            "metaDesc": "Découvrez notre projet UX/UI pour Moovizy, l'appli de transport stéphanois. Sécurité des trajets et prototypes innovants au rendez-vous ! ",
+            "url": "https://ephephe.github.io/eval-front-men-sportwear/",
+            "color": "black",
+            "competence": "Développement PHP",
+            "infoProjet": {
+                "libelle": "Le Projet",
+                "description": "Lors de la formation Webecom, j'ai pu suivre le module Front-End qui s'est conclu par la réalisation de ce projet."
+            },
+            "roleProjet": {
+                "libelle": "Mon Rôle",
+                "roles": [
+                    "Intégrateur Front",
+                    "Développeur PHP"
+                ]
+            },
+            "presentationProjet": "Nous avons terminé le module de développement Front-end par une évaluation sur l'intégration d'un site de e-commerce fictif Men's Sportswear. En partant de la consigne et des maquettes sur Figma, j'ai intégré les différentes pages pour les types d'affichages desktop, tablet et smartphone. Plusieurs bibliothèques javascript ont été utilisées pour améliorer la navigation et l'ergonomie du site.",
+            "histoProjet": "L'évaluation s'est déroulée sur une semaine, le but étant de montrer toutes les compétences acquises tout au long du module. J'ai intégrer les maquettes en utilisant notamment HTML et SCSS. J'ai également utilisé JavaScript pour notamment les contrôles sur les champs de formulaire et l'ajout de contenu dynamique par la lecture de fichier JSON. Plusieurs bibliothèques javascript ont été utilisés pour animer certains composants du site : leaflet pour la carte des boutiques, AOS pour les effets d'apparition au scroll et enfin SwipperJS pour le slider de la page produit. Enfin, une attention particulière a été apporté au SEO et à l'accessibilité : optimisation des différentes balises et mise en place d'une police de caractères accessible OpenDys. ",
+            "technoProjet": {
+                "libelle": "Compétences",
+                "technologies": [
+                    "HTML/CSS",
+                    "Javascript",
+                    "PHP",
+                    "BDD / SQL"
+                ]
+            },
+            "imagesDesktop": [
+                {
+                    "nom":"ecran-desktop-connexion.webp",
+                    "alt":"Écran de connexion à l'application Pizz'Artiste"
+                },
+                {
+                    "nom":"ecran-desktop-pizzas.webp",
+                    "alt":"Écran de visualisation de mes pizzas créées"
+                },
+                {
+                    "nom":"ecran-desktop-ingredients.webp",
+                    "alt":"Écran de sélection des ingrédients pour une pizza"
+                },
+                {
+                    "nom":"ecran-desktop-compte.webp",
+                    "alt":"Écran de mise à jour du compte utilisateur"
+                }
             ]
         },
         {
